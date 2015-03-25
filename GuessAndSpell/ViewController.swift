@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import QuartzCore
 
 class ViewController: UIViewController {
     
@@ -21,6 +22,11 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        theImageView.layer.contents = UIImage(named: "chair.jpg")?.CGImage
+        theImageView.layer.cornerRadius = 8.0
+        theImageView.clipsToBounds = true
+        
     }
 
     override func didReceiveMemoryWarning() {
