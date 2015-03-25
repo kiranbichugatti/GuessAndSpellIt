@@ -9,6 +9,14 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    
+    
+    @IBOutlet weak var theImageView: UIView!
+    @IBOutlet var theRevealButtons: [UIButton]!
+    
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
