@@ -14,6 +14,7 @@
 		A547CB331AAD77BC0084F2A9 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A547CB311AAD77BC0084F2A9 /* LaunchScreen.xib */; };
 		A547CB3F1AAD77BC0084F2A9 /* GuessAndSpellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A547CB3E1AAD77BC0084F2A9 /* GuessAndSpellTests.swift */; };
 		D6F93E9E1AC4690400BA27CF /* Level1.plist in Resources */ = {isa = PBXBuildFile; fileRef = D6F93E9D1AC4690400BA27CF /* Level1.plist */; };
+		D6F93EA11AC4729500BA27CF /* untitled folder.textClipping in Resources */ = {isa = PBXBuildFile; fileRef = D6F93EA01AC4729500BA27CF /* untitled folder.textClipping */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +38,8 @@
 		A547CB381AAD77BC0084F2A9 /* GuessAndSpellTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GuessAndSpellTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A547CB3D1AAD77BC0084F2A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A547CB3E1AAD77BC0084F2A9 /* GuessAndSpellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessAndSpellTests.swift; sourceTree = "<group>"; };
-		D6F93E9D1AC4690400BA27CF /* Level1.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Level1.plist; sourceTree = "<group>"; };
+		D6F93E9D1AC4690400BA27CF /* Level1.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Level1.plist; path = ../Level1.plist; sourceTree = "<group>"; };
+		D6F93EA01AC4729500BA27CF /* untitled folder.textClipping */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "untitled folder.textClipping"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,13 +81,16 @@
 		A547CB251AAD77BC0084F2A9 /* GuessAndSpell */ = {
 			isa = PBXGroup;
 			children = (
+				D6F93EA41AC472B600BA27CF /* Levels */,
+				D6F93EA31AC472AE00BA27CF /* View */,
+				D6F93EA21AC472A000BA27CF /* Model */,
+				D6F93E9F1AC4729500BA27CF /* Controller */,
 				A547CB281AAD77BC0084F2A9 /* AppDelegate.swift */,
 				A547CB2A1AAD77BC0084F2A9 /* ViewController.swift */,
 				A547CB2C1AAD77BC0084F2A9 /* Main.storyboard */,
 				A547CB2F1AAD77BC0084F2A9 /* Images.xcassets */,
 				A547CB311AAD77BC0084F2A9 /* LaunchScreen.xib */,
 				A547CB261AAD77BC0084F2A9 /* Supporting Files */,
-				D6F93E9D1AC4690400BA27CF /* Level1.plist */,
 			);
 			path = GuessAndSpell;
 			sourceTree = "<group>";
@@ -113,6 +118,36 @@
 				A547CB3D1AAD77BC0084F2A9 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D6F93E9F1AC4729500BA27CF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D6F93EA01AC4729500BA27CF /* untitled folder.textClipping */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D6F93EA21AC472A000BA27CF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D6F93EA31AC472AE00BA27CF /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D6F93EA41AC472B600BA27CF /* Levels */ = {
+			isa = PBXGroup;
+			children = (
+				D6F93E9D1AC4690400BA27CF /* Level1.plist */,
+			);
+			path = Levels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -195,6 +230,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6F93EA11AC4729500BA27CF /* untitled folder.textClipping in Resources */,
 				A547CB2E1AAD77BC0084F2A9 /* Main.storyboard in Resources */,
 				A547CB331AAD77BC0084F2A9 /* LaunchScreen.xib in Resources */,
 				A547CB301AAD77BC0084F2A9 /* Images.xcassets in Resources */,
