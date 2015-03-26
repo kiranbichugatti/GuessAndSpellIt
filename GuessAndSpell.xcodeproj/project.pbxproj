@@ -407,6 +407,7 @@
 				A547CB441AAD77BC0084F2A9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A547CB451AAD77BC0084F2A9 /* Build configuration list for PBXNativeTarget "GuessAndSpellTests" */ = {
 			isa = XCConfigurationList;
@@ -415,6 +416,7 @@
 				A547CB471AAD77BC0084F2A9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
