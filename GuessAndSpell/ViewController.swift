@@ -26,6 +26,9 @@ class ViewController: UIViewController {
         theImageView.layer.cornerRadius = 8.0
         theImageView.clipsToBounds = true
         
+        let level1 = Level(levelNumber: 2)
+        println("anagrams: \(level1.puzzles)")
+        
     }
 
     override func didReceiveMemoryWarning() {
