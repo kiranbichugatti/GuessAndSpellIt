@@ -5,12 +5,12 @@
 	<key>Puzzles</key>
 	<array>
 		<array>
-			<string></string>
-			<string></string>
+			<string>chair.jpg</string>
+			<string>chair</string>
 		</array>
 		<array>
-			<string></string>
-			<string></string>
+			<string>train.jpg</string>
+			<string>train</string>
 		</array>
 		<array>
 			<string></string>
