@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>puzzles</key>
+	<array>
+		<array>
+			<string>20.png</string>
+			<string>paris</string>
+		</array>
+		<array>
+			<string>21.png</string>
+			<string>coffee</string>
+		</array>
+		<array>
+			<string>22.png</string>
+			<string>pearl</string>
+		</array>
+		<array>
+			<string>23.png</string>
+			<string>birthday</string>
+		</array>
+		<array>
+			<string>24.png</string>
+			<string>chalk</string>
+		</array>
+		<array>
+			<string>25.png</string>
+			<string>football</string>
+		</array>
+		<array>
+			<string>26.png</string>
+			<string>new york</string>
+		</array>
+		<array>
+			<string>27.png</string>
+			<string>music</string>
+		</array>
+		<array>
+			<string>28.png</string>
+			<string>soccer</string>
+		</array>
+		<array>
+			<string>29.png</string>
+			<string>jar</string>
+		</array>
+	</array>
+	<key>timeToSolve</key>
+	<integer>180</integer>
+	<key>points</key>
+	<integer>100</integer>
+</dict>
+</plist>
