@@ -729,6 +729,12 @@
                                     <rect key="frame" x="259" y="8" width="158" height="31"/>
                                 </variation>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vSf-AX-yYG">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="0.0" width="800" height="800"/>
+                                </variation>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.91362527591623277" green="1" blue="0.8726143978328198" alpha="1" colorSpace="calibratedRGB"/>
                         <variation key="default">
@@ -761,6 +767,7 @@
                                 <exclude reference="Jns-Za-kT7"/>
                                 <exclude reference="fLx-MD-hzA"/>
                                 <exclude reference="LRq-ba-NM3"/>
+                                <exclude reference="vSf-AX-yYG"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=regular">
@@ -797,6 +804,7 @@
                                 <include reference="CBl-YK-2yL"/>
                                 <include reference="Jns-Za-kT7"/>
                                 <include reference="fLx-MD-hzA"/>
+                                <include reference="vSf-AX-yYG"/>
                             </mask>
                         </variation>
                     </view>
