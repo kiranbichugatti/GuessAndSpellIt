@@ -11,11 +11,15 @@ import QuartzCore
 
 class ViewController: UIViewController {
     
-    
+    private var controller:GameController
     
     @IBOutlet weak var theImageView: UIView!
     @IBOutlet var theRevealButtons: [UIButton]!
     
+    required init(coder aDecoder: NSCoder) {
+        controller = GameController()
+        super.init(coder: aDecoder)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,8 +30,15 @@ class ViewController: UIViewController {
         theImageView.layer.cornerRadius = 8.0
         theImageView.clipsToBounds = true
         
-        let level1 = Level(levelNumber: 2)
-        println("anagrams: \(level1.puzzles)")
+        //add one layer for all game elements
+        let gameView = UIView(frame: CGRectMake(0, 0, ScreenWidth, ScreenHeight))
+        self.view.addSubview(gameView)
+        controller.gameView = gameView
+        
+        let level2 = Level(levelNumber: 2)
+        println("anagrams: \(level2.puzzles)")
+        controller.level = level2
+        controller.dealRandomAnagram()
         
     }
 
