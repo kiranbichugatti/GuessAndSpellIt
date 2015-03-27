@@ -17,12 +17,14 @@ class TileView:UIImageView {
     init(letter:Character) {
         self.letter = letter
         //we only need a fixed length for our tile
-        self.sideLength = 40.0
+        self.sideLength = TileSideLength
         
         let image = UIImage(named:"tile")!
         super.init(image:image)
         
-        let scale = sideLength / image.size.width
+        println(image.size.width)
+        
+        let scale = TileSideLength / image.size.width
         self.frame = CGRect(x: 0, y: 0, width: image.size.width * scale, height: image.size.height * scale)
         
         //add a letter on top
@@ -31,7 +33,7 @@ class TileView:UIImageView {
         letterLabel.textColor = UIColor.blackColor()
         letterLabel.backgroundColor = UIColor.clearColor()
         letterLabel.text = String(letter).uppercaseString
-        letterLabel.font = UIFont(name: "Verdana-Bold", size: 78.0*scale)
+        letterLabel.font = UIFont(name: "Verdana-Bold", size: 100.0*scale)
         self.addSubview(letterLabel)
     }
 

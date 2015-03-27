@@ -13,7 +13,7 @@ import UIKit
 let ScreenWidth = UIScreen.mainScreen().bounds.size.width
 let ScreenHeight = UIScreen.mainScreen().bounds.size.height
 let TileMargin: CGFloat = 10.0
-let TileSideLength: CGFloat = 40.0
+let TileSideLength: CGFloat = 50.0
 
 
 //Random number generator
