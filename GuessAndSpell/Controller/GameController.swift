@@ -19,7 +19,7 @@ class GameController {
     init() {
     }
     
-    func dealRandomAnagram () {
+    func DrawRandomPuzzles () {
         //1
         assert(level.puzzles.count > 0, "no level loaded")
         
@@ -54,6 +54,7 @@ class GameController {
             //3
             if letter != " " {
                 let tile = TileView(letter: letter)
+                println("\(tile)")
                 tile.center = CGPointMake(xOffset + CGFloat(index)*(tileSide + TileMargin), ScreenHeight/4*3)
                 
                 //4

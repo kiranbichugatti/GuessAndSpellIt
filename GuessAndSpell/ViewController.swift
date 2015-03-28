@@ -21,11 +21,26 @@ class ViewController: UIViewController {
         super.init(coder: aDecoder)
     }
     
+ 
+    
+    @IBAction func revealButtonTouched(sender: UIButton) {
+        
+        let buttonIndex : Int = find(theRevealButtons,sender)!
+        println("the button index is \(buttonIndex)")
+        
+        theRevealButtons[buttonIndex].removeFromSuperview()
+        
+    }
+    
+    //create a function to pick a new game which should have new image, username, userscore
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "background.png")!)
         
+        //this should be done dynamically
         theImageView.layer.contents = UIImage(named: "chair.jpg")?.CGImage
         theImageView.layer.cornerRadius = 8.0
         theImageView.clipsToBounds = true
@@ -38,9 +53,10 @@ class ViewController: UIViewController {
         let level2 = Level(levelNumber: 2)
         println("anagrams: \(level2.puzzles)")
         controller.level = level2
-        controller.dealRandomAnagram()
-        
+        controller.DrawRandomPuzzles()
     }
+    
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

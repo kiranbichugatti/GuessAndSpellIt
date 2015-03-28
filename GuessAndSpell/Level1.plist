@@ -49,5 +49,9 @@
 			<string></string>
 		</array>
 	</array>
+	<key>timeToSolve</key>
+	<integer>250</integer>
+	<key>points</key>
+	<integer>100</integer>
 </dict>
 </plist>
