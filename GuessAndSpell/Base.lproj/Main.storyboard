@@ -54,12 +54,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y3f-M4-nYW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="54.75" y="-318.75"/>
+            <point key="canvasLocation" x="1270.5" y="-657"/>
         </scene>
-        <!--View Controller-->
+        <!--Root View Controller-->
         <scene sceneID="xPc-mI-HnS">
             <objects>
-                <viewController id="4Be-6z-cTx" sceneMemberID="viewController">
+                <viewController id="4Be-6z-cTx" customClass="RootViewController" customModule="GuessAndSpell" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="C1g-Xo-J9t"/>
                         <viewControllerLayoutGuide type="bottom" id="m44-3w-Fsv"/>
@@ -68,18 +68,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i1T-hf-QMG">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" backgroundImage="glass_play_button">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="463" y="334" width="98" height="110"/>
-                                </variation>
-                                <connections>
-                                    <segue destination="BYZ-38-t0r" kind="push" id="BVB-1E-cAM"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u9Q-6r-pvd">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <state key="normal" title="Rules">
@@ -104,20 +92,32 @@
                                     <segue destination="lA7-JA-YsC" kind="push" id="Z4O-az-7iG"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i1T-hf-QMG">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" backgroundImage="glass_play_button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="463" y="335" width="98" height="110"/>
+                                </variation>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="push" id="BVB-1E-cAM"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="i1T-hf-QMG"/>
                                 <exclude reference="u9Q-6r-pvd"/>
                                 <exclude reference="RaK-Cm-TgJ"/>
+                                <exclude reference="i1T-hf-QMG"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=regular">
                             <mask key="subviews">
-                                <include reference="i1T-hf-QMG"/>
                                 <include reference="u9Q-6r-pvd"/>
                                 <include reference="RaK-Cm-TgJ"/>
+                                <include reference="i1T-hf-QMG"/>
                             </mask>
                         </variation>
                     </view>
@@ -127,7 +127,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iA2-Lj-XJF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="465.75" y="315"/>
+            <point key="canvasLocation" x="408" y="369.75"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="m1v-lo-HPf">
@@ -172,7 +172,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jcm-5e-ESv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="594" y="1003.5"/>
+            <point key="canvasLocation" x="417" y="1237.5"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -925,7 +925,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1250.25" y="249"/>
+            <point key="canvasLocation" x="1451.25" y="140.25"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="vcG-Fg-PP5">
@@ -943,7 +943,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="580-xW-dsn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-174.75" y="327"/>
+            <point key="canvasLocation" x="-471.75" y="307.5"/>
         </scene>
     </scenes>
     <resources>
