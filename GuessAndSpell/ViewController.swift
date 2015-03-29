@@ -21,6 +21,10 @@ class ViewController: UIViewController {
         super.init(coder: aDecoder)
     }
     
+    @IBAction func Back(sender: AnyObject) {
+        
+        self.navigationController?.popViewControllerAnimated(true)
+    }
  
     
     @IBAction func revealButtonTouched(sender: UIButton) {

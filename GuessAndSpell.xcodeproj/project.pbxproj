@@ -13,6 +13,7 @@
 		A547CB301AAD77BC0084F2A9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A547CB2F1AAD77BC0084F2A9 /* Images.xcassets */; };
 		A547CB331AAD77BC0084F2A9 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A547CB311AAD77BC0084F2A9 /* LaunchScreen.xib */; };
 		A547CB3F1AAD77BC0084F2A9 /* GuessAndSpellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A547CB3E1AAD77BC0084F2A9 /* GuessAndSpellTests.swift */; };
+		A5D4AD081AC7BE6200B18171 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D4AD071AC7BE6200B18171 /* RootViewController.swift */; };
 		AE57BBAF1AC496C30098E5A5 /* Level.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE57BBAE1AC496C30098E5A5 /* Level.swift */; };
 		AE57BBB31AC4972D0098E5A5 /* PictureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE57BBB21AC4972D0098E5A5 /* PictureView.swift */; };
 		AE57BBB51AC497490098E5A5 /* TileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE57BBB41AC497490098E5A5 /* TileView.swift */; };
@@ -43,6 +44,7 @@
 		A547CB381AAD77BC0084F2A9 /* GuessAndSpellTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GuessAndSpellTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A547CB3D1AAD77BC0084F2A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A547CB3E1AAD77BC0084F2A9 /* GuessAndSpellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessAndSpellTests.swift; sourceTree = "<group>"; };
+		A5D4AD071AC7BE6200B18171 /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RootViewController.swift; path = ../RootViewController.swift; sourceTree = "<group>"; };
 		AE57BBAE1AC496C30098E5A5 /* Level.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Level.swift; sourceTree = SOURCE_ROOT; };
 		AE57BBB21AC4972D0098E5A5 /* PictureView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PictureView.swift; sourceTree = SOURCE_ROOT; };
 		AE57BBB41AC497490098E5A5 /* TileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TileView.swift; sourceTree = SOURCE_ROOT; };
@@ -98,6 +100,7 @@
 				D6F93E9F1AC4729500BA27CF /* Controller */,
 				A547CB281AAD77BC0084F2A9 /* AppDelegate.swift */,
 				A547CB2A1AAD77BC0084F2A9 /* ViewController.swift */,
+				A5D4AD071AC7BE6200B18171 /* RootViewController.swift */,
 				A547CB2C1AAD77BC0084F2A9 /* Main.storyboard */,
 				A547CB2F1AAD77BC0084F2A9 /* Images.xcassets */,
 				A547CB311AAD77BC0084F2A9 /* LaunchScreen.xib */,
@@ -273,6 +276,7 @@
 				AE57BBBB1AC5B3470098E5A5 /* Config.swift in Sources */,
 				A547CB291AAD77BC0084F2A9 /* AppDelegate.swift in Sources */,
 				AE57BBB51AC497490098E5A5 /* TileView.swift in Sources */,
+				A5D4AD081AC7BE6200B18171 /* RootViewController.swift in Sources */,
 				AE57BBB31AC4972D0098E5A5 /* PictureView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

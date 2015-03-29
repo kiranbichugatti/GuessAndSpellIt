@@ -5,6 +5,58 @@
     </dependencies>
     <scenes>
         <!--View Controller-->
+        <scene sceneID="aUd-QT-QpF">
+            <objects>
+                <viewController id="lA7-JA-YsC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Jn3-9R-Tf9"/>
+                        <viewControllerLayoutGuide type="bottom" id="kHe-lN-VCl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="U9g-Qh-XoA">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GQ0-jA-arD">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="425" y="629" width="35" height="30"/>
+                                </variation>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="High Scores" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HCD-zR-zK5">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="332" y="61" width="383" height="74"/>
+                                </variation>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="GQ0-jA-arD"/>
+                                <exclude reference="HCD-zR-zK5"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=regular">
+                            <mask key="subviews">
+                                <include reference="GQ0-jA-arD"/>
+                                <include reference="HCD-zR-zK5"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" id="9u0-yV-f82"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="y3f-M4-nYW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="54.75" y="-318.75"/>
+        </scene>
+        <!--View Controller-->
         <scene sceneID="xPc-mI-HnS">
             <objects>
                 <viewController id="4Be-6z-cTx" sceneMemberID="viewController">
@@ -22,10 +74,34 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="435" y="310" width="98" height="110"/>
+                                    <rect key="frame" x="463" y="334" width="98" height="110"/>
                                 </variation>
                                 <connections>
                                     <segue destination="BYZ-38-t0r" kind="push" id="BVB-1E-cAM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u9Q-6r-pvd">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Rules">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="71" y="659" width="39" height="30"/>
+                                </variation>
+                                <connections>
+                                    <segue destination="jKi-fG-ULy" kind="push" id="lLB-aO-iCc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RaK-Cm-TgJ">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="HighScores">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="869" y="666" width="80" height="30"/>
+                                </variation>
+                                <connections>
+                                    <segue destination="lA7-JA-YsC" kind="push" id="Z4O-az-7iG"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -33,11 +109,15 @@
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="i1T-hf-QMG"/>
+                                <exclude reference="u9Q-6r-pvd"/>
+                                <exclude reference="RaK-Cm-TgJ"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=regular">
                             <mask key="subviews">
                                 <include reference="i1T-hf-QMG"/>
+                                <include reference="u9Q-6r-pvd"/>
+                                <include reference="RaK-Cm-TgJ"/>
                             </mask>
                         </variation>
                     </view>
@@ -47,7 +127,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iA2-Lj-XJF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="584.25" y="327"/>
+            <point key="canvasLocation" x="465.75" y="315"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="m1v-lo-HPf">
@@ -60,8 +140,33 @@
                     <view key="view" contentMode="scaleToFill" id="tTi-Bc-vNN">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CEa-Xl-0pS">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Play the Game">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="462" y="616" width="101" height="30"/>
+                                </variation>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" id="ZPi-dZ-8EE"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="CEa-Xl-0pS"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=regular">
+                            <mask key="subviews">
+                                <include reference="CEa-Xl-0pS"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <navigationItem key="navigationItem" id="Qfk-eF-aOj"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                 </viewController>
@@ -725,6 +830,18 @@
                                     <rect key="frame" x="259" y="8" width="158" height="31"/>
                                 </variation>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OgZ-8x-9FW">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="662" y="390" width="35" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="Back:" destination="BYZ-38-t0r" eventType="touchUpInside" id="voR-XR-sVJ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.91362527591623277" green="1" blue="0.8726143978328198" alpha="1" colorSpace="calibratedRGB"/>
                         <variation key="default">
@@ -745,6 +862,7 @@
                                 <exclude reference="Jns-Za-kT7"/>
                                 <exclude reference="fLx-MD-hzA"/>
                                 <exclude reference="LRq-ba-NM3"/>
+                                <exclude reference="OgZ-8x-9FW"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=regular">
@@ -769,6 +887,7 @@
                                 <include reference="CBl-YK-2yL"/>
                                 <include reference="Jns-Za-kT7"/>
                                 <include reference="fLx-MD-hzA"/>
+                                <include reference="OgZ-8x-9FW"/>
                             </mask>
                         </variation>
                     </view>
@@ -811,7 +930,7 @@
         <!--Navigation Controller-->
         <scene sceneID="vcG-Fg-PP5">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ADd-BX-Vh5" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="ADd-BX-Vh5" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="oqs-xg-ukw">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -831,4 +950,7 @@
         <image name="glass_play_button" width="240" height="266"/>
         <image name="why" width="410" height="364"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="BVB-1E-cAM"/>
+    </inferredMetricsTieBreakers>
 </document>
