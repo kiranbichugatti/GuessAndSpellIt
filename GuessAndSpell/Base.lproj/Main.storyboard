@@ -13,10 +13,37 @@
                         <viewControllerLayoutGuide type="bottom" id="m44-3w-Fsv"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="E3u-h7-l9o">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i1T-hf-QMG">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" backgroundImage="glass_play_button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="435" y="310" width="98" height="110"/>
+                                </variation>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="push" id="BVB-1E-cAM"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="i1T-hf-QMG"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=regular">
+                            <mask key="subviews">
+                                <include reference="i1T-hf-QMG"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="Phx-4p-3OD"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iA2-Lj-XJF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -31,9 +58,12 @@
                         <viewControllerLayoutGuide type="bottom" id="1WU-eW-O2y"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="tTi-Bc-vNN">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jcm-5e-ESv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -742,6 +772,9 @@
                             </mask>
                         </variation>
                     </view>
+                    <navigationItem key="navigationItem" id="gbC-ve-uqZ"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                     <connections>
                         <outlet property="theImageView" destination="yWL-ie-dKg" id="Pev-t1-t07"/>
                         <outletCollection property="theRevealButtons" destination="T6K-RY-UtH" collectionClass="NSMutableArray" id="pAt-q5-29N"/>
@@ -773,7 +806,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1198.5" y="339.75"/>
+            <point key="canvasLocation" x="1250.25" y="249"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="vcG-Fg-PP5">
@@ -795,6 +828,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="glass_play_button" width="240" height="266"/>
         <image name="why" width="410" height="364"/>
     </resources>
 </document>
