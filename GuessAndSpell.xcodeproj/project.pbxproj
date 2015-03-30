@@ -20,6 +20,7 @@
 		AE57BBB71AC497790098E5A5 /* GameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE57BBB61AC497790098E5A5 /* GameController.swift */; };
 		AE57BBB91AC498DF0098E5A5 /* Level2.plist in Resources */ = {isa = PBXBuildFile; fileRef = AE57BBB81AC498DF0098E5A5 /* Level2.plist */; };
 		AE57BBBB1AC5B3470098E5A5 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE57BBBA1AC5B3470098E5A5 /* Config.swift */; };
+		D65494F61AC9E53B00F26A78 /* TargetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65494F51AC9E53B00F26A78 /* TargetView.swift */; };
 		D6F93E9E1AC4690400BA27CF /* Level1.plist in Resources */ = {isa = PBXBuildFile; fileRef = D6F93E9D1AC4690400BA27CF /* Level1.plist */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +52,7 @@
 		AE57BBB61AC497790098E5A5 /* GameController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameController.swift; sourceTree = "<group>"; };
 		AE57BBB81AC498DF0098E5A5 /* Level2.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Level2.plist; sourceTree = SOURCE_ROOT; };
 		AE57BBBA1AC5B3470098E5A5 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		D65494F51AC9E53B00F26A78 /* TargetView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TargetView.swift; sourceTree = SOURCE_ROOT; };
 		D6F93E9D1AC4690400BA27CF /* Level1.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Level1.plist; path = ../Level1.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -155,6 +157,7 @@
 			children = (
 				AE57BBB21AC4972D0098E5A5 /* PictureView.swift */,
 				AE57BBB41AC497490098E5A5 /* TileView.swift */,
+				D65494F51AC9E53B00F26A78 /* TargetView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -278,6 +281,7 @@
 				AE57BBB51AC497490098E5A5 /* TileView.swift in Sources */,
 				A5D4AD081AC7BE6200B18171 /* RootViewController.swift in Sources */,
 				AE57BBB31AC4972D0098E5A5 /* PictureView.swift in Sources */,
+				D65494F61AC9E53B00F26A78 /* TargetView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

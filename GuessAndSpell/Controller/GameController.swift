@@ -11,14 +11,17 @@ import QuartzCore
 
 import UIKit
 
-class GameController {
+class GameController: TileDragDelegateProtocol {
     
     var gameView: UIView!
     var level: Level!
     private var tiles: [TileView] = []
+    private var targets: [TargetView] = []
     private var puzzlesDatasource = [String]()
     
+    
     init() {
+        
     }
     
     
@@ -49,10 +52,25 @@ class GameController {
         let tileSide = TileSideLength
         
         //get the left margin for first tile
-        var xOffset = (ScreenWidth - CGFloat(puzzleWordLength) * (tileSide + TileMargin)) / 2.0
+        var xOffset = (ScreenWidth - CGFloat(puzzleWordLength) * (tileSide + TileMargin)) / 5.0
         
         //adjust for tile center (instead of the tile's origin)
         xOffset += tileSide / 2.0
+        
+        
+        // initialize the target list
+         targets = []
+        
+        //create targets
+        for(index,letter) in enumerate(puzzleWord) {
+            if letter != " " {
+                let target = TargetView(letter: letter, sideLength: tileSide)
+                target.center = CGPointMake(xOffset + CGFloat(index)*(tileSide + TileMargin), ScreenHeight/4*3.2)
+                
+                gameView.addSubview(target)
+                targets.append(target)
+            }
+        }
         
         //1 initialize tile list
         tiles = []
@@ -82,7 +100,9 @@ class GameController {
                // println("\(tile)")
                 tile.center = CGPointMake(xOffset + CGFloat(index)*(tileSide + TileMargin), ScreenHeight/4*3.6)
                 
-                //6
+                //6 supply the drag delegate to tiles
+                tile.dragDelegate = self
+                
                 gameView.addSubview(tile)
                 tiles.append(tile)
             }
@@ -95,12 +115,26 @@ class GameController {
                 // println("\(tile)")
                 tile.center = CGPointMake(xOffset + CGFloat(index)*(tileSide + TileMargin), ScreenHeight/4*3.9)
                 
-                //6
+                //6 supply the drag delegate to tiles
+                
+                tile.dragDelegate = self
+                
                 gameView.addSubview(tile)
                 tiles.append(tile)
             }
         }
    }
+    
+    func tileView(tileView: TileView, didDragToPoint point: CGPoint) {
+        var targetView: TargetView?
+        for tv in targets {
+            if CGRectContainsPoint(tv.frame, point) && !tv.isMatched {
+                targetView = tv
+                break
+            }
+        }
+    }
+
     
     
     func shuffle(puzzleWord: String)-> NSString {
@@ -148,6 +182,9 @@ class GameController {
     }
     
     
+    
+    
+    //the image is not getting displayed, need to ask prof
     func populatePuzzleImage(theImageView: UIView, imageurl: String) {
         
         if let url = NSURL(string: imageurl) {

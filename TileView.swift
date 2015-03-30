@@ -9,10 +9,21 @@
 import Foundation
 import UIKit
 
+protocol TileDragDelegateProtocol {
+    func tileView(tileView:TileView,didDragToPoint:CGPoint)
+    
+}
+
 class TileView:UIImageView {
     
     var letter:Character
     var sideLength:CGFloat
+    
+    var isMatched : Bool = false
+    private var xOffset: CGFloat = 0.0
+    private var yOffset: CGFloat = 0.0
+    
+    var dragDelegate:TileDragDelegateProtocol?
     
     init(letter:Character) {
         self.letter = letter
@@ -35,11 +46,29 @@ class TileView:UIImageView {
         letterLabel.text = String(letter).uppercaseString
         letterLabel.font = UIFont(name: "Verdana-Bold", size: 100.0*scale)
         self.addSubview(letterLabel)
+        
+        self.userInteractionEnabled = true
     }
 
     required init(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
+    //Dragging option is provided for the tiles
+    override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
+        let point = touches.anyObject()!.locationInView(self.superview)
+        xOffset = point.x - self.center.x
+        yOffset = point.y - self.center.y
+    }
     
+    override func touchesMoved(touches: NSSet, withEvent event: UIEvent) {
+        let point = touches.anyObject()!.locationInView(self.superview)
+        self.center = CGPointMake(point.x - xOffset, point.y - yOffset)
+    }
+    override func touchesEnded(touches: NSSet, withEvent event: UIEvent) {
+          self.touchesMoved(touches, withEvent: event)
+        dragDelegate?.tileView(self, didDragToPoint: self.center)
+    }
+    
+
 }
