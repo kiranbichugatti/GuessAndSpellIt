@@ -61,17 +61,41 @@ class GameController {
         
         var shuffledPuzzleWord : String = shuffle(puzzleWord)
         
+        //Split the shuffled string into half
         
-        //3 create tiles
+        let len = countElements(shuffledPuzzleWord)
+        let halfLEn = len/2
         
-        for (index, letter) in enumerate(shuffledPuzzleWord) {
-            //3
+        let halfOfString = advance(shuffledPuzzleWord.startIndex, halfLEn)
+       
+        let firstWord = shuffledPuzzleWord.substringWithRange(Range<String.Index>(start:advance(shuffledPuzzleWord.startIndex, 0),end: advance(shuffledPuzzleWord.startIndex,halfLEn)))
+        
+        let secondWord = shuffledPuzzleWord.substringFromIndex(halfOfString)
+        
+        
+        //4 create tiles
+        
+        for (index, letter) in enumerate(firstWord) {
+            //5
             if letter != " " {
                 let tile = TileView(letter: letter)
                // println("\(tile)")
-                tile.center = CGPointMake(xOffset + CGFloat(index)*(tileSide + TileMargin), ScreenHeight/4*3)
+                tile.center = CGPointMake(xOffset + CGFloat(index)*(tileSide + TileMargin), ScreenHeight/4*3.6)
                 
-                //4
+                //6
+                gameView.addSubview(tile)
+                tiles.append(tile)
+            }
+        }
+        
+        for (index, letter) in enumerate(secondWord) {
+            //5
+            if letter != " " {
+                let tile = TileView(letter: letter)
+                // println("\(tile)")
+                tile.center = CGPointMake(xOffset + CGFloat(index)*(tileSide + TileMargin), ScreenHeight/4*3.9)
+                
+                //6
                 gameView.addSubview(tile)
                 tiles.append(tile)
             }
