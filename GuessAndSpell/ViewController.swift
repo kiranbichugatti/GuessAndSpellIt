@@ -30,7 +30,9 @@ class ViewController: UIViewController {
     @IBAction func revealButtonTouched(sender: UIButton) {
         
         let buttonIndex : Int = find(theRevealButtons,sender)!
-        println("the button index is \(buttonIndex)")
+        //println("the button index is \(buttonIndex)")
+        
+        //keep the count of number of blocks removed! TBD
         
         theRevealButtons[buttonIndex].removeFromSuperview()
         
@@ -38,6 +40,10 @@ class ViewController: UIViewController {
     
     //create a function to pick a new game which should have new image, username, userscore
     
+    func StartNewGame() {
+        
+        
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,7 +51,7 @@ class ViewController: UIViewController {
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "background.png")!)
         
         //this should be done dynamically
-        theImageView.layer.contents = UIImage(named: "chair.jpg")?.CGImage
+       // theImageView.layer.contents = UIImage(named: "chair.jpg")?.CGImage
         theImageView.layer.cornerRadius = 8.0
         theImageView.clipsToBounds = true
         
@@ -54,10 +60,12 @@ class ViewController: UIViewController {
         self.view.addSubview(gameView)
         controller.gameView = gameView
         
-        let level2 = Level(levelNumber: 2)
-        println("anagrams: \(level2.puzzles)")
-        controller.level = level2
-        controller.DrawRandomPuzzles()
+        //need to get the level by checking some parameter and change it to level1 or level2
+        
+        let level = Level(levelNumber: 2)
+       // println("anagrams: \(level.puzzles)")
+        controller.level = level
+        controller.DrawRandomPuzzles(theImageView,choosenLevel: level)
     }
     
     

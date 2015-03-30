@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ADd-BX-Vh5">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="13F1066" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ADd-BX-Vh5">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -13,6 +13,7 @@
                         <viewControllerLayoutGuide type="bottom" id="kHe-lN-VCl"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="U9g-Qh-XoA">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="High Scores" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HCD-zR-zK5">
@@ -65,7 +66,7 @@
                         <viewControllerLayoutGuide type="bottom" id="m44-3w-Fsv"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="E3u-h7-l9o">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u9Q-6r-pvd">
@@ -138,7 +139,7 @@
                         <viewControllerLayoutGuide type="bottom" id="1WU-eW-O2y"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="tTi-Bc-vNN">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CEa-Xl-0pS">
@@ -183,7 +184,7 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" opaque="NO" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yWL-ie-dKg">
@@ -382,22 +383,6 @@
                                             <action selector="revealButtonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fX8-PH-wES"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DG6-v8-HYK">
-                                        <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                        <color key="backgroundColor" red="0.60000002384185791" green="0.40000000596046448" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
-                                        <state key="normal" backgroundImage="why">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <variation key="widthClass=regular" fixedFrame="YES">
-                                            <rect key="frame" x="212" y="178" width="101" height="85"/>
-                                        </variation>
-                                        <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                            <rect key="frame" x="215" y="181" width="105" height="89"/>
-                                        </variation>
-                                        <connections>
-                                            <action selector="revealButtonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hK9-g3-Sn4"/>
-                                        </connections>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IY9-n1-jL9">
                                         <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                         <color key="backgroundColor" red="0.60000002384185791" green="0.40000000596046448" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
@@ -492,22 +477,6 @@
                                         </variation>
                                         <connections>
                                             <action selector="revealButtonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wvq-TJ-L0s"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FVF-sw-ynN">
-                                        <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                        <color key="backgroundColor" red="0.60000002384185791" green="0.40000000596046448" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
-                                        <state key="normal" backgroundImage="why">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <variation key="widthClass=regular" fixedFrame="YES">
-                                            <rect key="frame" x="418" y="263" width="101" height="85"/>
-                                        </variation>
-                                        <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                            <rect key="frame" x="427" y="271" width="105" height="89"/>
-                                        </variation>
-                                        <connections>
-                                            <action selector="revealButtonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Z2w-Je-MWo"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cub-YF-6Vh">
@@ -621,14 +590,12 @@
                                         <exclude reference="2iy-YN-Qja"/>
                                         <exclude reference="lGL-8i-XFZ"/>
                                         <exclude reference="dF6-Zv-z0c"/>
-                                        <exclude reference="DG6-v8-HYK"/>
                                         <exclude reference="IY9-n1-jL9"/>
                                         <exclude reference="o6X-Mm-hlx"/>
                                         <exclude reference="ODd-Sz-EVp"/>
                                         <exclude reference="PjT-ix-4kN"/>
                                         <exclude reference="Cyt-Vx-ih6"/>
                                         <exclude reference="mGq-6X-A0P"/>
-                                        <exclude reference="FVF-sw-ynN"/>
                                         <exclude reference="Cub-YF-6Vh"/>
                                         <exclude reference="lyg-Gp-fAN"/>
                                         <exclude reference="2iS-1F-HG7"/>
@@ -654,14 +621,12 @@
                                         <include reference="2iy-YN-Qja"/>
                                         <include reference="lGL-8i-XFZ"/>
                                         <include reference="dF6-Zv-z0c"/>
-                                        <include reference="DG6-v8-HYK"/>
                                         <include reference="IY9-n1-jL9"/>
                                         <include reference="o6X-Mm-hlx"/>
                                         <include reference="ODd-Sz-EVp"/>
                                         <include reference="PjT-ix-4kN"/>
                                         <include reference="Cyt-Vx-ih6"/>
                                         <include reference="mGq-6X-A0P"/>
-                                        <include reference="FVF-sw-ynN"/>
                                         <include reference="Cub-YF-6Vh"/>
                                         <include reference="lyg-Gp-fAN"/>
                                         <include reference="2iS-1F-HG7"/>
@@ -842,6 +807,38 @@
                                     <action selector="Back:" destination="BYZ-38-t0r" eventType="touchUpInside" id="voR-XR-sVJ"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FVF-sw-ynN">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="0.60000002384185791" green="0.40000000596046448" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" backgroundImage="why">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="418" y="263" width="101" height="85"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="639" y="470" width="105" height="89"/>
+                                </variation>
+                                <connections>
+                                    <action selector="revealButtonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Z2w-Je-MWo"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DG6-v8-HYK">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="0.60000002384185791" green="0.40000000596046448" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" backgroundImage="why">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="212" y="178" width="101" height="85"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="509" y="540" width="105" height="89"/>
+                                </variation>
+                                <connections>
+                                    <action selector="revealButtonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hK9-g3-Sn4"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.91362527591623277" green="1" blue="0.8726143978328198" alpha="1" colorSpace="calibratedRGB"/>
                         <variation key="default">
@@ -863,6 +860,8 @@
                                 <exclude reference="fLx-MD-hzA"/>
                                 <exclude reference="LRq-ba-NM3"/>
                                 <exclude reference="OgZ-8x-9FW"/>
+                                <exclude reference="FVF-sw-ynN"/>
+                                <exclude reference="DG6-v8-HYK"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=regular">
@@ -888,6 +887,8 @@
                                 <include reference="Jns-Za-kT7"/>
                                 <include reference="fLx-MD-hzA"/>
                                 <include reference="OgZ-8x-9FW"/>
+                                <include reference="FVF-sw-ynN"/>
+                                <include reference="DG6-v8-HYK"/>
                             </mask>
                         </variation>
                     </view>
@@ -908,10 +909,8 @@
                         <outletCollection property="theRevealButtons" destination="5ZI-kn-d9g" collectionClass="NSMutableArray" id="PT3-yO-vka"/>
                         <outletCollection property="theRevealButtons" destination="o6X-Mm-hlx" collectionClass="NSMutableArray" id="wWc-yG-qkQ"/>
                         <outletCollection property="theRevealButtons" destination="IY9-n1-jL9" collectionClass="NSMutableArray" id="MOC-Vq-1yj"/>
-                        <outletCollection property="theRevealButtons" destination="DG6-v8-HYK" collectionClass="NSMutableArray" id="U8S-y6-gdY"/>
                         <outletCollection property="theRevealButtons" destination="dF6-Zv-z0c" collectionClass="NSMutableArray" id="ueV-wR-v21"/>
                         <outletCollection property="theRevealButtons" destination="lGL-8i-XFZ" collectionClass="NSMutableArray" id="EQx-xq-YWS"/>
-                        <outletCollection property="theRevealButtons" destination="FVF-sw-ynN" collectionClass="NSMutableArray" id="sr8-sj-HYg"/>
                         <outletCollection property="theRevealButtons" destination="mGq-6X-A0P" collectionClass="NSMutableArray" id="hDt-Eh-eik"/>
                         <outletCollection property="theRevealButtons" destination="Cyt-Vx-ih6" collectionClass="NSMutableArray" id="4vA-Vp-BPS"/>
                         <outletCollection property="theRevealButtons" destination="PjT-ix-4kN" collectionClass="NSMutableArray" id="oXP-Xa-2Zc"/>
@@ -921,6 +920,8 @@
                         <outletCollection property="theRevealButtons" destination="h19-k7-hEj" collectionClass="NSMutableArray" id="Wmz-Ry-E7k"/>
                         <outletCollection property="theRevealButtons" destination="lyg-Gp-fAN" collectionClass="NSMutableArray" id="hvc-ju-F96"/>
                         <outletCollection property="theRevealButtons" destination="Cub-YF-6Vh" collectionClass="NSMutableArray" id="res-j0-Ayh"/>
+                        <outletCollection property="theRevealButtons" destination="FVF-sw-ynN" collectionClass="NSMutableArray" id="sr8-sj-HYg"/>
+                        <outletCollection property="theRevealButtons" destination="DG6-v8-HYK" collectionClass="NSMutableArray" id="U8S-y6-gdY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -936,6 +937,7 @@
                         <viewControllerLayoutGuide type="bottom" id="jUQ-J1-AeW"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="UbH-yp-wl5">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="omb-fH-o8q">
@@ -994,6 +996,7 @@
                         <viewControllerLayoutGuide type="bottom" id="Jqz-hQ-Poe"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="t92-M3-s6Y">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P2G-NJ-4Nf">

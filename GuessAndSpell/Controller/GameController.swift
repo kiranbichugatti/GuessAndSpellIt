@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import QuartzCore
 
 import UIKit
 
@@ -15,11 +16,14 @@ class GameController {
     var gameView: UIView!
     var level: Level!
     private var tiles: [TileView] = []
+    private var puzzlesDatasource = [String]()
     
     init() {
     }
     
-    func DrawRandomPuzzles () {
+    
+    
+    func DrawRandomPuzzles (theImageView: UIView, choosenLevel: Level) {
         //1
         assert(level.puzzles.count > 0, "no level loaded")
         
@@ -28,12 +32,16 @@ class GameController {
         let puzzlePair = level.puzzles[randomIndex]
         
         //3
+        let puzzleImage = puzzlePair[0] as String
+        
+        populatePuzzleImage(theImageView, imageurl: puzzleImage)
         let puzzleWord = puzzlePair[1] as String
         
         //4
         let puzzleWordLength = countElements(puzzleWord)
         
         //5
+        println("Image \(puzzleImage)")
         println("phrase1[\(puzzleWordLength)]: \(puzzleWord)")
         
         //calculate the tile size
@@ -49,12 +57,18 @@ class GameController {
         //1 initialize tile list
         tiles = []
         
-        //2 create tiles
-        for (index, letter) in enumerate(puzzleWord) {
+        //2 create random letters
+        
+        var shuffledPuzzleWord : String = shuffle(puzzleWord)
+        
+        
+        //3 create tiles
+        
+        for (index, letter) in enumerate(shuffledPuzzleWord) {
             //3
             if letter != " " {
                 let tile = TileView(letter: letter)
-                println("\(tile)")
+               // println("\(tile)")
                 tile.center = CGPointMake(xOffset + CGFloat(index)*(tileSide + TileMargin), ScreenHeight/4*3)
                 
                 //4
@@ -62,6 +76,73 @@ class GameController {
                 tiles.append(tile)
             }
         }
+   }
+    
+    
+    func shuffle(puzzleWord: String)-> NSString {
         
+        var puzzleLetters = randomStringWithLength(5)
+        
+        var selectedword = puzzleWord+puzzleLetters
+        var newWord = selectedword.capitalizedString
+        
+        var shuffledWord: String = ""
+         println("new word \(newWord)")
+    
+        while countElements(newWord) > 0 {
+            
+            // Get the random index
+            var length = countElements(newWord)
+            var position = Int(arc4random_uniform(UInt32(length)))
+            
+            // Get the character at that random index
+            var subString = newWord[advance(newWord.startIndex, position)]
+            // Add the character to the shuffledWord string
+            shuffledWord.append(subString)
+            // Remove the character from the original selectedWord string
+            newWord.removeAtIndex(advance(newWord.startIndex, position))
+         }
+        println("shuffled word \(shuffledWord)")
+
+        
+        return shuffledWord
+    }
+    
+    func randomStringWithLength (len : Int) -> NSString {
+        
+        let letters : NSString = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+        
+        var randomString : NSMutableString = NSMutableString(capacity: len)
+        
+        for (var i=0; i < len; i++){
+            var length = UInt32 (letters.length)
+            var rand = arc4random_uniform(length)
+            randomString.appendFormat("%C", letters.characterAtIndex(Int(rand)))
+        }
+        
+        return randomString
+    }
+    
+    
+    func populatePuzzleImage(theImageView: UIView, imageurl: String) {
+        
+        if let url = NSURL(string: imageurl) {
+            if let data = NSData(contentsOfURL: url){
+                println("inside image data0 \(data)")
+                
+                let image = UIImage(data: data)
+               
+                theImageView.layer.contents = UIImage(data: data)?.CGImage
+                
+                //theImageView.contentMode = UIViewContentMode.ScaleAspectFit
+                
+                //theImageView.layer.contents =  UIImage(data: data)?.CGImage // returns blank, need to ask professor
+                
+            }
+        }
     }
 }
+
+
+
+
