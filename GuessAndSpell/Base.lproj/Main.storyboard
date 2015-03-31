@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="13F1066" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ADd-BX-Vh5">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ADd-BX-Vh5">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -22,7 +22,7 @@
                                 <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="332" y="61" width="383" height="74"/>
+                                    <rect key="frame" x="193" y="81" width="383" height="74"/>
                                 </variation>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GQ0-jA-arD">
@@ -31,7 +31,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="495" y="650" width="35" height="30"/>
+                                    <rect key="frame" x="367" y="673" width="35" height="30"/>
                                 </variation>
                             </button>
                         </subviews>
@@ -50,12 +50,12 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" id="9u0-yV-f82"/>
-                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y3f-M4-nYW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1300.5" y="-645"/>
+            <point key="canvasLocation" x="1265.25" y="-696"/>
         </scene>
         <!--Root View Controller-->
         <scene sceneID="xPc-mI-HnS">
@@ -75,22 +75,10 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="71" y="659" width="39" height="30"/>
+                                    <rect key="frame" x="136" y="568" width="39" height="30"/>
                                 </variation>
                                 <connections>
                                     <segue destination="jKi-fG-ULy" kind="push" id="lLB-aO-iCc"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RaK-Cm-TgJ">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="HighScores">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="869" y="666" width="80" height="30"/>
-                                </variation>
-                                <connections>
-                                    <segue destination="lA7-JA-YsC" kind="push" id="Z4O-az-7iG"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i1T-hf-QMG">
@@ -99,10 +87,22 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="463" y="335" width="98" height="110"/>
+                                    <rect key="frame" x="355" y="337" width="98" height="110"/>
                                 </variation>
                                 <connections>
                                     <segue destination="NU9-9e-qS0" kind="push" id="Q2T-Qg-ges"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RaK-Cm-TgJ">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="HighScores">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="626" y="568" width="80" height="30"/>
+                                </variation>
+                                <connections>
+                                    <segue destination="lA7-JA-YsC" kind="push" id="Z4O-az-7iG"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -110,20 +110,20 @@
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="u9Q-6r-pvd"/>
-                                <exclude reference="RaK-Cm-TgJ"/>
                                 <exclude reference="i1T-hf-QMG"/>
+                                <exclude reference="RaK-Cm-TgJ"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=regular">
                             <mask key="subviews">
                                 <include reference="u9Q-6r-pvd"/>
-                                <include reference="RaK-Cm-TgJ"/>
                                 <include reference="i1T-hf-QMG"/>
+                                <include reference="RaK-Cm-TgJ"/>
                             </mask>
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" id="Phx-4p-3OD"/>
-                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iA2-Lj-XJF" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -168,7 +168,7 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" id="Qfk-eF-aOj"/>
-                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jcm-5e-ESv" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -809,7 +809,7 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" id="gbC-ve-uqZ"/>
-                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                     <connections>
                         <outlet property="theImageView" destination="yWL-ie-dKg" id="Pev-t1-t07"/>
@@ -862,7 +862,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="396" y="424" width="95" height="30"/>
+                                    <rect key="frame" x="337" y="430" width="95" height="30"/>
                                 </variation>
                                 <connections>
                                     <segue destination="BYZ-38-t0r" kind="push" id="go3-3p-0Z4"/>
@@ -874,7 +874,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="383" y="618" width="121" height="30"/>
+                                    <rect key="frame" x="324" y="624" width="121" height="30"/>
                                 </variation>
                                 <connections>
                                     <segue destination="aBz-MA-5kN" kind="push" id="U00-R8-w7k"/>
@@ -896,17 +896,17 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" id="PXR-W4-2z3"/>
-                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fPE-7u-K5x" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1352.25" y="902.25"/>
         </scene>
-        <!--View Controller-->
+        <!--User View Controller-->
         <scene sceneID="yMU-wd-h8Z">
             <objects>
-                <viewController id="aBz-MA-5kN" sceneMemberID="viewController">
+                <viewController id="aBz-MA-5kN" customClass="UserViewController" customModule="GuessAndSpell" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="VwD-ji-1mi"/>
                         <viewControllerLayoutGuide type="bottom" id="Jqz-hQ-Poe"/>
@@ -921,7 +921,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="290" y="299" width="83" height="45"/>
+                                    <rect key="frame" x="196" y="299" width="83" height="45"/>
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Profile Pic" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7cD-Af-fLX">
@@ -930,7 +930,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="290" y="419" width="78" height="21"/>
+                                    <rect key="frame" x="196" y="419" width="78" height="21"/>
                                 </variation>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VKX-HE-Dju">
@@ -938,13 +938,13 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="516" y="307" width="178" height="30"/>
+                                    <rect key="frame" x="398" y="307" width="178" height="30"/>
                                 </variation>
                             </textField>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FBP-j4-Udr">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="485" y="366" width="240" height="128"/>
+                                    <rect key="frame" x="345" y="363" width="311" height="149"/>
                                 </variation>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zK3-LX-fha">
@@ -953,8 +953,11 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="579" y="541" width="53" height="30"/>
+                                    <rect key="frame" x="492" y="539" width="53" height="30"/>
                                 </variation>
+                                <connections>
+                                    <action selector="ChoosePic:" destination="aBz-MA-5kN" eventType="touchUpInside" id="1nK-Xl-WJD"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -978,6 +981,12 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" id="Xj1-Rw-bhO"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                    <connections>
+                        <outlet property="ProPic" destination="FBP-j4-Udr" id="Th8-Vr-fEe"/>
+                        <outlet property="UserName" destination="VKX-HE-Dju" id="EWe-6X-jCL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8tm-dv-tSK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
