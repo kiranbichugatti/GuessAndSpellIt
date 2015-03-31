@@ -39,6 +39,11 @@ class UserViewController: UIViewController, UIImagePickerControllerDelegate,UINa
     }
     
     
+    @IBAction func SaveUser(sender: UIButton) {
+        
+        self.navigationController?.popViewControllerAnimated(true)
+        
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
