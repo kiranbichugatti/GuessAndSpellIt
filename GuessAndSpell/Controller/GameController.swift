@@ -26,7 +26,7 @@ class GameController: TileDragDelegateProtocol {
     
     
     
-    func DrawRandomPuzzles (theImageView: UIView, choosenLevel: Level) {
+    func DrawRandomPuzzles (theImageView: UIImageView, choosenLevel: Level) {
         //1
         assert(level.puzzles.count > 0, "no level loaded")
         
@@ -181,13 +181,12 @@ class GameController: TileDragDelegateProtocol {
         return randomString
     }
     
-    
-    
-    
-    //the image is not getting displayed, need to ask prof
-    func populatePuzzleImage(theImageView: UIView, imageurl: String) {
+
+    func populatePuzzleImage(theImageView: UIImageView, imageurl: String) {
         
-        if let url = NSURL(string: imageurl) {
+        theImageView.image = UIImage(named: imageurl)
+        
+       /* if let url = NSURL(string: imageurl) {
             if let data = NSData(contentsOfURL: url){
                 println("inside image data0 \(data)")
                 
@@ -200,7 +199,7 @@ class GameController: TileDragDelegateProtocol {
                 //theImageView.layer.contents =  UIImage(data: data)?.CGImage // returns blank, need to ask professor
                 
             }
-        }
+        } */
     }
 }
 

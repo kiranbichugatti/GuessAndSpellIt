@@ -13,7 +13,10 @@ class ViewController: UIViewController {
     
     private var controller:GameController
     
-    @IBOutlet weak var theImageView: UIView!
+    
+    
+    @IBOutlet weak var thebackgroundImage: UIImageView!
+    
     @IBOutlet var theRevealButtons: [UIButton]!
     
     required init(coder aDecoder: NSCoder) {
@@ -52,8 +55,8 @@ class ViewController: UIViewController {
         
         //this should be done dynamically
        // theImageView.layer.contents = UIImage(named: "chair.jpg")?.CGImage
-        theImageView.layer.cornerRadius = 8.0
-        theImageView.clipsToBounds = true
+        thebackgroundImage.layer.cornerRadius = 8.0
+        thebackgroundImage.clipsToBounds = true
         
         //add one layer for all game elements
         let gameView = UIView(frame: CGRectMake(0, 0, ScreenWidth, ScreenHeight))
@@ -65,7 +68,7 @@ class ViewController: UIViewController {
         let level = Level(levelNumber: 2)
        // println("anagrams: \(level.puzzles)")
         controller.level = level
-        controller.DrawRandomPuzzles(theImageView,choosenLevel: level)
+        controller.DrawRandomPuzzles(thebackgroundImage,choosenLevel: level)
     }
     
     
