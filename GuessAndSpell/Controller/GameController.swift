@@ -18,12 +18,12 @@ class GameController: TileDragDelegateProtocol {
     private var tiles: [TileView] = []
     private var targets: [TargetView] = []
     private var puzzlesDatasource = [String]()
+    private var data:GameData
     
     
     init() {
-        
+        self.data = GameData()
     }
-    
     
     
     func DrawRandomPuzzles (theImageView: UIImageView, choosenLevel: Level) {
@@ -201,6 +201,25 @@ class GameController: TileDragDelegateProtocol {
             }
         } */
     }
+    
+    //these functions are for hints record
+    func revealBlock(){
+        data.revealHintLeft -= 1
+    }
+    
+    func getCorrectLetter(){
+        data.correctLetterHintLeft -= 1
+    }
+    
+    func getRidOfBadLetter(){
+        data.badLetterHintLeft -= 1
+    }
+    
+    //if success
+    func getBonus(){
+        data.points += level.points
+    }
+    
 }
 
 

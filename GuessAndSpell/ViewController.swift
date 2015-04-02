@@ -38,6 +38,7 @@ class ViewController: UIViewController {
         //keep the count of number of blocks removed! TBD
         
         theRevealButtons[buttonIndex].removeFromSuperview()
+        controller.revealBlock()
         
     }
     
