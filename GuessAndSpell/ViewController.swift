@@ -49,6 +49,21 @@ class ViewController: UIViewController {
         
     }
     
+    //we need this to update the reveal info and hints.
+    func updateGUI(){
+        if (controller.isMatched){
+            //remove all the buttons on the image, we can add some effect later
+            for button in theRevealButtons {
+                button.removeFromSuperview()
+            }
+        }
+        
+        //update hints view
+        
+        //update reveals left text
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.

@@ -15,6 +15,8 @@ class GameController: TileDragDelegateProtocol {
     
     var gameView: UIView!
     var level: Level!
+    var isMatched = false
+    
     private var tiles: [TileView] = []
     private var targets: [TargetView] = []
     private var puzzlesDatasource = [String]()
@@ -205,6 +207,10 @@ class GameController: TileDragDelegateProtocol {
     //these functions are for hints record
     func revealBlock(){
         data.revealHintLeft -= 1
+    }
+    
+    func getMoreReveal(){
+        data.revealHintLeft += 1
     }
     
     func getCorrectLetter(){
