@@ -25,6 +25,7 @@ class GameController: TileDragDelegateProtocol {
     private var puzzlesDatasource = [String]()
     private var data:GameData
     private var filled : Int = 0
+    private var selectedTileView:[TileView] = []
  
     init() {
         self.data = GameData()
@@ -209,11 +210,10 @@ class GameController: TileDragDelegateProtocol {
             
             println("filled \(targets.count)")
             
-                for lett in targets {
-                    
-                    self.placeTile(tileView, targetView: targetView!)
-                    
-                    
+            self.placeTile(tileView, targetView: targetView!)
+            
+            for lett in targets {
+                
                     if foundTargetView.letter != tileView.letter {
                         
                         checked--
@@ -236,7 +236,7 @@ class GameController: TileDragDelegateProtocol {
                 }
         }
         
-        if (filled == targets.count) {
+        /*if (filled == targets.count) {
              println("inside filled == target.count \(filled)")
             if(checked == targets.count) {
                 println("checked \(checked)")
@@ -245,10 +245,14 @@ class GameController: TileDragDelegateProtocol {
             } else {
                 println("checked  else \(checked)")
                 tileView.image = UIImage(named: "redblock")
-                isMatched = true
+                isMatched = false
             }
-        }
+        }*/
         
+        if filled == targets.count{
+            println("get called \(filled)")
+            updateColor()
+        }
          /* //check for finished game
                // checkForSuccess()
                 
@@ -292,6 +296,8 @@ class GameController: TileDragDelegateProtocol {
 
 
     func placeTile(tileView: TileView, targetView: TargetView) {
+        selectedTileView.append(tileView)
+        
         //1
         targetView.isMatched = true
         tileView.isMatched = true
@@ -313,6 +319,8 @@ class GameController: TileDragDelegateProtocol {
                 (value:Bool) in
                 targetView.hidden = true
         })
+        
+        
         filled++
     }
     
@@ -356,6 +364,18 @@ class GameController: TileDragDelegateProtocol {
     //if success
     func getBonus(){
         data.points += level.points
+    }
+    
+    func updateColor(){
+        
+        var color = "redblock"
+        if isMatched {
+            color="greenblock"
+        }
+        for lett in selectedTileView {
+            
+            lett.image = UIImage(named: color)
+        }
     }
     
 }
