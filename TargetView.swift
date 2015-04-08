@@ -20,7 +20,9 @@ class TargetView: UIImageView {
     }
     
     init(letter:Character, sideLength:CGFloat) {
+        
         self.letter = letter
+        println("target view letter \(self.letter)")
         
         let image = UIImage(named: "slot")!
         super.init(image:image)

@@ -70,5 +70,9 @@ class TileView:UIImageView {
         dragDelegate?.tileView(self, didDragToPoint: self.center)
     }
     
+    override func touchesCancelled(touches: NSSet!, withEvent event: UIEvent!) {
+        self.center = CGPointMake(xOffset, yOffset)
+    }
+    
 
 }

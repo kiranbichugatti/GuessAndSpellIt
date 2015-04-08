@@ -250,15 +250,6 @@
                                     <rect key="frame" x="653" y="294" width="91" height="30"/>
                                 </variation>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 reveal remaining!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fLx-MD-hzA">
-                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="631" y="442" width="144" height="21"/>
-                                </variation>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="   Guess &amp; Spell It" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LRq-ba-NM3">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -709,6 +700,15 @@
                                     <action selector="revealButtonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="v1p-sM-hKj"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 reveal remaining!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fLx-MD-hzA">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="119" y="525" width="220" height="31"/>
+                                </variation>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.91362527591623277" green="1" blue="0.8726143978328198" alpha="1" colorSpace="calibratedRGB"/>
                         <variation key="default">
@@ -720,7 +720,6 @@
                                 <exclude reference="S7T-cQ-sPt"/>
                                 <exclude reference="1ZJ-Hm-T4K"/>
                                 <exclude reference="Bpa-4Q-Jrj"/>
-                                <exclude reference="fLx-MD-hzA"/>
                                 <exclude reference="LRq-ba-NM3"/>
                                 <exclude reference="OgZ-8x-9FW"/>
                                 <exclude reference="pNV-3p-tkc"/>
@@ -749,6 +748,7 @@
                                 <exclude reference="4cc-qx-kH7"/>
                                 <exclude reference="h19-k7-hEj"/>
                                 <exclude reference="7If-ps-KcO"/>
+                                <exclude reference="fLx-MD-hzA"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=regular">
@@ -765,7 +765,6 @@
                         </variation>
                         <variation key="heightClass=regular-widthClass=regular">
                             <mask key="subviews">
-                                <include reference="fLx-MD-hzA"/>
                                 <include reference="OgZ-8x-9FW"/>
                                 <include reference="pNV-3p-tkc"/>
                                 <include reference="FVF-sw-ynN"/>
@@ -793,6 +792,7 @@
                                 <include reference="4cc-qx-kH7"/>
                                 <include reference="h19-k7-hEj"/>
                                 <include reference="7If-ps-KcO"/>
+                                <include reference="fLx-MD-hzA"/>
                             </mask>
                         </variation>
                     </view>
@@ -800,6 +800,8 @@
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                     <connections>
+                        <outlet property="remainingReveal" destination="fLx-MD-hzA" id="bzi-Pn-u2H"/>
+                        <outlet property="scoreLabel" destination="Wtj-ru-SAJ" id="Se0-R7-OeO"/>
                         <outlet property="thebackgroundImage" destination="pNV-3p-tkc" id="c4d-Vf-fIg"/>
                         <outletCollection property="theRevealButtons" destination="FVF-sw-ynN" collectionClass="NSMutableArray" id="sr8-sj-HYg"/>
                         <outletCollection property="theRevealButtons" destination="DG6-v8-HYK" collectionClass="NSMutableArray" id="U8S-y6-gdY"/>

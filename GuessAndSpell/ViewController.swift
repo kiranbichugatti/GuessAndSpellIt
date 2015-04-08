@@ -12,15 +12,30 @@ import QuartzCore
 class ViewController: UIViewController {
     
     private var controller:GameController
+    var gamedata: GameData
     
     
+    @IBOutlet weak var scoreLabel: UILabel!
     
     @IBOutlet weak var thebackgroundImage: UIImageView!
     
+    @IBOutlet weak var remainingReveal: UILabel!
+    
     @IBOutlet var theRevealButtons: [UIButton]!
+    
+    
+    
+    var selectCount: Int = 0 {
+        didSet {
+            println("remaining reveal : \(5 - selectCount)")
+            
+            remainingReveal.text = "Remaining Reveal: \(5 - selectCount)"
+        }
+    }
     
     required init(coder aDecoder: NSCoder) {
         controller = GameController()
+        gamedata = GameData()
         super.init(coder: aDecoder)
     }
     
@@ -37,7 +52,12 @@ class ViewController: UIViewController {
         
         //keep the count of number of blocks removed! TBD
         
-        theRevealButtons[buttonIndex].removeFromSuperview()
+        if (selectCount < 5) {
+            theRevealButtons[buttonIndex].removeFromSuperview()
+          
+            selectCount++
+        }
+      
         controller.revealBlock()
         
     }
@@ -51,12 +71,14 @@ class ViewController: UIViewController {
     
     //we need this to update the reveal info and hints.
     func updateGUI(){
+        println("matched? \(controller.isMatched)")
         if (controller.isMatched){
             //remove all the buttons on the image, we can add some effect later
             for button in theRevealButtons {
                 button.removeFromSuperview()
             }
         }
+     //   scoreLabel.text = "Score: " + gamedata.points
         
         //update hints view
         
@@ -85,6 +107,8 @@ class ViewController: UIViewController {
        // println("anagrams: \(level.puzzles)")
         controller.level = level
         controller.DrawRandomPuzzles(thebackgroundImage,choosenLevel: level)
+        
+        updateGUI()
     }
     
     

@@ -8,6 +8,7 @@
 
 import Foundation
 import QuartzCore
+//import AVFoundation
 
 import UIKit
 
@@ -16,15 +17,19 @@ class GameController: TileDragDelegateProtocol {
     var gameView: UIView!
     var level: Level!
     var isMatched = false
+    var gameover = false
+   // var viewcontrollerInstance: ViewController
     
     private var tiles: [TileView] = []
     private var targets: [TargetView] = []
     private var puzzlesDatasource = [String]()
     private var data:GameData
-    
-    
+    private var filled : Int = 0
+ 
     init() {
         self.data = GameData()
+       // self.viewcontrollerInstance = ViewController()
+        
     }
     
     
@@ -102,6 +107,8 @@ class GameController: TileDragDelegateProtocol {
                // println("\(tile)")
                 tile.center = CGPointMake(xOffset + CGFloat(index)*(tileSide + TileMargin), ScreenHeight/4*3.6)
                 
+                println("tile location is \(tile.center)")
+                
                 //6 supply the drag delegate to tiles
                 tile.dragDelegate = self
                 
@@ -125,29 +132,21 @@ class GameController: TileDragDelegateProtocol {
                 tiles.append(tile)
             }
         }
+        
    }
-    
-    func tileView(tileView: TileView, didDragToPoint point: CGPoint) {
-        var targetView: TargetView?
-        for tv in targets {
-            if CGRectContainsPoint(tv.frame, point) && !tv.isMatched {
-                targetView = tv
-                break
-            }
-        }
-    }
-
     
     
     func shuffle(puzzleWord: String)-> NSString {
         
-        var puzzleLetters = randomStringWithLength(5)
+        var len = countElements(puzzleWord)
+        var puzzleLetters = randomStringWithLength(14 - len)
         
-        var selectedword = puzzleWord+puzzleLetters
-        var newWord = selectedword.capitalizedString
+        var newWord = puzzleWord+puzzleLetters
+        
+        println("selected word \(newWord)")
+       // var newWord = selectedword.capitalizedString
         
         var shuffledWord: String = ""
-         println("new word \(newWord)")
     
         while countElements(newWord) > 0 {
             
@@ -171,6 +170,7 @@ class GameController: TileDragDelegateProtocol {
     func randomStringWithLength (len : Int) -> NSString {
         
         let letters : NSString = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+        println("random letters \(letters)")
         
         var randomString : NSMutableString = NSMutableString(capacity: len)
         
@@ -187,22 +187,154 @@ class GameController: TileDragDelegateProtocol {
     func populatePuzzleImage(theImageView: UIImageView, imageurl: String) {
         
         theImageView.image = UIImage(named: imageurl)
-        
-       /* if let url = NSURL(string: imageurl) {
-            if let data = NSData(contentsOfURL: url){
-                println("inside image data0 \(data)")
-                
-                let image = UIImage(data: data)
-               
-                theImageView.layer.contents = UIImage(data: data)?.CGImage
-                
-                //theImageView.contentMode = UIViewContentMode.ScaleAspectFit
-                
-                //theImageView.layer.contents =  UIImage(data: data)?.CGImage // returns blank, need to ask professor
-                
-            }
-        } */
+      
     }
+    
+    func tileView(tileView: TileView, didDragToPoint point: CGPoint) {
+        
+        var checked = 0
+        
+       
+        var targetView: TargetView?
+        for tv in targets {
+            if CGRectContainsPoint(tv.frame, point) && !tv.isMatched {
+                targetView = tv
+                break
+            }
+        }
+        
+        //1 check if target was found
+        if let foundTargetView = targetView {
+            
+            
+            println("filled \(targets.count)")
+            
+                for lett in targets {
+                    
+                    self.placeTile(tileView, targetView: targetView!)
+                    
+                    
+                    if foundTargetView.letter != tileView.letter {
+                        
+                        checked--
+                    
+                        println("targetView unmatched:\(foundTargetView.letter)")
+                    
+                        tileView.userInteractionEnabled = true
+                    
+                       //tileView.image = UIImage(named: "greenblock")!
+                       isMatched = false
+                    
+                    //check for finished game
+                  // self.checkForSuccess(tileView)
+                    
+                     } else {
+                         println("targeview matched \(tileView.letter)")
+                        checked++
+                        isMatched = true
+                    }
+                }
+        }
+        
+        if (filled == targets.count) {
+             println("inside filled == target.count \(filled)")
+            if(checked == targets.count) {
+                println("checked \(checked)")
+                tileView.image = UIImage(named: "greenblock")
+                isMatched = true
+            } else {
+                println("checked  else \(checked)")
+                tileView.image = UIImage(named: "redblock")
+                isMatched = true
+            }
+        }
+        
+         /* //check for finished game
+               // checkForSuccess()
+                
+                //give points
+                data.points += level.points
+        
+                var tileviewCGpointCoordinate = tileView.center
+                println("tile view coordinates\(tileviewCGpointCoordinate)")
+               
+                tileView.userInteractionEnabled = true
+                
+                tileView.image = UIImage(named: "redblock")!
+
+                //2  Animate
+                
+                UIView.animateWithDuration(0.75,
+                    delay:0.00,
+                    options:UIViewAnimationOptions.CurveEaseOut,
+                    animations: {
+                        
+                        //the below code will bring the tile slightly below the target view
+                        tileView.center = CGPointMake(tileView.center.x + CGFloat(randomNumber(minX:0, maxX:50)-30),
+                            tileView.center.y + CGFloat(randomNumber(minX:20, maxX:80)))
+                        
+                        //Need to find the exact origin of the tileview so, we can send the tile back to its original location not working now.
+                        //tileView.center = CGPointMake(tilevieworiginX,tilevieworiginY)
+                        
+                          tileView.transform = CGAffineTransformIdentity
+                        tileView.alpha = 1
+                    },
+                    completion: {
+                        (value:Bool) in
+                        tileView.hidden = false
+                })
+                
+        
+                //4. take out points
+                data.points -= level.points/2 */
+               
+    }
+
+
+    func placeTile(tileView: TileView, targetView: TargetView) {
+        //1
+        targetView.isMatched = true
+        tileView.isMatched = true
+        
+        //2
+        tileView.userInteractionEnabled = false
+        
+        //3
+        UIView.animateWithDuration(0.35,
+            delay:0.00,
+            options:UIViewAnimationOptions.CurveEaseOut,
+            //4
+            animations:{
+                tileView.center = targetView.center
+                tileView.transform = CGAffineTransformIdentity
+            },
+            //5
+            completion: {
+                (value:Bool) in
+                targetView.hidden = true
+        })
+        filled++
+    }
+    
+    func checkForSuccess(tileview:TileView) {
+        for targetView in targets {
+            //no success, bail out
+            if !targetView.isMatched {
+               return
+            }
+        }
+        gameover = true
+        
+        //call text to voice
+        
+       // viewcontrollerInstance.updateGUI()
+        println("Game Over!")
+        
+        
+    }
+    
+
+    
     
     //these functions are for hints record
     func revealBlock(){
