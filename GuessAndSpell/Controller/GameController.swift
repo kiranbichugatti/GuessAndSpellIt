@@ -213,7 +213,9 @@ class GameController: TileDragDelegateProtocol {
             
             self.placeTile(tileView, targetView: targetView!)
             
-            for lett in targets {
+            if filled==targets.count {
+                for lett in targets {
+                    checked++
                 
                     if foundTargetView.letter != tileView.letter {
                         
@@ -222,25 +224,23 @@ class GameController: TileDragDelegateProtocol {
                         println("targetView unmatched:\(foundTargetView.letter)")
                     
                         tileView.userInteractionEnabled = true
-                    
                      
                        isMatched = false
-                    
                    
-                     } else {
-                         println("targeview matched \(tileView.letter)")
-                        checked++
-                        isMatched = true
-                        
-                        puzzleSucceed()
-                    }
+                     }
                 }
-        }
-     
-        if filled == targets.count{
-            updateColor()
-        }
+                if checked == targets.count {
+                    isMatched = true
+                    println("checked is:\(checked)")
+                    puzzleSucceed()
+                }
+                updateColor()
             }
+            
+        }
+        
+        
+        }
 
 
     func placeTile(tileView: TileView, targetView: TargetView) {
@@ -329,6 +329,7 @@ class GameController: TileDragDelegateProtocol {
     func puzzleSucceed(){
         //bring up the modal
         data.points+=level.points
+        println("filled is: \(filled)")
         tempLevelData.removeObjectAtIndex(currentIndex)
     }
     
