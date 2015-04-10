@@ -5,44 +5,54 @@
 	<key>puzzles</key>
 	<array>
 		<array>
-			<string>chair.jpg</string>
-			<string>CHAIR</string>
+			<string>sofa.jpg</string>
+			<string>SOFA</string>
+			<integer>0</integer>
 		</array>
 		<array>
 			<string>chair.jpg</string>
 			<string>CHAIR</string>
+			<integer>0</integer>
+		</array>
+		<array>
+			<string>dora.jpg</string>
+			<string>DORA</string>
+			<integer>0</integer>
+		</array>
+		<array>
+			<string>train.jpg</string>
+			<string>TRAIN</string>
+			<integer>0</integer>
+		</array>
+		<array>
+			<string>train.jpg</string>
+			<string>TRAIN</string>
+			<integer>0</integer>
+		</array>
+		<array>
+			<string>green.jpg</string>
+			<string>GREEN</string>
+			<integer>0</integer>
 		</array>
 		<array>
 			<string>chair.jpg</string>
 			<string>CHAIR</string>
+			<integer>0</integer>
 		</array>
 		<array>
-			<string>chair.jpg</string>
-			<string>CHAIR</string>
+			<string>train.jpg</string>
+			<string>TRAIN</string>
+			<integer>0</integer>
 		</array>
 		<array>
-			<string>chair.jpg</string>
-			<string>CHAIR</string>
+			<string>sofa.jpg</string>
+			<string>SOFA</string>
+			<integer>0</integer>
 		</array>
 		<array>
-			<string>chair.jpg</string>
-			<string>CHAIR</string>
-		</array>
-		<array>
-			<string>chair.jpg</string>
-			<string>CHAIR</string>
-		</array>
-		<array>
-			<string>chair.jpg</string>
-			<string>CHAIR</string>
-		</array>
-		<array>
-			<string>chair.jpg</string>
-			<string>CHAIR</string>
-		</array>
-		<array>
-			<string>chair.jpg</string>
-			<string>CHAIR</string>
+			<string>dora.jpg</string>
+			<string>DORA</string>
+			<integer>0</integer>
 		</array>
 	</array>
 	<key>timeToSolve</key>

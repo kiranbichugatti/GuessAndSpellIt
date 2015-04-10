@@ -106,6 +106,7 @@ class ViewController: UIViewController {
         let level = Level(levelNumber: 2)
        // println("anagrams: \(level.puzzles)")
         controller.level = level
+        controller.tempLevelData = NSMutableArray(array: level.puzzles)
         controller.DrawRandomPuzzles(thebackgroundImage,choosenLevel: level)
         
         updateGUI()

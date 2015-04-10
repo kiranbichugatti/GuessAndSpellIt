@@ -26,11 +26,14 @@ class GameController: TileDragDelegateProtocol {
     private var data:GameData
     private var filled : Int = 0
     private var selectedTileView:[TileView] = []
+    private var currentIndex : Int!
+    var tempLevelData : NSMutableArray!
+
+    
  
     init() {
         self.data = GameData()
-       // self.viewcontrollerInstance = ViewController()
-        
+        //initialize a mutable array which is the same as the level.puzzle array
     }
     
     
@@ -38,9 +41,10 @@ class GameController: TileDragDelegateProtocol {
         //1
         assert(level.puzzles.count > 0, "no level loaded")
         
-        //2
-        let randomIndex = randomNumber(minX:0, maxX:UInt32(level.puzzles.count-1))
-        let puzzlePair = level.puzzles[randomIndex]
+        currentIndex = randomNumber(minX:0, maxX:UInt32(tempLevelData.count-1))
+        
+        let puzzlePair = tempLevelData[currentIndex] as NSMutableArray
+        
         
         //3
         let puzzleImage = puzzlePair[0] as String
@@ -207,9 +211,6 @@ class GameController: TileDragDelegateProtocol {
         //1 check if target was found
         if let foundTargetView = targetView {
             
-            
-            println("filled \(targets.count)")
-            
             self.placeTile(tileView, targetView: targetView!)
             
             for lett in targets {
@@ -222,77 +223,24 @@ class GameController: TileDragDelegateProtocol {
                     
                         tileView.userInteractionEnabled = true
                     
-                       //tileView.image = UIImage(named: "greenblock")!
+                     
                        isMatched = false
                     
-                    //check for finished game
-                  // self.checkForSuccess(tileView)
-                    
+                   
                      } else {
                          println("targeview matched \(tileView.letter)")
                         checked++
                         isMatched = true
+                        
+                        puzzleSucceed()
                     }
                 }
         }
-        
-        /*if (filled == targets.count) {
-             println("inside filled == target.count \(filled)")
-            if(checked == targets.count) {
-                println("checked \(checked)")
-                tileView.image = UIImage(named: "greenblock")
-                isMatched = true
-            } else {
-                println("checked  else \(checked)")
-                tileView.image = UIImage(named: "redblock")
-                isMatched = false
-            }
-        }*/
-        
+     
         if filled == targets.count{
-            println("get called \(filled)")
             updateColor()
         }
-         /* //check for finished game
-               // checkForSuccess()
-                
-                //give points
-                data.points += level.points
-        
-                var tileviewCGpointCoordinate = tileView.center
-                println("tile view coordinates\(tileviewCGpointCoordinate)")
-               
-                tileView.userInteractionEnabled = true
-                
-                tileView.image = UIImage(named: "redblock")!
-
-                //2  Animate
-                
-                UIView.animateWithDuration(0.75,
-                    delay:0.00,
-                    options:UIViewAnimationOptions.CurveEaseOut,
-                    animations: {
-                        
-                        //the below code will bring the tile slightly below the target view
-                        tileView.center = CGPointMake(tileView.center.x + CGFloat(randomNumber(minX:0, maxX:50)-30),
-                            tileView.center.y + CGFloat(randomNumber(minX:20, maxX:80)))
-                        
-                        //Need to find the exact origin of the tileview so, we can send the tile back to its original location not working now.
-                        //tileView.center = CGPointMake(tilevieworiginX,tilevieworiginY)
-                        
-                          tileView.transform = CGAffineTransformIdentity
-                        tileView.alpha = 1
-                    },
-                    completion: {
-                        (value:Bool) in
-                        tileView.hidden = false
-                })
-                
-        
-                //4. take out points
-                data.points -= level.points/2 */
-               
-    }
+            }
 
 
     func placeTile(tileView: TileView, targetView: TargetView) {
@@ -376,6 +324,16 @@ class GameController: TileDragDelegateProtocol {
             
             lett.image = UIImage(named: color)
         }
+    }
+    
+    func puzzleSucceed(){
+        //bring up the modal
+        data.points+=level.points
+        tempLevelData.removeObjectAtIndex(currentIndex)
+    }
+    
+    func levelFinished() {
+        //start new game, go to next level
     }
     
 }
