@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     
     private var controller:GameController
     var gamedata: GameData
+   
     
     
     @IBOutlet weak var scoreLabel: UILabel!
@@ -22,7 +23,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var remainingReveal: UILabel!
     
     @IBOutlet var theRevealButtons: [UIButton]!
-    
     
     
     var selectCount: Int = 0 {
@@ -37,6 +37,17 @@ class ViewController: UIViewController {
         controller = GameController()
         gamedata = GameData()
         super.init(coder: aDecoder)
+    }
+   
+    var matched:Bool =  false {
+        didSet {
+            if controller.isMatched == true {
+                println("ismatched inside didset \(controller.isMatched)")
+                matched = controller.isMatched
+                updateGUI()
+            }
+            
+        }
     }
     
     @IBAction func Back(sender: AnyObject) {
@@ -71,8 +82,8 @@ class ViewController: UIViewController {
     
     //we need this to update the reveal info and hints.
     func updateGUI(){
-        println("matched? \(controller.isMatched)")
-        if (controller.isMatched){
+        println("matched? \(matched)")
+        if (matched){
             //remove all the buttons on the image, we can add some effect later
             for button in theRevealButtons {
                 button.removeFromSuperview()

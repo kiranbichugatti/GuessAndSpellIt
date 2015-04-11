@@ -13,6 +13,12 @@ import UIKit
 let ScreenWidth = UIScreen.mainScreen().bounds.size.width
 let ScreenHeight = UIScreen.mainScreen().bounds.size.height
 let TileMargin: CGFloat = 10.0
+
+// sound effects
+let SoundDing = "ding.mp3"
+let SoundWrong = "wrong.m4a"
+let SoundWin = "win.mp3"
+let AudioEffectFiles = [SoundDing, SoundWrong, SoundWin]
 let TileSideLength: CGFloat = 50.0
 
 

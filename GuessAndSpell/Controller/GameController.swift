@@ -8,7 +8,7 @@
 
 import Foundation
 import QuartzCore
-//import AVFoundation
+import AVFoundation
 
 import UIKit
 
@@ -18,7 +18,7 @@ class GameController: TileDragDelegateProtocol {
     var level: Level!
     var isMatched = false
     var gameover = false
-   // var viewcontrollerInstance: ViewController
+  //  var viewcontrollerInstance: ViewController
     
     private var tiles: [TileView] = []
     private var targets: [TargetView] = []
@@ -28,11 +28,16 @@ class GameController: TileDragDelegateProtocol {
     private var selectedTileView:[TileView] = []
     private var currentIndex : Int!
     var tempLevelData : NSMutableArray!
+    private var audioController:  AudioController
+    private var PWord: String = ""
 
     
  
     init() {
         self.data = GameData()
+        self.audioController = AudioController()
+        audioController.preloadAudioEffects(AudioEffectFiles)
+        
         //initialize a mutable array which is the same as the level.puzzle array
     }
     
@@ -51,6 +56,7 @@ class GameController: TileDragDelegateProtocol {
         
         populatePuzzleImage(theImageView, imageurl: puzzleImage)
         let puzzleWord = puzzlePair[1] as String
+        PWord = puzzleWord
         
         //4
         let puzzleWordLength = countElements(puzzleWord)
@@ -270,26 +276,8 @@ class GameController: TileDragDelegateProtocol {
         
         
         filled++
+         audioController.playEffect(SoundDing)
     }
-    
-    func checkForSuccess(tileview:TileView) {
-        for targetView in targets {
-            //no success, bail out
-            if !targetView.isMatched {
-               return
-            }
-        }
-        gameover = true
-        
-        //call text to voice
-        
-       // viewcontrollerInstance.updateGUI()
-        println("Game Over!")
-        
-        
-    }
-    
-
     
     
     //these functions are for hints record
@@ -319,6 +307,9 @@ class GameController: TileDragDelegateProtocol {
         var color = "redblock"
         if isMatched {
             color="greenblock"
+           audioController.playEffect(SoundWin)
+        } else {
+            audioController.playEffect(SoundWrong)
         }
         for lett in selectedTileView {
             
@@ -327,10 +318,23 @@ class GameController: TileDragDelegateProtocol {
     }
     
     func puzzleSucceed(){
+        
+        //text to voice 
+        
+        let synth = AVSpeechSynthesizer()
+        var puzzleWordToUtter = AVSpeechUtterance(string: PWord)
+        
         //bring up the modal
         data.points+=level.points
         println("filled is: \(filled)")
         tempLevelData.removeObjectAtIndex(currentIndex)
+        audioController.playEffect(SoundDing)
+        
+        puzzleWordToUtter.rate = 0.1
+        synth.speakUtterance(puzzleWordToUtter)
+        
+        //remove all the blocks, call updateGUI function
+        
     }
     
     func levelFinished() {
