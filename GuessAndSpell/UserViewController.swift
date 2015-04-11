@@ -14,6 +14,7 @@ class UserViewController: UIViewController, UIImagePickerControllerDelegate,UINa
     @IBOutlet weak var UserName: UITextField!
     
     
+    
     @IBOutlet weak var ProPic: UIImageView!
     
     
@@ -39,10 +40,17 @@ class UserViewController: UIViewController, UIImagePickerControllerDelegate,UINa
     }
     
     
+
+    
+    
+    
     @IBAction func SaveUser(sender: UIButton) {
         
-        self.navigationController?.popViewControllerAnimated(true)
+        var usr : User?
+        usr = User()
+        usr?.userInput(UserName.text, image: ProPic.image!)
         
+        self.navigationController?.popViewControllerAnimated(true)
     }
 
     override func viewDidLoad() {

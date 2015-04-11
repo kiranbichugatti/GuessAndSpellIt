@@ -15,6 +15,7 @@
 		A547CB3F1AAD77BC0084F2A9 /* GuessAndSpellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A547CB3E1AAD77BC0084F2A9 /* GuessAndSpellTests.swift */; };
 		A57BEBC71ACA5939008EFAB0 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57BEBC61ACA5939008EFAB0 /* UserViewController.swift */; };
 		A57BEBC91ACA74CE008EFAB0 /* ListUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57BEBC81ACA74CE008EFAB0 /* ListUserViewController.swift */; };
+		A589B59D1AD9BE0B00F1A395 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A589B59C1AD9BE0B00F1A395 /* User.swift */; };
 		A5D4AD081AC7BE6200B18171 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D4AD071AC7BE6200B18171 /* RootViewController.swift */; };
 		AE57BBAF1AC496C30098E5A5 /* Level.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE57BBAE1AC496C30098E5A5 /* Level.swift */; };
 		AE57BBB31AC4972D0098E5A5 /* PictureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE57BBB21AC4972D0098E5A5 /* PictureView.swift */; };
@@ -55,6 +56,7 @@
 		A547CB3E1AAD77BC0084F2A9 /* GuessAndSpellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessAndSpellTests.swift; sourceTree = "<group>"; };
 		A57BEBC61ACA5939008EFAB0 /* UserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		A57BEBC81ACA74CE008EFAB0 /* ListUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListUserViewController.swift; sourceTree = "<group>"; };
+		A589B59C1AD9BE0B00F1A395 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		A5D4AD071AC7BE6200B18171 /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RootViewController.swift; path = ../RootViewController.swift; sourceTree = "<group>"; };
 		AE57BBAE1AC496C30098E5A5 /* Level.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Level.swift; sourceTree = SOURCE_ROOT; };
 		AE57BBB21AC4972D0098E5A5 /* PictureView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PictureView.swift; sourceTree = SOURCE_ROOT; };
@@ -120,6 +122,7 @@
 				D6F93EA21AC472A000BA27CF /* Model */,
 				D6F93E9F1AC4729500BA27CF /* Controller */,
 				A547CB281AAD77BC0084F2A9 /* AppDelegate.swift */,
+				A589B59C1AD9BE0B00F1A395 /* User.swift */,
 				A547CB2A1AAD77BC0084F2A9 /* ViewController.swift */,
 				A5D4AD071AC7BE6200B18171 /* RootViewController.swift */,
 				A547CB2C1AAD77BC0084F2A9 /* Main.storyboard */,
@@ -315,6 +318,7 @@
 				AE57BBB71AC497790098E5A5 /* GameController.swift in Sources */,
 				A547CB2B1AAD77BC0084F2A9 /* ViewController.swift in Sources */,
 				AE57BBBB1AC5B3470098E5A5 /* Config.swift in Sources */,
+				A589B59D1AD9BE0B00F1A395 /* User.swift in Sources */,
 				A547CB291AAD77BC0084F2A9 /* AppDelegate.swift in Sources */,
 				AE57BBB51AC497490098E5A5 /* TileView.swift in Sources */,
 				A57BEBC91ACA74CE008EFAB0 /* ListUserViewController.swift in Sources */,
