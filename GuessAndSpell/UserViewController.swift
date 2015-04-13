@@ -48,7 +48,7 @@ class UserViewController: UIViewController, UIImagePickerControllerDelegate,UINa
         
         var usr : User?
         usr = User()
-        usr?.userInput(UserName.text, image: ProPic.image!)
+        usr?.userInput(UserName.text, pic: ProPic.image!)
         
         self.navigationController?.popViewControllerAnimated(true)
     }

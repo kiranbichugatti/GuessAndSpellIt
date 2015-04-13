@@ -38,10 +38,21 @@ class User: NSObject {
         var users : NSMutableArray?
         users = NSMutableArray()
         if((NSUserDefaults.standardUserDefaults().objectForKey("users")) != nil){
-        users?.arrayByAddingObjectsFromArray(NSUserDefaults.standardUserDefaults().objectForKey("users") as NSArray)
+            let tempArr : NSArray  = NSUserDefaults.standardUserDefaults().objectForKey("users") as NSArray
+            users?.addObjectsFromArray(tempArr)
         }
         
-        
+//        let firstNameSortDescriptor = NSSortDescriptor(key: "score", ascending: true, selector: "localizedStandardCompare:")
+//        let sortedByAge = (users as NSArray).sortedArrayUsingDescriptors([firstNameSortDescriptor])
+//        
+////        var descriptor: NSSortDescriptor = NSSortDescriptor(key: "score", ascending: true)
+////        var sortedResults: NSMutableArray = users?.sortedArrayUsingDescriptors(descriptor)
+////        
+////        var sortedResults= users.sorted {
+////            (dictOne) -> Bool in
+////            // put your comparison logic here
+////            return dictOne["name"]! > dictTwo["name"]!
+////        }
         
         return users!
     }
