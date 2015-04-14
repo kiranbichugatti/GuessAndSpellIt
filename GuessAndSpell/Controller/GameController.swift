@@ -18,7 +18,8 @@ class GameController: TileDragDelegateProtocol {
     var level: Level!
     var isMatched = false
     var gameover = false
-  //  var viewcontrollerInstance: ViewController
+    
+    private var viewcontrollerInstance: [ViewController] = []
     
     private var tiles: [TileView] = []
     private var targets: [TargetView] = []
@@ -30,16 +31,28 @@ class GameController: TileDragDelegateProtocol {
     var tempLevelData : NSMutableArray!
     private var audioController:  AudioController
     private var PWord: String = ""
+   
 
-    
- 
+  /*  required init(coder aDecoder: NSCoder) {
+        //fatalError("init(coder:) has not been implemented")
+        self.data = GameData()
+        self.viewcontrollerInstance = ViewController(coder: aDecoder)
+        self.audioController = AudioController()
+        audioController.preloadAudioEffects(AudioEffectFiles)
+       
+    }*/
+  
+
     init() {
         self.data = GameData()
-        self.audioController = AudioController()
+      //self.viewcontrollerInstance = ViewController(coder aDecoder)
+              self.audioController = AudioController()
         audioController.preloadAudioEffects(AudioEffectFiles)
         
         //initialize a mutable array which is the same as the level.puzzle array
+       
     }
+    
     
     
     func DrawRandomPuzzles (theImageView: UIImageView, choosenLevel: Level) {
@@ -334,7 +347,7 @@ class GameController: TileDragDelegateProtocol {
         synth.speakUtterance(puzzleWordToUtter)
         
         //remove all the blocks, call updateGUI function
-        
+       // viewcontrollerInstance.
     }
     
     func levelFinished() {

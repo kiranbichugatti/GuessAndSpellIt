@@ -53,6 +53,8 @@ class TileView:UIImageView {
     required init(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+
+ 
     
     //Dragging option is provided for the tiles
     override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {

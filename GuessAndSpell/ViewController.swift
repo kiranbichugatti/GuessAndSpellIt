@@ -14,8 +14,6 @@ class ViewController: UIViewController {
     private var controller:GameController
     var gamedata: GameData
    
-    
-    
     @IBOutlet weak var scoreLabel: UILabel!
     
     @IBOutlet weak var thebackgroundImage: UIImageView!
@@ -23,6 +21,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var remainingReveal: UILabel!
     
     @IBOutlet var theRevealButtons: [UIButton]!
+    
+    var animator:UIDynamicAnimator!
+    var gravityBehavior:UIGravityBehavior!
     
     
     var selectCount: Int = 0 {
@@ -32,6 +33,7 @@ class ViewController: UIViewController {
             remainingReveal.text = "Remaining Reveal: \(5 - selectCount)"
         }
     }
+  
     
     required init(coder aDecoder: NSCoder) {
         controller = GameController()
@@ -55,20 +57,36 @@ class ViewController: UIViewController {
         self.navigationController?.popViewControllerAnimated(true)
     }
  
-    
     @IBAction func revealButtonTouched(sender: UIButton) {
         
         let buttonIndex : Int = find(theRevealButtons,sender)!
-        //println("the button index is \(buttonIndex)")
-        
-        //keep the count of number of blocks removed! TBD
-        
+        let buttonAtIndex = theRevealButtons[buttonIndex]
+        let newPoint = CGPointMake(buttonAtIndex.center.x,
+            buttonAtIndex.center.y - 70)
+
         if (selectCount < 5) {
-            theRevealButtons[buttonIndex].removeFromSuperview()
-          
+            UIView.animateWithDuration(2,
+                delay:0.01,
+                options:UIViewAnimationOptions.CurveEaseInOut,
+                animations: {
+
+                   
+                self.theRevealButtons[buttonIndex].alpha = 0
+                      buttonAtIndex.center = newPoint
+                
+                buttonAtIndex.transform  = CGAffineTransformIdentity
+                    
+                },
+                completion: {
+                    (value:Bool) in
+                     buttonAtIndex.center = newPoint
+                  //  self.theRevealButtons[buttonIndex].removeFromSuperview()
+                    
+                    
+            })
             selectCount++
         }
-      
+       
         controller.revealBlock()
         
     }
@@ -82,8 +100,8 @@ class ViewController: UIViewController {
     
     //we need this to update the reveal info and hints.
     func updateGUI(){
-        println("matched? \(matched)")
-        if (matched){
+        println("matched? \(controller.isMatched)")
+        if (controller.isMatched){
             //remove all the buttons on the image, we can add some effect later
             for button in theRevealButtons {
                 button.removeFromSuperview()
@@ -103,8 +121,7 @@ class ViewController: UIViewController {
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "background.png")!)
         
         //this should be done dynamically
-       // theImageView.layer.contents = UIImage(named: "chair.jpg")?.CGImage
-        thebackgroundImage.layer.cornerRadius = 8.0
+          thebackgroundImage.layer.cornerRadius = 8.0
         thebackgroundImage.clipsToBounds = true
         
         //add one layer for all game elements
@@ -115,15 +132,14 @@ class ViewController: UIViewController {
         //need to get the level by checking some parameter and change it to level1 or level2
         
         let level = Level(levelNumber: 2)
-       // println("anagrams: \(level.puzzles)")
+
         controller.level = level
         controller.tempLevelData = NSMutableArray(array: level.puzzles)
         controller.DrawRandomPuzzles(thebackgroundImage,choosenLevel: level)
         
         updateGUI()
     }
-    
-    
+   
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
