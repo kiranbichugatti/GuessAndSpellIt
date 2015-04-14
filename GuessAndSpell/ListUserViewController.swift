@@ -44,7 +44,7 @@ class ListUserViewController: UIViewController,UITableViewDataSource,UITableView
         
         var score : NSNumber?
         score = dict?.objectForKey("score") as? NSNumber
-        let s:String = String(format:"%@,         %@",name!, score!)
+        let s:String = String(format:"%@ ----------------------------->   %@",name!, score!)
         cell_?.textLabel?.text = s;
         cell_?.imageView?.image = decodedimage;
         
@@ -64,24 +64,29 @@ class ListUserViewController: UIViewController,UITableViewDataSource,UITableView
         let dict = delegate?.presentUser
         
         
-        println(delegate?.presentUser)
+        
     }
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        var tempuser = User?()
-        tempuser = User()
-        
-        users = NSArray()
-        users = tempuser?.getAllUsers()
-        
-        UserList.delegate=self;
-        UserList.dataSource = self;
-        UserList.reloadData()
         
         // Do any additional setup after loading the view.
     }
+    
+    override func viewDidAppear(animated: Bool) {
+        
+    
+    var tempuser = User?()
+    tempuser = User()
+    
+    users = NSArray()
+    users = tempuser?.getAllUsers()
+    
+    UserList.delegate=self;
+    UserList.dataSource = self;
+    UserList.reloadData()
 
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
