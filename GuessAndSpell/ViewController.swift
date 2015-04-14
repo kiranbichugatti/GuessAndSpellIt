@@ -115,7 +115,10 @@ class ViewController: UIViewController {
         if (controller.isMatched){
             //remove all the buttons on the image, we can add some effect later
             for button in theRevealButtons {
-                button.removeFromSuperview()
+                //button.removeFromSuperview()
+                UIView.animateWithDuration(0.75, delay:0.5, options: nil, animations: {
+                button.alpha = 0
+                },completion:nil)
             }
         }
      //   scoreLabel.text = "Score: " + gamedata.points
