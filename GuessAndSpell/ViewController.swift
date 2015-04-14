@@ -56,51 +56,62 @@ class ViewController: UIViewController {
         
         self.navigationController?.popViewControllerAnimated(true)
     }
- 
+    
+    
     @IBAction func revealButtonTouched(sender: UIButton) {
+        println("into the touched")
         
         let buttonIndex : Int = find(theRevealButtons,sender)!
         let buttonAtIndex = theRevealButtons[buttonIndex]
         let newPoint = CGPointMake(buttonAtIndex.center.x,
             buttonAtIndex.center.y - 70)
-
+        
         if (selectCount < 5) {
             UIView.animateWithDuration(2,
-                delay:0.01,
-                options:UIViewAnimationOptions.CurveEaseInOut,
-                animations: {
-
-                   
-                self.theRevealButtons[buttonIndex].alpha = 0
-                      buttonAtIndex.center = newPoint
-                
-                buttonAtIndex.transform  = CGAffineTransformIdentity
-                    
-                },
-                completion: {
-                    (value:Bool) in
-                     buttonAtIndex.center = newPoint
-                  //  self.theRevealButtons[buttonIndex].removeFromSuperview()
-                    
-                    
+            delay:0.01,
+            options:UIViewAnimationOptions.CurveEaseInOut,
+            animations: {
+            
+            
+            self.theRevealButtons[buttonIndex].alpha = 0
+            buttonAtIndex.center = newPoint
+            
+            buttonAtIndex.transform  = CGAffineTransformIdentity
+            
+            },
+            completion: {
+            (value:Bool) in
+            buttonAtIndex.center = newPoint
+            //  self.theRevealButtons[buttonIndex].removeFromSuperview()
+            
+            
             })
+            
+            /*UIView.animateWithDuration(0.75, animations:{
+                buttonAtIndex.alpha = 0
+            })*/
             selectCount++
         }
-       
-        controller.revealBlock()
         
+        controller.revealBlock()
     }
+    
     
     //create a function to pick a new game which should have new image, username, userscore
     
-    func StartNewGame() {
-        
+    func startNewLevel(whichLevel:Int) {
+        var level = Level(levelNumber: whichLevel)
+        controller.level = level
+        controller.tempLevelData = NSMutableArray(array:level.puzzles)
+        controller.DrawRandomPuzzles(thebackgroundImage,choosenLevel: level)
+    }
+    
+    func startNewPuzzle(){
         
     }
     
     //we need this to update the reveal info and hints.
     func updateGUI(){
-        println("matched? \(controller.isMatched)")
         if (controller.isMatched){
             //remove all the buttons on the image, we can add some effect later
             for button in theRevealButtons {
@@ -129,13 +140,12 @@ class ViewController: UIViewController {
         self.view.addSubview(gameView)
         controller.gameView = gameView
         
+        //set the viewController instance in gameController
+        controller.viewControllerInstance = self
+        
         //need to get the level by checking some parameter and change it to level1 or level2
         
-        let level = Level(levelNumber: 2)
-
-        controller.level = level
-        controller.tempLevelData = NSMutableArray(array: level.puzzles)
-        controller.DrawRandomPuzzles(thebackgroundImage,choosenLevel: level)
+        startNewLevel(2)
         
         updateGUI()
     }

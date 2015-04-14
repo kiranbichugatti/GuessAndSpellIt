@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Puzzles</key>
+	<array>
+		<array>
+			<string>chair.jpg</string>
+			<string>chair</string>
+		</array>
+		<array>
+			<string>train.jpg</string>
+			<string>train</string>
+		</array>
+		<array>
+			<string></string>
+			<string></string>
+		</array>
+		<array>
+			<string></string>
+			<string></string>
+		</array>
+		<array>
+			<string></string>
+			<string></string>
+		</array>
+		<array>
+			<string></string>
+			<string></string>
+		</array>
+		<array>
+			<string></string>
+			<string></string>
+		</array>
+		<array>
+			<string></string>
+			<string></string>
+		</array>
+		<array>
+			<string></string>
+			<string></string>
+		</array>
+		<array>
+			<string></string>
+			<string></string>
+		</array>
+		<array>
+			<string></string>
+			<string></string>
+		</array>
+	</array>
+	<key>timeToSolve</key>
+	<integer>250</integer>
+	<key>points</key>
+	<integer>100</integer>
+</dict>
+</plist>

@@ -117,7 +117,7 @@
 			children = (
 				D6D786181AD9AE73003CF6A2 /* Assets */,
 				AE57BBBA1AC5B3470098E5A5 /* Config.swift */,
-				D6F93EA41AC472B600BA27CF /* Levels */,
+				D6F93EA41AC472B600BA27CF /* Level */,
 				D6F93EA31AC472AE00BA27CF /* View */,
 				D6F93EA21AC472A000BA27CF /* Model */,
 				D6F93E9F1AC4729500BA27CF /* Controller */,
@@ -198,12 +198,13 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		D6F93EA41AC472B600BA27CF /* Levels */ = {
+		D6F93EA41AC472B600BA27CF /* Level */ = {
 			isa = PBXGroup;
 			children = (
 				D6F93E9D1AC4690400BA27CF /* Level1.plist */,
 				AE57BBB81AC498DF0098E5A5 /* Level2.plist */,
 			);
+			name = Level;
 			path = Levels;
 			sourceTree = "<group>";
 		};
