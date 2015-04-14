@@ -45,8 +45,8 @@ class ListUserViewController: UIViewController,UITableViewDataSource,UITableView
         var score : NSNumber?
         score = dict?.objectForKey("score") as? NSNumber
         let s:String = String(format:"%@ ----------------------------->   %@",name!, score!)
-        cell_?.textLabel?.text = s;
-        cell_?.imageView?.image = decodedimage;
+        cell_?.textLabel?.text = s
+        cell_?.imageView?.image = decodedimage
         
         return cell_!
     }

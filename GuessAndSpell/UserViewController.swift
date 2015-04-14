@@ -48,8 +48,20 @@ class UserViewController: UIViewController, UIImagePickerControllerDelegate,UINa
         
         var usr : User?
         usr = User()
-        usr?.userInput(UserName.text, pic: ProPic.image!)
+       //if (usr?.userInput(UserName.text, pic: ProPic.image!) == nil)
         
+            if(UserName.text == nil)
+        {
+            let alert = UIAlertView()
+            alert.title = "Invalid"
+            alert.message = "Please fill all the fields"
+            alert.addButtonWithTitle("OK")
+            alert.show()
+        }
+        else
+        {
+        usr?.userInput(UserName.text, pic: ProPic.image!)
+        }
         self.navigationController?.popViewControllerAnimated(true)
     }
 
