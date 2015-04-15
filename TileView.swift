@@ -9,8 +9,10 @@
 import Foundation
 import UIKit
 
+
+
 protocol TileDragDelegateProtocol {
-    func tileView(tileView:TileView,didDragToPoint:CGPoint)
+    func tileView(tileView:TileView,didDragToPoint:CGPoint, from:CGPoint)
     
 }
 
@@ -18,6 +20,7 @@ class TileView:UIImageView {
     
     var letter:Character
     var sideLength:CGFloat
+    var origin : CGPoint!
     
     var isMatched : Bool = false
     private var xOffset: CGFloat = 0.0
@@ -29,11 +32,12 @@ class TileView:UIImageView {
         self.letter = letter
         //we only need a fixed length for our tile
         self.sideLength = TileSideLength
+       
         
         let image = UIImage(named:"tile")!
         super.init(image:image)
         
-        println(image.size.width)
+        //println(image.size.width)
         
         let scale = TileSideLength / image.size.width
         self.frame = CGRect(x: 0, y: 0, width: image.size.width * scale, height: image.size.height * scale)
@@ -59,6 +63,7 @@ class TileView:UIImageView {
         let point = touches.anyObject()!.locationInView(self.superview)
         xOffset = point.x - self.center.x
         yOffset = point.y - self.center.y
+        self.origin = self.center
     }
     
     override func touchesMoved(touches: NSSet, withEvent event: UIEvent) {
@@ -66,8 +71,8 @@ class TileView:UIImageView {
         self.center = CGPointMake(point.x - xOffset, point.y - yOffset)
     }
     override func touchesEnded(touches: NSSet, withEvent event: UIEvent) {
-          self.touchesMoved(touches, withEvent: event)
-        dragDelegate?.tileView(self, didDragToPoint: self.center)
+        self.touchesMoved(touches, withEvent: event)
+        dragDelegate?.tileView(self, didDragToPoint: self.center, from:self.origin)
     }
     
     override func touchesCancelled(touches: NSSet!, withEvent event: UIEvent!) {

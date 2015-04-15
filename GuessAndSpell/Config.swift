@@ -20,6 +20,7 @@ let SoundWrong = "wrong.m4a"
 let SoundWin = "win.mp3"
 let AudioEffectFiles = [SoundDing, SoundWrong, SoundWin]
 let TileSideLength: CGFloat = 50.0
+let TargetSideLength : CGFloat = 50.0
 
 
 //Random number generator

@@ -19,15 +19,15 @@ class TargetView: UIImageView {
         fatalError("use init(letter:, sideLength:")
     }
     
-    init(letter:Character, sideLength:CGFloat) {
+    init(letter:Character) {
         
         self.letter = letter
-        println("target view letter \(self.letter)")
+        //println("target view letter \(self.letter)")
         
         let image = UIImage(named: "slot")!
         super.init(image:image)
         
-        let scale = sideLength / image.size.width
+        let scale = TargetSideLength / image.size.width
         self.frame = CGRectMake(0, 0, image.size.width * scale, image.size.height * scale)
     }
 }

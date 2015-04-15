@@ -19,6 +19,8 @@ class GameController: TileDragDelegateProtocol {
     var isMatched = false
     var gameover = false
     var viewControllerInstance: ViewController!
+    var tempLevelData : NSMutableArray!
+    var currentTileOrigin : CGPoint!
     
     private var tiles: [TileView] = []
     private var targets: [TargetView] = []
@@ -27,7 +29,6 @@ class GameController: TileDragDelegateProtocol {
     private var filled : Int = 0
     private var selectedTileView:[TileView] = []
     private var currentIndex : Int!
-    var tempLevelData : NSMutableArray!
     private var audioController:  AudioController
     private var PWord: String = ""
 
@@ -68,6 +69,7 @@ class GameController: TileDragDelegateProtocol {
         //calculate the tile size
         //let tileSide = ceil(ScreenWidth * 0.9 / CGFloat(puzzleWordLength)) - TileMargin
         let tileSide = TileSideLength
+        let targetSide = TargetSideLength
         
         //get the left margin for first tile
         var xOffset = (ScreenWidth - CGFloat(puzzleWordLength) * (tileSide + TileMargin)) / 5.0
@@ -82,8 +84,8 @@ class GameController: TileDragDelegateProtocol {
         //create targets
         for(index,letter) in enumerate(puzzleWord) {
             if letter != " " {
-                let target = TargetView(letter: letter, sideLength: tileSide)
-                target.center = CGPointMake(xOffset + CGFloat(index)*(tileSide + TileMargin), ScreenHeight/4*3.2)
+                let target = TargetView(letter: letter)
+                target.center = CGPointMake(xOffset + CGFloat(index)*(targetSide + TileMargin), ScreenHeight/4*3.2)
                 
                 gameView.addSubview(target)
                 targets.append(target)
@@ -201,14 +203,14 @@ class GameController: TileDragDelegateProtocol {
       
     }
     
-    func tileView(tileView: TileView, didDragToPoint point: CGPoint) {
+    func tileView(tileView: TileView, didDragToPoint point: CGPoint, from : CGPoint) {
         
         var checked = 0
         
        
         var targetView: TargetView?
         for tv in targets {
-            if CGRectContainsPoint(tv.frame, point) && !tv.isMatched {
+            if CGRectContainsPoint(tv.frame, point) {
                 targetView = tv
                 break
             }
@@ -243,6 +245,14 @@ class GameController: TileDragDelegateProtocol {
                 updateColor()
             }
             
+        } else {
+            //tile is not in the target, we need to bring it back to original place
+            
+            UIView.animateWithDuration(0.2, animations: {
+                
+                tileView.center = from
+                
+                }, completion: nil)
         }
         
         
@@ -339,6 +349,19 @@ class GameController: TileDragDelegateProtocol {
     
     func levelFinished() {
         //start new game, go to next level
+    }
+    
+    func moveImage(view: UIView){
+        var toPoint: CGPoint = CGPointMake(111, 921.6)
+        var fromPoint : CGPoint = view.center
+        
+        var movement = CABasicAnimation(keyPath: "movement")
+        movement.additive = true
+        movement.fromValue =  NSValue(CGPoint: fromPoint)
+        movement.toValue =  NSValue(CGPoint: toPoint)
+        movement.duration = 0.3
+        
+        view.layer.addAnimation(movement, forKey: "move")
     }
     
 }
