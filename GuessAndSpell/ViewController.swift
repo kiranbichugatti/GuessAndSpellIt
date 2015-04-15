@@ -99,7 +99,11 @@ class ViewController: UIViewController {
     
     //we need this to update the reveal info and hints.
     func updateGUI(){
+        
+        controller.updateColor()
+
         if (controller.isMatched){
+
             //remove all the buttons on the image, we can add some effect later
             for button in theRevealButtons {
                 UIView.animateWithDuration(1.0, animations:{
@@ -109,7 +113,7 @@ class ViewController: UIViewController {
             }
             //gravity = UIGravityBehavior(items: [theRevealButtons])
             //animator.addBehavior(gravity)
-
+            
             scoreLabel.text = "Score: \(controller.currentScore())"
           
             

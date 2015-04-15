@@ -31,7 +31,8 @@ class GameController: TileDragDelegateProtocol {
     private var selectedTileView:[TileView] = []
     private var currentIndex : Int!
     private var audioController:  AudioController
-    private var PWord: String = ""
+    private var puzzleWord: String = ""
+    private var selectedWord = ""
 
     
  
@@ -57,8 +58,7 @@ class GameController: TileDragDelegateProtocol {
         let puzzleImage = puzzlePair[0] as String
         
         populatePuzzleImage(theImageView, imageurl: puzzleImage)
-        let puzzleWord = puzzlePair[1] as String
-        PWord = puzzleWord
+        puzzleWord = puzzlePair[1] as String
         
         //4
         let puzzleWordLength = countElements(puzzleWord)
@@ -223,7 +223,8 @@ class GameController: TileDragDelegateProtocol {
             self.placeTile(tileView, targetView: targetView!)
             
             if filled==targets.count {
-                for lett in targets {
+                
+               /* for lett in targets {
                     checked++
                 
                     if foundTargetView.letter != tileView.letter {
@@ -235,6 +236,7 @@ class GameController: TileDragDelegateProtocol {
                         tileView.userInteractionEnabled = true
                      
                        isMatched = false
+                        break
                    
                      }
                 }
@@ -242,8 +244,17 @@ class GameController: TileDragDelegateProtocol {
                     isMatched = true
                     println("checked is:\(checked)")
                     puzzleSucceed()
+                }*/
+                if puzzleWord == selectedWord {
+                    isMatched = true
+                    puzzleSucceed()
+                } else {
+                    isMatched = false
                 }
+                
                 updateColor()
+                self.viewControllerInstance.updateGUI()
+                
             }
             
         } else {
@@ -262,13 +273,14 @@ class GameController: TileDragDelegateProtocol {
 
     func placeTile(tileView: TileView, targetView: TargetView) {
         selectedTileView.append(tileView)
+        selectedWord = selectedWord + [tileView.letter]
         
         //1
-        targetView.isMatched = true
-        tileView.isMatched = true
+        //targetView.isMatched = true
+        //tileView.isMatched = true
         
         //2
-        tileView.userInteractionEnabled = false
+        //tileView.userInteractionEnabled = false
         
         //3
         UIView.animateWithDuration(0.35,
@@ -333,7 +345,7 @@ class GameController: TileDragDelegateProtocol {
         //text to voice 
         
         let synth = AVSpeechSynthesizer()
-        var puzzleWordToUtter = AVSpeechUtterance(string: PWord)
+        var puzzleWordToUtter = AVSpeechUtterance(string: puzzleWord)
         
         //bring up the modal
         //give the bonus points
@@ -348,8 +360,7 @@ class GameController: TileDragDelegateProtocol {
         puzzleWordToUtter.rate = 0.1
         synth.speakUtterance(puzzleWordToUtter)
         
-        //remove all the blocks, call updateGUI function
-        self.viewControllerInstance.updateGUI()
+        
     }
     
     func currentScore() -> Int {
