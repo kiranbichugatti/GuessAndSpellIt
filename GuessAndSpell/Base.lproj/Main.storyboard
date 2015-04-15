@@ -55,16 +55,6 @@
                                     <segue destination="jKi-fG-ULy" kind="push" id="lLB-aO-iCc"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="i1T-hf-QMG">
-                                <rect key="frame" x="355" y="337" width="98" height="110"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" backgroundImage="glass_play_button">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="NU9-9e-qS0" kind="push" id="Q2T-Qg-ges"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="RaK-Cm-TgJ">
                                 <rect key="frame" x="626" y="568" width="80" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -75,14 +65,24 @@
                                     <segue destination="lA7-JA-YsC" kind="push" id="Z4O-az-7iG"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="W1t-ao-ncD">
-                                <rect key="frame" x="572" y="52" width="43" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="W1t-ao-ncD">
+                                <rect key="frame" x="619" y="69" width="56" height="54"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Pause">
+                                <state key="normal" title="Pause" image="pauseButton">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="pauseButton:" destination="4Be-6z-cTx" eventType="touchUpInside" id="DD4-tx-iEs"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="i1T-hf-QMG">
+                                <rect key="frame" x="335" y="332" width="98" height="110"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="glass_play_button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="NU9-9e-qS0" kind="push" id="Q2T-Qg-ges"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -94,7 +94,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iA2-Lj-XJF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="522.24000000000001" y="631.04000000000008"/>
+            <point key="canvasLocation" x="522" y="631"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="m1v-lo-HPf">
@@ -686,6 +686,7 @@
     <resources>
         <image name="background" width="1024" height="1024"/>
         <image name="glass_play_button" width="240" height="266"/>
+        <image name="pauseButton" width="200" height="200"/>
         <image name="why" width="410" height="364"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

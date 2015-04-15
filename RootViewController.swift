@@ -12,6 +12,7 @@ import AVFoundation
 class RootViewController: UIViewController {
     
     var backgroundMusicPlayer: AVAudioPlayer!
+    var togglestate = 1
     
    func playBackgroundMusic(filename: String) {
         let url = NSBundle.mainBundle().URLForResource(
@@ -35,28 +36,60 @@ class RootViewController: UIViewController {
     }
     func pauseBackgroundMusic()
     {
-        if(backgroundMusicPlayer.playing == true)
-        {
-            backgroundMusicPlayer.stop()
-            backgroundMusicPlayer.currentTime = 0
-        }
-        else
-        {
-        backgroundMusicPlayer.numberOfLoops = -1
-            backgroundMusicPlayer.prepareToPlay()
-            backgroundMusicPlayer.play()
-            
-        }
-    }
+//        if(backgroundMusicPlayer.playing == true)
+//        {
+//            backgroundMusicPlayer.stop()
+//            backgroundMusicPlayer.currentTime = 0
+//        }
+//        else
+//        {
+//        backgroundMusicPlayer.numberOfLoops = -1
+//            backgroundMusicPlayer.prepareToPlay()
+//            backgroundMusicPlayer.play()
+//            
+//        }
+        
+            }
 
+    @IBOutlet weak var background: UIImageView!
     @IBAction func pauseButton(sender: UIButton) {
-        pauseBackgroundMusic()
+//
+//        if sender.titleLabel!.text == "Pause"
+//        {
+//            sender.titleLabel!.text = "Play"
+//            backgroundMusicPlayer.stop()
+//           
+//            
+//        }
+//        else
+//        {
+//            sender.titleLabel!.text = "Pause"
+//            backgroundMusicPlayer.play()
+//        }
+//
+        //pauseBackgroundMusic()
+        if togglestate == 1 {
+            backgroundMusicPlayer.play()
+            togglestate = 2
+            sender.setImage(UIImage(named:"pauseButton.jpg"),forState:UIControlState.Normal)
+        } else {
+            backgroundMusicPlayer.pause()
+            togglestate = 1
+            sender.setImage(UIImage(named:"playButton.png"),forState:UIControlState.Normal)
+        }
+    
         
     }
 
     override func viewDidLoad() {
         
         playBackgroundMusic("titlescreen.mp3")
+        
+//        let yourImage = UIImage(named: "frontscreen.jpg")
+//        
+//        let imageview = UIImageView(image: yourImage)
+//        self.view.addSubview(imageview)
+        
         
         // Do any additional setup after loading the view.
     }
