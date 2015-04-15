@@ -18,22 +18,18 @@ class ViewController: UIViewController {
     var animator : UIDynamicAnimator
     var gameView : UIView
     var level : Level!
+
     
     @IBOutlet weak var puzzleLabel: UILabel!
     @IBOutlet weak var levelLabel: UILabel!
     @IBOutlet weak var scoreLabel: UILabel!
-    
     @IBOutlet weak var thebackgroundImage: UIImageView!
-    
     @IBOutlet weak var remainingReveal: UILabel!
-    
     @IBOutlet var theRevealButtons: [UIButton]!
     
     
     var selectCount: Int = 0 {
-        didSet {
-            println("remaining reveal : \(5 - selectCount)")
-            
+        didSet { 
             remainingReveal.text = "Remaining Reveal: \(5 - selectCount)"
         }
     }
@@ -108,8 +104,30 @@ class ViewController: UIViewController {
         
     }
     
+    //detect touch, if it's in range of target tile, bring it back to original place
+    override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
+        var touch : UITouch = touches.anyObject() as UITouch
+        let location = touch.locationInView(self.view)
+        //println("touched \(location)")
+        var i = 0
+        for coor in controller.targetViewArray {
+            var smallx = coor[0] as CGFloat
+            var smally = coor[1] as CGFloat
+            var bigx = (coor[0] + TargetSideLength ) as CGFloat
+            var bigy = (coor[1] + TargetSideLength ) as CGFloat
+
+            if (location.x > smallx) && location.x < bigx && location.y > smally && (location.y < bigy){
+                println("call function touched with index \(i)")
+                break
+            }
+            i++
+        }
+       
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         // Do any additional setup after loading the view, typically from a nib.
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "background.png")!)
         
