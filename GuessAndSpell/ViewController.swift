@@ -14,7 +14,9 @@ class ViewController: UIViewController {
     private var controller:GameController
     var gamedata: GameData
    
-    
+    var gravity : UIGravityBehavior!
+    var animator : UIDynamicAnimator
+    var gameView : UIView
     
     @IBOutlet weak var scoreLabel: UILabel!
     
@@ -36,6 +38,9 @@ class ViewController: UIViewController {
     required init(coder aDecoder: NSCoder) {
         controller = GameController()
         gamedata = GameData()
+        gameView = UIView(frame: CGRectMake(0, 0, ScreenWidth, ScreenHeight))
+        animator = UIDynamicAnimator(referenceView: gameView)
+        
         super.init(coder: aDecoder)
     }
    
@@ -68,8 +73,6 @@ class ViewController: UIViewController {
           
             selectCount++
         }
-      
-        controller.revealBlock()
         
     }
     
@@ -89,12 +92,16 @@ class ViewController: UIViewController {
     
     //we need this to update the reveal info and hints.
     func updateGUI(){
-        println("matched? \(matched)")
         if (controller.isMatched){
             //remove all the buttons on the image, we can add some effect later
             for button in theRevealButtons {
-                button.removeFromSuperview()
+                UIView.animateWithDuration(1.0, animations:{
+                    button.alpha = 0.0
+                })
+
             }
+            //gravity = UIGravityBehavior(items: [theRevealButtons])
+            //animator.addBehavior(gravity)
         }
      //   scoreLabel.text = "Score: " + gamedata.points
         
@@ -115,7 +122,7 @@ class ViewController: UIViewController {
         thebackgroundImage.clipsToBounds = true
         
         //add one layer for all game elements
-        let gameView = UIView(frame: CGRectMake(0, 0, ScreenWidth, ScreenHeight))
+        //gameView = UIView(frame: CGRectMake(0, 0, ScreenWidth, ScreenHeight))
         self.view.addSubview(gameView)
         controller.gameView = gameView
         
