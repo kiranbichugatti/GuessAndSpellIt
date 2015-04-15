@@ -64,12 +64,31 @@ class ViewController: UIViewController {
     @IBAction func revealButtonTouched(sender: UIButton) {
         
         let buttonIndex : Int = find(theRevealButtons,sender)!
-        //println("the button index is \(buttonIndex)")
-        
-        //keep the count of number of blocks removed! TBD
+        let buttonAtIndex = theRevealButtons[buttonIndex]
         
         if (selectCount < 5) {
-            theRevealButtons[buttonIndex].removeFromSuperview()
+            UIView.animateWithDuration(2,
+                delay:0.01,
+                options:UIViewAnimationOptions.CurveEaseInOut,
+                animations: {
+                    
+                    let newPoint = CGPointMake(buttonAtIndex.center.x,
+                        buttonAtIndex.center.y - 70)
+                    self.theRevealButtons[buttonIndex].alpha = 0
+                    buttonAtIndex.center = newPoint
+                    
+                    buttonAtIndex.transform  = CGAffineTransformIdentity
+                    
+                },
+                completion: {
+                    (value:Bool) in
+                    self.theRevealButtons[buttonIndex].removeFromSuperview()
+                    
+                    
+            })
+
+            
+      //      theRevealButtons[buttonIndex].removeFromSuperview()
           
             selectCount++
         }
