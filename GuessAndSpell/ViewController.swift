@@ -75,15 +75,22 @@ class ViewController: UIViewController {
     
     //create a function to pick a new game which should have new image, username, userscore
     
-    func StartNewGame() {
+    func startNewPuzzle() {
         
         
+    }
+    
+    func startNewLevel(levelNum : Int) {
+        var level = Level(levelNumber:levelNum)
+        controller.level = level
+        controller.tempLevelData = NSMutableArray(array: level.puzzles)
+        controller.DrawRandomPuzzles(thebackgroundImage,choosenLevel: level)
     }
     
     //we need this to update the reveal info and hints.
     func updateGUI(){
         println("matched? \(matched)")
-        if (matched){
+        if (controller.isMatched){
             //remove all the buttons on the image, we can add some effect later
             for button in theRevealButtons {
                 button.removeFromSuperview()
@@ -112,13 +119,14 @@ class ViewController: UIViewController {
         self.view.addSubview(gameView)
         controller.gameView = gameView
         
+        //pass a reference of viewController to gameController
+        controller.viewControllerInstance = self
+        
         //need to get the level by checking some parameter and change it to level1 or level2
         
-        let level = Level(levelNumber: 2)
+        startNewLevel(2)
        // println("anagrams: \(level.puzzles)")
-        controller.level = level
-        controller.tempLevelData = NSMutableArray(array: level.puzzles)
-        controller.DrawRandomPuzzles(thebackgroundImage,choosenLevel: level)
+        
         
         updateGUI()
     }

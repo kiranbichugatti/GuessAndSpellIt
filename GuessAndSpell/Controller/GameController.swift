@@ -18,7 +18,7 @@ class GameController: TileDragDelegateProtocol {
     var level: Level!
     var isMatched = false
     var gameover = false
-  //  var viewcontrollerInstance: ViewController
+    var viewControllerInstance: ViewController!
     
     private var tiles: [TileView] = []
     private var targets: [TargetView] = []
@@ -334,7 +334,7 @@ class GameController: TileDragDelegateProtocol {
         synth.speakUtterance(puzzleWordToUtter)
         
         //remove all the blocks, call updateGUI function
-        
+        self.viewControllerInstance.updateGUI()
     }
     
     func levelFinished() {
