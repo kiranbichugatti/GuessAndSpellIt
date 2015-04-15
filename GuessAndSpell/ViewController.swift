@@ -17,7 +17,10 @@ class ViewController: UIViewController {
     var gravity : UIGravityBehavior!
     var animator : UIDynamicAnimator
     var gameView : UIView
+    var level : Level!
     
+    @IBOutlet weak var puzzleLabel: UILabel!
+    @IBOutlet weak var levelLabel: UILabel!
     @IBOutlet weak var scoreLabel: UILabel!
     
     @IBOutlet weak var thebackgroundImage: UIImageView!
@@ -38,22 +41,14 @@ class ViewController: UIViewController {
     required init(coder aDecoder: NSCoder) {
         controller = GameController()
         gamedata = GameData()
+        
         gameView = UIView(frame: CGRectMake(0, 0, ScreenWidth, ScreenHeight))
         animator = UIDynamicAnimator(referenceView: gameView)
         
         super.init(coder: aDecoder)
     }
    
-    var matched:Bool =  false {
-        didSet {
-            if controller.isMatched == true {
-                println("ismatched inside didset \(controller.isMatched)")
-                matched = controller.isMatched
-                updateGUI()
-            }
-            
-        }
-    }
+
     
     @IBAction func Back(sender: AnyObject) {
         
@@ -64,12 +59,29 @@ class ViewController: UIViewController {
     @IBAction func revealButtonTouched(sender: UIButton) {
         
         let buttonIndex : Int = find(theRevealButtons,sender)!
-        //println("the button index is \(buttonIndex)")
-        
-        //keep the count of number of blocks removed! TBD
+        let buttonAtIndex = theRevealButtons[buttonIndex]
         
         if (selectCount < 5) {
-            theRevealButtons[buttonIndex].removeFromSuperview()
+            UIView.animateWithDuration(2,
+                delay:0.01,
+                options:UIViewAnimationOptions.CurveEaseInOut,
+                animations: {
+                    
+                    let newPoint = CGPointMake(buttonAtIndex.center.x,
+                        buttonAtIndex.center.y - 70)
+                    self.theRevealButtons[buttonIndex].alpha = 0
+                    buttonAtIndex.center = newPoint
+                    
+                    buttonAtIndex.transform  = CGAffineTransformIdentity
+                    
+                },
+                completion: {
+                    (value:Bool) in
+                    self.theRevealButtons[buttonIndex].removeFromSuperview()
+            })
+
+            
+      //      theRevealButtons[buttonIndex].removeFromSuperview()
           
             selectCount++
         }
@@ -77,11 +89,6 @@ class ViewController: UIViewController {
     }
     
     //create a function to pick a new game which should have new image, username, userscore
-    
-    func startNewPuzzle() {
-        
-        
-    }
     
     func startNewLevel(levelNum : Int) {
         var level = Level(levelNumber:levelNum)
@@ -102,8 +109,13 @@ class ViewController: UIViewController {
             }
             //gravity = UIGravityBehavior(items: [theRevealButtons])
             //animator.addBehavior(gravity)
+
+            scoreLabel.text = "Score: \(controller.currentScore())"
+          
+            
         }
-     //   scoreLabel.text = "Score: " + gamedata.points
+      // scoreLabel.text = "Score: \(gamedata.points)"
+        //println("point is \(gamedata.points)")
         
         //update hints view
         
@@ -125,6 +137,11 @@ class ViewController: UIViewController {
         //gameView = UIView(frame: CGRectMake(0, 0, ScreenWidth, ScreenHeight))
         self.view.addSubview(gameView)
         controller.gameView = gameView
+        
+        //get the level and puzzle number
+       
+        puzzleLabel.text = "Puzzle: \(controller.currentPuzzleIndex())"
+        println("puzzle is \(controller.currentPuzzleIndex())")
         
         //pass a reference of viewController to gameController
         controller.viewControllerInstance = self

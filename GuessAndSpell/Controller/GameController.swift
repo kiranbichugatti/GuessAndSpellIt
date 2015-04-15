@@ -18,6 +18,7 @@ class GameController: TileDragDelegateProtocol {
     var level: Level!
     var isMatched = false
     var gameover = false
+    private var score = 0
     var viewControllerInstance: ViewController!
     var tempLevelData : NSMutableArray!
     var currentTileOrigin : CGPoint!
@@ -335,11 +336,15 @@ class GameController: TileDragDelegateProtocol {
         var puzzleWordToUtter = AVSpeechUtterance(string: PWord)
         
         //bring up the modal
+        //give the bonus points
         data.points+=level.points
-        println("filled is: \(filled)")
-        tempLevelData.removeObjectAtIndex(currentIndex)
-        audioController.playEffect(SoundDing)
+        score += level.points
         
+        //remove the instance from the level array
+        tempLevelData.removeObjectAtIndex(currentIndex)
+        
+        audioController.playEffect(SoundDing)
+        //text to voice framework
         puzzleWordToUtter.rate = 0.1
         synth.speakUtterance(puzzleWordToUtter)
         
@@ -347,22 +352,22 @@ class GameController: TileDragDelegateProtocol {
         self.viewControllerInstance.updateGUI()
     }
     
+    func currentScore() -> Int {
+        return score
+    }
+    
+    func currentPuzzleIndex() -> Int {
+        if currentIndex != nil {
+        return currentIndex
+        } else {
+            return 0
+        }
+    }
+    
     func levelFinished() {
         //start new game, go to next level
     }
-    
-    func moveImage(view: UIView){
-        var toPoint: CGPoint = CGPointMake(111, 921.6)
-        var fromPoint : CGPoint = view.center
-        
-        var movement = CABasicAnimation(keyPath: "movement")
-        movement.additive = true
-        movement.fromValue =  NSValue(CGPoint: fromPoint)
-        movement.toValue =  NSValue(CGPoint: toPoint)
-        movement.duration = 0.3
-        
-        view.layer.addAnimation(movement, forKey: "move")
-    }
+
     
 }
 
