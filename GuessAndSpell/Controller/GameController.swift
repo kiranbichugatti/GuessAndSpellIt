@@ -22,6 +22,7 @@ class GameController: TileDragDelegateProtocol {
     var viewControllerInstance: ViewController!
     var tempLevelData : NSMutableArray!
     var currentTileOrigin : CGPoint!
+    var targetViewArray : [[CGFloat]] = []
     
     private var tiles: [TileView] = []
     private var targets: [TargetView] = []
@@ -33,6 +34,7 @@ class GameController: TileDragDelegateProtocol {
     private var audioController:  AudioController
     private var puzzleWord: String = ""
     private var selectedWord = ""
+    private var targetCheckPoint:[Int] = []
 
     
  
@@ -82,16 +84,22 @@ class GameController: TileDragDelegateProtocol {
         // initialize the target list
          targets = []
         
+        targetCheckPoint = []
+        
         //create targets
         for(index,letter) in enumerate(puzzleWord) {
             if letter != " " {
                 let target = TargetView(letter: letter)
                 target.center = CGPointMake(xOffset + CGFloat(index)*(targetSide + TileMargin), ScreenHeight/4*3.2)
                 
+                targetViewArray.append([target.center.x - TargetSideLength/2, target.center.y - TargetSideLength/2 , 0 , 0])
+                targetCheckPoint.append(0)
+                
                 gameView.addSubview(target)
                 targets.append(target)
             }
         }
+        //println(targetViewArray)
         
         //1 initialize tile list
         tiles = []
@@ -207,15 +215,26 @@ class GameController: TileDragDelegateProtocol {
     func tileView(tileView: TileView, didDragToPoint point: CGPoint, from : CGPoint) {
         
         var checked = 0
-        
+        var i : Int
        
+        
         var targetView: TargetView?
-        for tv in targets {
+        for i in 0...targets.count-1 {
+            if CGRectContainsPoint(targets[i].frame, point) && targetCheckPoint[i] == 0 {
+                targetView = targets[i]
+                println("the letter is placed at \(i)")
+                targetCheckPoint[i] = 1
+                println("the array is: \(targetCheckPoint)")
+                break
+            }
+        }
+        
+        /*for tv in targets {
             if CGRectContainsPoint(tv.frame, point) {
                 targetView = tv
                 break
             }
-        }
+        }*/
         
         //1 check if target was found
         if let foundTargetView = targetView {
@@ -223,28 +242,7 @@ class GameController: TileDragDelegateProtocol {
             self.placeTile(tileView, targetView: targetView!)
             
             if filled==targets.count {
-                
-               /* for lett in targets {
-                    checked++
-                
-                    if foundTargetView.letter != tileView.letter {
-                        
-                        checked--
-                    
-                        println("targetView unmatched:\(foundTargetView.letter)")
-                    
-                        tileView.userInteractionEnabled = true
-                     
-                       isMatched = false
-                        break
-                   
-                     }
-                }
-                if checked == targets.count {
-                    isMatched = true
-                    println("checked is:\(checked)")
-                    puzzleSucceed()
-                }*/
+
                 if puzzleWord == selectedWord {
                     isMatched = true
                     puzzleSucceed()
@@ -267,20 +265,20 @@ class GameController: TileDragDelegateProtocol {
                 }, completion: nil)
         }
         
-        
         }
 
 
     func placeTile(tileView: TileView, targetView: TargetView) {
+        
         selectedTileView.append(tileView)
         selectedWord = selectedWord + [tileView.letter]
         
         //1
-        //targetView.isMatched = true
-        //tileView.isMatched = true
+        targetView.isMatched = true
+        tileView.isMatched = true
         
         //2
-        //tileView.userInteractionEnabled = false
+        tileView.userInteractionEnabled = false
         
         //3
         UIView.animateWithDuration(0.35,
@@ -300,6 +298,15 @@ class GameController: TileDragDelegateProtocol {
         
         filled++
          audioController.playEffect(SoundDing)
+    }
+    
+    func targetClicked(tileView: TileView, targetView: TargetView, indexInArray: Int) {
+        filled--
+        targetView.hidden = false
+        var x = targetViewArray[indexInArray][2] as CGFloat
+        var y = targetViewArray[indexInArray][3] as CGFloat
+        tileView.center = CGPointMake(x, y)
+        
     }
     
     
