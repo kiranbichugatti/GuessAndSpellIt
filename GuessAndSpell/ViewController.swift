@@ -58,26 +58,7 @@ class ViewController: UIViewController {
         let buttonAtIndex = theRevealButtons[buttonIndex]
         
         if (selectCount < 5) {
-            UIView.animateWithDuration(2,
-                delay:0.01,
-                options:UIViewAnimationOptions.CurveEaseInOut,
-                animations: {
-                    
-                    let newPoint = CGPointMake(buttonAtIndex.center.x,
-                        buttonAtIndex.center.y - 70)
-                    self.theRevealButtons[buttonIndex].alpha = 0
-                    buttonAtIndex.center = newPoint
-                    
-                    buttonAtIndex.transform  = CGAffineTransformIdentity
-                    
-                },
-                completion: {
-                    (value:Bool) in
-                    self.theRevealButtons[buttonIndex].removeFromSuperview()
-            })
-
-            
-      //      theRevealButtons[buttonIndex].removeFromSuperview()
+                      theRevealButtons[buttonIndex].removeFromSuperview()
           
             selectCount++
         }
