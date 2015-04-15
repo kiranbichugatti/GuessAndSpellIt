@@ -18,6 +18,7 @@ class GameController: TileDragDelegateProtocol {
     var level: Level!
     var isMatched = false
     var gameover = false
+    private var score = 0
     var viewControllerInstance: ViewController!
     
     private var tiles: [TileView] = []
@@ -26,7 +27,7 @@ class GameController: TileDragDelegateProtocol {
     private var data:GameData
     private var filled : Int = 0
     private var selectedTileView:[TileView] = []
-    private var currentIndex : Int!
+    var currentIndex : Int!
     var tempLevelData : NSMutableArray!
     private var audioController:  AudioController
     private var PWord: String = ""
@@ -325,16 +326,32 @@ class GameController: TileDragDelegateProtocol {
         var puzzleWordToUtter = AVSpeechUtterance(string: PWord)
         
         //bring up the modal
+        //give the bonus points
         data.points+=level.points
-        println("filled is: \(filled)")
-        tempLevelData.removeObjectAtIndex(currentIndex)
-        audioController.playEffect(SoundDing)
+        score += level.points
         
+        //remove the instance from the level array
+        tempLevelData.removeObjectAtIndex(currentIndex)
+        
+        audioController.playEffect(SoundDing)
+        //text to voice framework
         puzzleWordToUtter.rate = 0.1
         synth.speakUtterance(puzzleWordToUtter)
         
         //remove all the blocks, call updateGUI function
         self.viewControllerInstance.updateGUI()
+    }
+    
+    func currentScore() -> Int {
+        return score
+    }
+    
+    func currentPuzzleIndex() -> Int {
+        if currentIndex != nil {
+        return currentIndex
+        } else {
+            return 0
+        }
     }
     
     func levelFinished() {
