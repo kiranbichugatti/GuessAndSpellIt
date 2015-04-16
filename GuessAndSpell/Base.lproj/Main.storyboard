@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ADd-BX-Vh5">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="13F1066" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ADd-BX-Vh5">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -250,9 +250,6 @@
                                 <state key="normal" backgroundImage="why">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <variation key="widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="418" y="263" width="101" height="85"/>
-                                </variation>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
                                     <rect key="frame" x="420" y="88" width="105" height="89"/>
                                 </variation>
@@ -266,9 +263,6 @@
                                 <state key="normal" backgroundImage="why">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <variation key="widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="212" y="178" width="101" height="85"/>
-                                </variation>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
                                     <rect key="frame" x="208" y="177" width="105" height="89"/>
                                 </variation>
@@ -288,9 +282,6 @@
                                         <integer key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
-                                <variation key="widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="8" y="8" width="101" height="85"/>
-                                </variation>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
                                     <rect key="frame" x="526" y="357" width="105" height="89"/>
                                 </variation>
@@ -310,9 +301,6 @@
                                         <integer key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
-                                <variation key="widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="110" y="8" width="101" height="85"/>
-                                </variation>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
                                     <rect key="frame" x="102" y="88" width="105" height="89"/>
                                 </variation>
@@ -331,9 +319,6 @@
                                         <integer key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
-                                <variation key="widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="212" y="8" width="101" height="85"/>
-                                </variation>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
                                     <rect key="frame" x="208" y="88" width="105" height="89"/>
                                 </variation>
@@ -347,9 +332,6 @@
                                 <state key="normal" backgroundImage="why">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <variation key="widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="315" y="8" width="101" height="85"/>
-                                </variation>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
                                     <rect key="frame" x="314" y="88" width="105" height="89"/>
                                 </variation>
@@ -363,9 +345,6 @@
                                 <state key="normal" backgroundImage="why">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <variation key="widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="8" y="94" width="101" height="85"/>
-                                </variation>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
                                     <rect key="frame" x="102" y="267" width="105" height="89"/>
                                 </variation>
@@ -379,9 +358,6 @@
                                 <state key="normal" backgroundImage="why">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <variation key="widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="110" y="94" width="101" height="85"/>
-                                </variation>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
                                     <rect key="frame" x="208" y="267" width="105" height="89"/>
                                 </variation>
@@ -395,9 +371,6 @@
                                 <state key="normal" backgroundImage="why">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <variation key="widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="212" y="93" width="101" height="85"/>
-                                </variation>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
                                     <rect key="frame" x="314" y="267" width="105" height="89"/>
                                 </variation>
@@ -411,9 +384,6 @@
                                 <state key="normal" backgroundImage="why">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <variation key="widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="315" y="93" width="101" height="85"/>
-                                </variation>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
                                     <rect key="frame" x="420" y="267" width="105" height="89"/>
                                 </variation>
@@ -427,9 +397,6 @@
                                 <state key="normal" backgroundImage="why">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <variation key="widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="418" y="93" width="101" height="85"/>
-                                </variation>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
                                     <rect key="frame" x="526" y="88" width="105" height="89"/>
                                 </variation>
@@ -443,9 +410,6 @@
                                 <state key="normal" backgroundImage="why">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <variation key="widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="8" y="178" width="101" height="85"/>
-                                </variation>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
                                     <rect key="frame" x="102" y="177" width="105" height="89"/>
                                 </variation>
@@ -459,9 +423,6 @@
                                 <state key="normal" backgroundImage="why">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <variation key="widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="110" y="178" width="101" height="85"/>
-                                </variation>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
                                     <rect key="frame" x="314" y="177" width="105" height="89"/>
                                 </variation>
@@ -475,9 +436,6 @@
                                 <state key="normal" backgroundImage="why">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <variation key="widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="315" y="178" width="101" height="85"/>
-                                </variation>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
                                     <rect key="frame" x="420" y="177" width="105" height="89"/>
                                 </variation>
@@ -494,9 +452,6 @@
                                 <state key="normal" backgroundImage="why">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <variation key="widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="418" y="178" width="101" height="85"/>
-                                </variation>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
                                     <rect key="frame" x="526" y="177" width="105" height="89"/>
                                 </variation>
@@ -510,9 +465,6 @@
                                 <state key="normal" backgroundImage="why">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <variation key="widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="8" y="263" width="101" height="85"/>
-                                </variation>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
                                     <rect key="frame" x="102" y="357" width="105" height="89"/>
                                 </variation>
@@ -526,9 +478,6 @@
                                 <state key="normal" backgroundImage="why">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <variation key="widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="110" y="263" width="101" height="85"/>
-                                </variation>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
                                     <rect key="frame" x="208" y="357" width="105" height="89"/>
                                 </variation>
@@ -542,9 +491,6 @@
                                 <state key="normal" backgroundImage="why">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <variation key="widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="212" y="263" width="101" height="85"/>
-                                </variation>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
                                     <rect key="frame" x="314" y="357" width="105" height="89"/>
                                 </variation>
@@ -558,9 +504,6 @@
                                 <state key="normal" backgroundImage="why">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <variation key="widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="315" y="263" width="101" height="85"/>
-                                </variation>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
                                     <rect key="frame" x="420" y="357" width="105" height="89"/>
                                 </variation>
@@ -574,9 +517,6 @@
                                 <state key="normal" backgroundImage="why">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <variation key="widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="8" y="348" width="101" height="85"/>
-                                </variation>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
                                     <rect key="frame" x="102" y="449" width="105" height="89"/>
                                 </variation>
@@ -590,9 +530,6 @@
                                 <state key="normal" backgroundImage="why">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <variation key="widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="110" y="348" width="101" height="85"/>
-                                </variation>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
                                     <rect key="frame" x="208" y="449" width="105" height="89"/>
                                 </variation>
@@ -606,9 +543,6 @@
                                 <state key="normal" backgroundImage="why">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <variation key="widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="212" y="348" width="101" height="85"/>
-                                </variation>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
                                     <rect key="frame" x="314" y="449" width="105" height="89"/>
                                 </variation>
@@ -622,9 +556,6 @@
                                 <state key="normal" backgroundImage="why">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <variation key="widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="315" y="348" width="101" height="85"/>
-                                </variation>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
                                     <rect key="frame" x="420" y="449" width="105" height="89"/>
                                 </variation>
@@ -638,9 +569,6 @@
                                 <state key="normal" backgroundImage="why">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <variation key="widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="418" y="348" width="101" height="85"/>
-                                </variation>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
                                     <rect key="frame" x="526" y="449" width="105" height="89"/>
                                 </variation>
@@ -654,9 +582,6 @@
                                 <state key="normal" backgroundImage="why">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <variation key="widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="418" y="8" width="101" height="85"/>
-                                </variation>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
                                     <rect key="frame" x="526" y="267" width="105" height="89"/>
                                 </variation>
@@ -834,7 +759,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1451.25" y="140.25"/>
+            <point key="canvasLocation" x="1710" y="165"/>
         </scene>
         <!--List User View Controller-->
         <scene sceneID="DhF-H7-GfW">
