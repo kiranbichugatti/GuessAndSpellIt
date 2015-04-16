@@ -12,6 +12,7 @@ import AVFoundation
 class RootViewController: UIViewController {
     
     var backgroundMusicPlayer: AVAudioPlayer!
+    var togglestate = 1
     
        func playBackgroundMusic(filename: String) {
                 let url = NSBundle.mainBundle().URLForResource(
@@ -33,24 +34,21 @@ class RootViewController: UIViewController {
                 backgroundMusicPlayer.prepareToPlay()
                 backgroundMusicPlayer.play()
             }
-        func pauseBackgroundMusic()
-        {
-            if(backgroundMusicPlayer.playing == true)
-            {
-                backgroundMusicPlayer.stop()
-                backgroundMusicPlayer.currentTime = 0
-            }
-            else
-            {
-            backgroundMusicPlayer.numberOfLoops = -1
-                backgroundMusicPlayer.prepareToPlay()
-                backgroundMusicPlayer.play()
-    
-            }
-        }
-    
-    
             
+            
+    @IBAction func pauseButton(sender: UIButton) {
+        
+        if togglestate == 1 {
+                        backgroundMusicPlayer.play()
+                        togglestate = 2
+                        sender.setImage(UIImage(named:"pauseButton.jpg"),forState:UIControlState.Normal)
+                    } else {
+                        backgroundMusicPlayer.pause()
+                        togglestate = 1
+                        sender.setImage(UIImage(named:"playButton.png"),forState:UIControlState.Normal)
+               }
+        
+    }
     
         
           override func viewDidLoad() {
