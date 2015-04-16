@@ -65,7 +65,7 @@ class ViewController: UIViewController {
                     
                     let newPoint = CGPointMake(buttonAtIndex.center.x,
                         buttonAtIndex.center.y - 70)
-                    self.theRevealButtons[buttonIndex].alpha = 0
+
                     buttonAtIndex.center = newPoint
                 },
                 completion: {
@@ -82,10 +82,20 @@ class ViewController: UIViewController {
     
     //create a function to pick a new game which should have new image, username, userscore
     
-    func startNewLevel(levelNum : Int) {
-        var level = Level(levelNumber:levelNum)
+    func startNewPuzzle() {
+        
+        //if the puzzle exists in the current level, then call the same level else call diffferent level
+        var levelNumber : Int = 2
+        println("inside startnewlevel")
+        var level = Level(levelNumber:2)
         controller.level = level
         controller.tempLevelData = NSMutableArray(array: level.puzzles)
+        for button in theRevealButtons {
+            
+            button.enabled = true
+            button.hidden = false
+            
+        }
         controller.DrawRandomPuzzles(thebackgroundImage,choosenLevel: level)
     }
     
@@ -99,7 +109,8 @@ class ViewController: UIViewController {
             //remove all the buttons on the image, we can add some effect later
             for button in theRevealButtons {
                 UIView.animateWithDuration(1.0, animations:{
-                    button.alpha = 0.0
+
+                    button.hidden = true
                 })
 
             }
@@ -110,9 +121,7 @@ class ViewController: UIViewController {
           
             
         }
-      // scoreLabel.text = "Score: \(gamedata.points)"
-        //println("point is \(gamedata.points)")
-        
+    
         //update hints view
         
         //update reveals left text
@@ -166,12 +175,14 @@ class ViewController: UIViewController {
         controller.viewControllerInstance = self
         
         //need to get the level by checking some parameter and change it to level1 or level2
-        
-        startNewLevel(2)
+        controller.onPuzzleSolved = startNewPuzzle
        // println("anagrams: \(level.puzzles)")
         
         
         updateGUI()
+    }
+    override func viewDidAppear(animated: Bool) {
+        self.startNewPuzzle()
     }
     
     
