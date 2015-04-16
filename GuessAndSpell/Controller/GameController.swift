@@ -23,9 +23,11 @@ class GameController: TileDragDelegateProtocol {
     var tempLevelData : NSMutableArray!
     var currentTileOrigin : CGPoint!
     var targetViewArray : [[CGFloat]] = []
+    var targetCheckPoint:[Int] = []
     
     private var tiles: [TileView] = []
     private var targets: [TargetView] = []
+
     private var puzzlesDatasource = [String]()
     private var data:GameData
     private var filled : Int = 0
@@ -33,8 +35,7 @@ class GameController: TileDragDelegateProtocol {
     private var currentIndex : Int!
     private var audioController:  AudioController
     private var puzzleWord: String = ""
-    private var selectedWord = ""
-    private var targetCheckPoint:[Int] = []
+    
 
     
  
@@ -82,7 +83,7 @@ class GameController: TileDragDelegateProtocol {
         
         
         // initialize the target list
-         targets = []
+        targets = []
         
         targetCheckPoint = []
         
@@ -92,20 +93,18 @@ class GameController: TileDragDelegateProtocol {
                 let target = TargetView(letter: letter)
                 target.center = CGPointMake(xOffset + CGFloat(index)*(targetSide + TileMargin), ScreenHeight/4*3.2)
                 
-                targetViewArray.append([target.center.x - TargetSideLength/2, target.center.y - TargetSideLength/2 , 0 , 0])
-                targetCheckPoint.append(0)
+                targetViewArray.append([target.center.x - TargetSideLength/2, target.center.y - TargetSideLength/2 ])
+                targetCheckPoint.append(-1)
                 
                 gameView.addSubview(target)
                 targets.append(target)
             }
         }
-        //println(targetViewArray)
         
         //1 initialize tile list
         tiles = []
         
         //2 create random letters
-        
         var shuffledPuzzleWord : String = shuffle(puzzleWord)
         
         //Split the shuffled string into half
@@ -216,14 +215,19 @@ class GameController: TileDragDelegateProtocol {
         
         var checked = 0
         var i : Int
+        var selectedWord = ""
        
-        
         var targetView: TargetView?
         for i in 0...targets.count-1 {
-            if CGRectContainsPoint(targets[i].frame, point) && targetCheckPoint[i] == 0 {
+            if CGRectContainsPoint(targets[i].frame, point) && targetCheckPoint[i] == -1 {
                 targetView = targets[i]
+
                 println("the letter is placed at \(i)")
-                targetCheckPoint[i] = 1
+                if let j = find(tiles, tileView) {
+                    println("tileView is at index : \(j)")
+                    targetCheckPoint[i] = j
+                }
+
                 println("the array is: \(targetCheckPoint)")
                 break
             }
@@ -243,6 +247,12 @@ class GameController: TileDragDelegateProtocol {
             
             if filled==targets.count {
 
+                for i in targetCheckPoint {
+                    selectedWord = selectedWord + [tiles[i].letter]
+                }
+                
+                println("selected : \(selectedWord)")
+                
                 if puzzleWord == selectedWord {
                     isMatched = true
                     puzzleSucceed()
@@ -270,8 +280,7 @@ class GameController: TileDragDelegateProtocol {
 
     func placeTile(tileView: TileView, targetView: TargetView) {
         
-        selectedTileView.append(tileView)
-        selectedWord = selectedWord + [tileView.letter]
+        //selectedTileView.append(tileView)
         
         //1
         targetView.isMatched = true
@@ -295,17 +304,32 @@ class GameController: TileDragDelegateProtocol {
                 targetView.hidden = true
         })
         
-        
         filled++
          audioController.playEffect(SoundDing)
     }
     
-    func targetClicked(tileView: TileView, targetView: TargetView, indexInArray: Int) {
+    func targetClicked(indexInArray: Int) {
+        
         filled--
-        targetView.hidden = false
-        var x = targetViewArray[indexInArray][2] as CGFloat
-        var y = targetViewArray[indexInArray][3] as CGFloat
-        tileView.center = CGPointMake(x, y)
+        
+        var tileIndex = targetCheckPoint[indexInArray]
+        println("tileIndex is : \(tileIndex)")
+        targetCheckPoint[indexInArray] = -1
+        targets[indexInArray].hidden = false
+        //var x = targetViewArray[indexInArray][2] as CGFloat
+        //var y = targetViewArray[indexInArray][3] as CGFloat
+        var clickedTileView = tiles[tileIndex]
+        clickedTileView.center = clickedTileView.origin
+        clickedTileView.image = UIImage(named:"tile")
+        clickedTileView.userInteractionEnabled = true
+        
+        if filled == targets.count - 1 {
+            for i in targetCheckPoint {
+                if i > -1 {
+                    tiles[i].image = UIImage(named : "tile")
+                }
+            }
+        }
         
     }
     
@@ -341,10 +365,13 @@ class GameController: TileDragDelegateProtocol {
         } else {
             audioController.playEffect(SoundWrong)
         }
-        for lett in selectedTileView {
-            
-            lett.image = UIImage(named: color)
+        for i in targetCheckPoint {
+            if i > -1 {
+                var theTile = tiles[i]
+                theTile.image = UIImage(named:color)
+            }
         }
+
     }
     
     func puzzleSucceed(){
@@ -367,7 +394,9 @@ class GameController: TileDragDelegateProtocol {
         puzzleWordToUtter.rate = 0.1
         synth.speakUtterance(puzzleWordToUtter)
         
-        
+        for t in tiles {
+            t.userInteractionEnabled = false
+        }
     }
     
     func currentScore() -> Int {

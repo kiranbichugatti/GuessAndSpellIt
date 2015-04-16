@@ -58,7 +58,8 @@ class ViewController: UIViewController {
         let buttonAtIndex = theRevealButtons[buttonIndex]
         
         if (selectCount < 5) {
-                      theRevealButtons[buttonIndex].removeFromSuperview()
+            
+            theRevealButtons[buttonIndex].removeFromSuperview()
           
             selectCount++
         }
@@ -116,8 +117,9 @@ class ViewController: UIViewController {
             var bigx = (coor[0] + TargetSideLength ) as CGFloat
             var bigy = (coor[1] + TargetSideLength ) as CGFloat
 
-            if (location.x > smallx) && location.x < bigx && location.y > smally && (location.y < bigy){
-                println("call function touched with index \(i)")
+            if (location.x > smallx) && location.x < bigx && location.y > smally &&
+                (location.y < bigy)&&(controller.targetCheckPoint[i] > -1) && (!controller.isMatched){
+                controller.targetClicked(i)
                 break
             }
             i++
