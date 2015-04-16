@@ -69,18 +69,25 @@ class ListUserViewController: UIViewController,UITableViewDataSource,UITableView
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        var tempuser = User?()
-        tempuser = User()
-        
-        users = NSArray()
-        users = tempuser?.getAllUsers()
-        
-        UserList.delegate=self;
-        UserList.dataSource = self;
-        UserList.reloadData()
+      
         
         // Do any additional setup after loading the view.
     }
+    
+    override func viewDidAppear(animated: Bool) {
+        
+        
+           var tempuser = User?()
+                tempuser = User()
+        
+                users = NSArray()
+                users = tempuser?.getAllUsers()
+        
+              UserList.delegate=self;
+          UserList.dataSource = self;
+          UserList.reloadData()
+        
+        }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
