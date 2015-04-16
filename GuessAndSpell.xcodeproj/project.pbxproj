@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A509CBA61AE0328000BBC2AC /* titlescreen.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A509CBA51AE0328000BBC2AC /* titlescreen.mp3 */; };
 		A547CB291AAD77BC0084F2A9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A547CB281AAD77BC0084F2A9 /* AppDelegate.swift */; };
 		A547CB2B1AAD77BC0084F2A9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A547CB2A1AAD77BC0084F2A9 /* ViewController.swift */; };
 		A547CB2E1AAD77BC0084F2A9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A547CB2C1AAD77BC0084F2A9 /* Main.storyboard */; };
@@ -44,6 +45,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A509CBA51AE0328000BBC2AC /* titlescreen.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = titlescreen.mp3; sourceTree = "<group>"; };
 		A547CB231AAD77BC0084F2A9 /* GuessAndSpell.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GuessAndSpell.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A547CB271AAD77BC0084F2A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A547CB281AAD77BC0084F2A9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -165,6 +167,7 @@
 			children = (
 				D6D786191AD9AE73003CF6A2 /* ding.mp3 */,
 				D6D7861A1AD9AE73003CF6A2 /* win.mp3 */,
+				A509CBA51AE0328000BBC2AC /* titlescreen.mp3 */,
 				D6D7861B1AD9AE73003CF6A2 /* wrong.m4a */,
 			);
 			path = Assets;
@@ -295,6 +298,7 @@
 				A547CB301AAD77BC0084F2A9 /* Images.xcassets in Resources */,
 				D6D7861E1AD9AE73003CF6A2 /* wrong.m4a in Resources */,
 				D6F93E9E1AC4690400BA27CF /* Level1.plist in Resources */,
+				A509CBA61AE0328000BBC2AC /* titlescreen.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
