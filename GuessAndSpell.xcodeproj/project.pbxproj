@@ -25,6 +25,8 @@
 		AE57BBBB1AC5B3470098E5A5 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE57BBBA1AC5B3470098E5A5 /* Config.swift */; };
 		AEF289A91ACD9C6A00F1D997 /* GameData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF289A81ACD9C6900F1D997 /* GameData.swift */; };
 		D65494F61AC9E53B00F26A78 /* TargetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65494F51AC9E53B00F26A78 /* TargetView.swift */; };
+		D6B0F3D31AE0BDCC0079A522 /* particle.png in Resources */ = {isa = PBXBuildFile; fileRef = D6B0F3D21AE0BDCC0079A522 /* particle.png */; };
+		D6B0F3D51AE0BE9B0079A522 /* ShowStars.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B0F3D41AE0BE9B0079A522 /* ShowStars.swift */; };
 		D6D786141AD1CD83003CF6A2 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6D786131AD1CD83003CF6A2 /* AVFoundation.framework */; };
 		D6D786171AD9AD58003CF6A2 /* AudioController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D786161AD9AD58003CF6A2 /* AudioController.swift */; };
 		D6D7861C1AD9AE73003CF6A2 /* ding.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D6D786191AD9AE73003CF6A2 /* ding.mp3 */; };
@@ -66,6 +68,8 @@
 		AE57BBBA1AC5B3470098E5A5 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		AEF289A81ACD9C6900F1D997 /* GameData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameData.swift; sourceTree = SOURCE_ROOT; };
 		D65494F51AC9E53B00F26A78 /* TargetView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TargetView.swift; sourceTree = SOURCE_ROOT; };
+		D6B0F3D21AE0BDCC0079A522 /* particle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = particle.png; sourceTree = "<group>"; };
+		D6B0F3D41AE0BE9B0079A522 /* ShowStars.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowStars.swift; sourceTree = SOURCE_ROOT; };
 		D6D786131AD1CD83003CF6A2 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		D6D786161AD9AD58003CF6A2 /* AudioController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioController.swift; sourceTree = "<group>"; };
 		D6D786191AD9AE73003CF6A2 /* ding.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ding.mp3; sourceTree = "<group>"; };
@@ -163,6 +167,7 @@
 		D6D786181AD9AE73003CF6A2 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				D6B0F3D21AE0BDCC0079A522 /* particle.png */,
 				D6D786191AD9AE73003CF6A2 /* ding.mp3 */,
 				D6D7861A1AD9AE73003CF6A2 /* win.mp3 */,
 				D6D7861B1AD9AE73003CF6A2 /* wrong.m4a */,
@@ -194,6 +199,7 @@
 				AE57BBB21AC4972D0098E5A5 /* PictureView.swift */,
 				AE57BBB41AC497490098E5A5 /* TileView.swift */,
 				D65494F51AC9E53B00F26A78 /* TargetView.swift */,
+				D6B0F3D41AE0BE9B0079A522 /* ShowStars.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -292,6 +298,7 @@
 				D6D7861D1AD9AE73003CF6A2 /* win.mp3 in Resources */,
 				D6D7861C1AD9AE73003CF6A2 /* ding.mp3 in Resources */,
 				A547CB331AAD77BC0084F2A9 /* LaunchScreen.xib in Resources */,
+				D6B0F3D31AE0BDCC0079A522 /* particle.png in Resources */,
 				A547CB301AAD77BC0084F2A9 /* Images.xcassets in Resources */,
 				D6D7861E1AD9AE73003CF6A2 /* wrong.m4a in Resources */,
 				D6F93E9E1AC4690400BA27CF /* Level1.plist in Resources */,
@@ -319,6 +326,7 @@
 				A547CB2B1AAD77BC0084F2A9 /* ViewController.swift in Sources */,
 				AE57BBBB1AC5B3470098E5A5 /* Config.swift in Sources */,
 				A589B59D1AD9BE0B00F1A395 /* User.swift in Sources */,
+				D6B0F3D51AE0BE9B0079A522 /* ShowStars.swift in Sources */,
 				A547CB291AAD77BC0084F2A9 /* AppDelegate.swift in Sources */,
 				AE57BBB51AC497490098E5A5 /* TileView.swift in Sources */,
 				A57BEBC91ACA74CE008EFAB0 /* ListUserViewController.swift in Sources */,

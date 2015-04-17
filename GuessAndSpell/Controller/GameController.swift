@@ -35,6 +35,7 @@ class GameController: TileDragDelegateProtocol {
     private var currentIndex : Int!
     private var audioController:  AudioController
     private var puzzleWord: String = ""
+    var onPuzzleSolved: (( ) -> ( ))!
     
 
     
@@ -397,6 +398,37 @@ class GameController: TileDragDelegateProtocol {
         for t in tiles {
             t.userInteractionEnabled = false
         }
+        
+        //success animation
+        
+        let firstTarget = targets[0]
+        let startX:CGFloat = 0
+        let endX:CGFloat = ScreenWidth + 300
+        let startY = firstTarget.center.y
+        
+        
+        let stars = StardustView(frame: CGRectMake(startX, startY, 10, 10))
+        
+        gameView.addSubview(stars)
+        gameView.sendSubviewToBack(stars)
+        
+        
+        UIView.animateWithDuration(3.0,
+            delay:0.5,
+            options:UIViewAnimationOptions.CurveEaseOut,
+            animations:{
+                stars.center = CGPointMake(endX, startY)
+            }, completion: {(value:Bool) in
+                //game finished
+                stars.removeFromSuperview()
+                //when animation is finished, show menu
+                self.clearBoard()
+                 self.onPuzzleSolved()
+              
+                
+        })
+          self.viewControllerInstance.updateGUI()
+
     }
     
     func currentScore() -> Int {
@@ -409,6 +441,17 @@ class GameController: TileDragDelegateProtocol {
         } else {
             return 0
         }
+    }
+    
+    //clear the tiles and targets
+    func clearBoard() {
+        tiles.removeAll(keepCapacity: false)
+        targets.removeAll(keepCapacity: false)
+        
+        for view in gameView.subviews  {
+            view.removeFromSuperview()
+        }
+        filled = 0
     }
     
     func levelFinished() {

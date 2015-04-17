@@ -65,7 +65,7 @@ class ViewController: UIViewController {
                     
                     let newPoint = CGPointMake(buttonAtIndex.center.x,
                         buttonAtIndex.center.y - 70)
-                    self.theRevealButtons[buttonIndex].alpha = 0
+
                     buttonAtIndex.center = newPoint
                 },
                 completion: {
@@ -82,11 +82,14 @@ class ViewController: UIViewController {
     
     //create a function to pick a new game which should have new image, username, userscore
     
-    func startNewLevel(levelNum : Int) {
-        var level = Level(levelNumber:levelNum)
+    func startNewLevel() {
+        var level = Level(levelNumber:2)
         controller.level = level
         controller.tempLevelData = NSMutableArray(array: level.puzzles)
         controller.DrawRandomPuzzles(thebackgroundImage,choosenLevel: level)
+        for button in theRevealButtons {
+            button.hidden = false
+        }
     }
     
     //we need this to update the reveal info and hints.
@@ -99,7 +102,7 @@ class ViewController: UIViewController {
             //remove all the buttons on the image, we can add some effect later
             for button in theRevealButtons {
                 UIView.animateWithDuration(1.0, animations:{
-                    button.alpha = 0.0
+                    button.hidden = true
                 })
 
             }
@@ -167,13 +170,18 @@ class ViewController: UIViewController {
         
         //need to get the level by checking some parameter and change it to level1 or level2
         
-        startNewLevel(2)
+        controller.onPuzzleSolved =  self.startNewLevel
+        
+      
        // println("anagrams: \(level.puzzles)")
         
         
         updateGUI()
     }
     
+    override func viewDidAppear(animated: Bool) {
+        self.startNewLevel()
+    }
     
 
     override func didReceiveMemoryWarning() {
