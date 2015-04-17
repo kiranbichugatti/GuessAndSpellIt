@@ -51,6 +51,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="frontscreen" translatesAutoresizingMaskIntoConstraints="NO" id="A0m-fq-HIK">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u9Q-6r-pvd">
                                 <rect key="frame" x="136" y="568" width="39" height="30"/>
                                 <state key="normal" title="Rules">
@@ -651,6 +654,7 @@
     </scenes>
     <resources>
         <image name="background" width="1024" height="1024"/>
+        <image name="frontscreen" width="1300" height="1300"/>
         <image name="glass_play_button" width="240" height="266"/>
         <image name="pauseButton" width="200" height="200"/>
         <image name="why" width="410" height="364"/>

@@ -38,7 +38,7 @@ class RootViewController: UIViewController {
             
     @IBAction func pauseButton(sender: UIButton) {
         
-        if togglestate == 1 {
+        if !backgroundMusicPlayer.playing {
                         backgroundMusicPlayer.play()
                         togglestate = 2
                         sender.setImage(UIImage(named:"pauseButton.jpg"),forState:UIControlState.Normal)
