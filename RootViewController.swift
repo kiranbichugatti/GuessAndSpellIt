@@ -7,14 +7,56 @@
 //
 
 import UIKit
+import AVFoundation
 
 class RootViewController: UIViewController {
-
-    override func viewDidLoad() {
+    
+    var backgroundMusicPlayer: AVAudioPlayer!
+    var togglestate = 1
+    
+       func playBackgroundMusic(filename: String) {
+                let url = NSBundle.mainBundle().URLForResource(
+                    filename, withExtension: nil)
+                if (url == nil) {
+                        println("Could not find file: \(filename)")
+                        return
+                    }
         
-
-        // Do any additional setup after loading the view.
+                var error: NSError? = nil
+                backgroundMusicPlayer =
+                    AVAudioPlayer(contentsOfURL: url, error: &error)
+             if backgroundMusicPlayer == nil {
+                        println("Could not create audio player: \(error!)")
+                        return
+                    }
+        
+                backgroundMusicPlayer.numberOfLoops = -1
+                backgroundMusicPlayer.prepareToPlay()
+                backgroundMusicPlayer.play()
+            }
+            
+            
+    @IBAction func pauseButton(sender: UIButton) {
+        
+        if togglestate == 1 {
+                        backgroundMusicPlayer.play()
+                        togglestate = 2
+                        sender.setImage(UIImage(named:"pauseButton.jpg"),forState:UIControlState.Normal)
+                    } else {
+                        backgroundMusicPlayer.pause()
+                        togglestate = 1
+                        sender.setImage(UIImage(named:"playButton.png"),forState:UIControlState.Normal)
+               }
+        
     }
+    
+        
+          override func viewDidLoad() {
+            
+                    playBackgroundMusic("titlescreen.mp3")
+            
+            // Do any additional setup after loading the view.
+        }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
