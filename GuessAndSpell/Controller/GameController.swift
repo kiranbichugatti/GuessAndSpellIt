@@ -36,8 +36,6 @@ class GameController: TileDragDelegateProtocol {
     private var audioController:  AudioController
     private var puzzleWord: String = ""
     
-    var onPuzzleSolved: (( ) -> ( ))!
-    
 
     
  
@@ -51,8 +49,6 @@ class GameController: TileDragDelegateProtocol {
     
     
     func DrawRandomPuzzles (theImageView: UIImageView, choosenLevel: Level) {
-        
-        println("inside randompuzzle")
         //1
         assert(level.puzzles.count > 0, "no level loaded")
         
@@ -265,7 +261,7 @@ class GameController: TileDragDelegateProtocol {
                 }
                 
                 updateColor()
-               // self.viewControllerInstance.updateGUI()
+                self.viewControllerInstance.updateGUI()
                 
             }
             
@@ -369,8 +365,6 @@ class GameController: TileDragDelegateProtocol {
         } else {
             audioController.playEffect(SoundWrong)
         }
-        
-        //should we do it here?.. when the new game starts, it crashes here.
         for i in targetCheckPoint {
             if i > -1 {
                 var theTile = tiles[i]
@@ -382,8 +376,7 @@ class GameController: TileDragDelegateProtocol {
     
     func puzzleSucceed(){
         
-        
-        //text to voice
+        //text to voice 
         
         let synth = AVSpeechSynthesizer()
         var puzzleWordToUtter = AVSpeechUtterance(string: puzzleWord)
@@ -394,7 +387,6 @@ class GameController: TileDragDelegateProtocol {
         score += level.points
         
         //remove the instance from the level array
-        
         tempLevelData.removeObjectAtIndex(currentIndex)
         
         audioController.playEffect(SoundDing)
@@ -402,54 +394,8 @@ class GameController: TileDragDelegateProtocol {
         puzzleWordToUtter.rate = 0.1
         synth.speakUtterance(puzzleWordToUtter)
         
-        //remove all the blocks, call updateGUI function
-        
-        
-        //success animation
-        
-        let firstTarget = targets[0]
-        let startX:CGFloat = 0
-        let endX:CGFloat = ScreenWidth + 300
-        let startY = firstTarget.center.y
-        
-        
-        let stars = StardustView(frame: CGRectMake(startX, startY, 10, 10))
-        
-        gameView.addSubview(stars)
-        gameView.sendSubviewToBack(stars)
-        
-        
-        UIView.animateWithDuration(3.0,
-            delay:0.5,
-            options:UIViewAnimationOptions.CurveEaseOut,
-            animations:{
-                stars.center = CGPointMake(endX, startY)
-            }, completion: {(value:Bool) in
-                //game finished
-                stars.removeFromSuperview()
-                //when animation is finished, show menu
-                self.clearBoard()
-                
-                 self.onPuzzleSolved()
-        })
-        self.viewControllerInstance.updateGUI()
-        
-        //need to work on counting the puzzle and call the level dynamically //and different image is not getting covered
-
-        
-        
-        
-    }
-    
-    
-    //clear the tiles and targets
-    func clearBoard() {
-        tiles.removeAll(keepCapacity: false)
-        targets.removeAll(keepCapacity: false)
-        filled = 0
-        
-        for view in gameView.subviews  {
-            view.removeFromSuperview()
+        for t in tiles {
+            t.userInteractionEnabled = false
         }
     }
     
