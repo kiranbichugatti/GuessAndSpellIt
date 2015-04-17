@@ -37,7 +37,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y3f-M4-nYW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1619.52" y="-1187.8400000000001"/>
+            <point key="canvasLocation" x="1619.52" y="-1187.8400000000004"/>
         </scene>
         <!--Root View Controller-->
         <scene sceneID="xPc-mI-HnS">
@@ -78,9 +78,9 @@
                                     <segue destination="lA7-JA-YsC" kind="push" id="Z4O-az-7iG"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8OH-f5-BUj">
-                                <rect key="frame" x="600" y="70" width="46" height="30"/>
-                                <state key="normal" title="Button">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8OH-f5-BUj">
+                                <rect key="frame" x="592" y="94" width="86" height="76"/>
+                                <state key="normal" image="pauseButton">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -96,7 +96,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iA2-Lj-XJF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="522.24000000000001" y="631.04000000000008"/>
+            <point key="canvasLocation" x="522" y="631"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="m1v-lo-HPf">
@@ -563,7 +563,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fPE-7u-K5x" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1710.72" y="1646.0800000000002"/>
+            <point key="canvasLocation" x="1710.72" y="1646.0800000000004"/>
         </scene>
         <!--User View Controller-->
         <scene sceneID="yMU-wd-h8Z">
@@ -628,7 +628,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8tm-dv-tSK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1944" y="3143.6800000000003"/>
+            <point key="canvasLocation" x="1944" y="3143.6800000000007"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="vcG-Fg-PP5">
@@ -646,12 +646,13 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="580-xW-dsn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-603.84000000000003" y="524.80000000000007"/>
+            <point key="canvasLocation" x="-603.84000000000003" y="524.80000000000018"/>
         </scene>
     </scenes>
     <resources>
         <image name="background" width="1024" height="1024"/>
         <image name="glass_play_button" width="240" height="266"/>
+        <image name="pauseButton" width="200" height="200"/>
         <image name="why" width="410" height="364"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
@@ -660,6 +661,6 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="ZPi-dZ-8EE"/>
+        <segue reference="go3-3p-0Z4"/>
     </inferredMetricsTieBreakers>
 </document>

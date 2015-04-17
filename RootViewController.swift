@@ -45,7 +45,7 @@ class RootViewController: UIViewController {
                     } else {
                         backgroundMusicPlayer.pause()
                         togglestate = 1
-                        sender.setImage(UIImage(named:"playButton.png"),forState:UIControlState.Normal)
+                        sender.setImage(UIImage(named:"playButton.jpg"),forState:UIControlState.Normal)
                }
         
     }
@@ -53,7 +53,7 @@ class RootViewController: UIViewController {
         
           override func viewDidLoad() {
             
-                    playBackgroundMusic("titlescreen.mp3")
+                  playBackgroundMusic("titlescreen.mp3")
             
             // Do any additional setup after loading the view.
         }
