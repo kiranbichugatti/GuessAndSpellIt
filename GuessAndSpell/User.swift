@@ -9,8 +9,8 @@
 import UIKit
 
 class User: NSObject {
-   
-    func userInput(name : NSString, pic : UIImage){
+    
+    func userInput(name : NSString){
         var tempUserArray :NSMutableArray?
         tempUserArray = NSMutableArray();
         if((NSUserDefaults.standardUserDefaults().objectForKey("users")) != nil){
@@ -23,10 +23,10 @@ class User: NSObject {
         tempDict?.setObject(NSNumber(int: 0), forKey: "score")
         tempDict?.setObject(name, forKey: "userName")
         
-        var image : UIImage = pic
-        var imageData = UIImagePNGRepresentation(image)
-        let base64String = imageData.base64EncodedStringWithOptions(.allZeros)
-        tempDict?.setObject(base64String, forKey: "pic")
+//        var image : UIImage = pic
+//        var imageData = UIImagePNGRepresentation(image)
+//        let base64String = imageData.base64EncodedStringWithOptions(.allZeros)
+//        // tempDict?.setObject(base64String, forKey: "pic")
         
         tempUserArray?.addObject(tempDict!)
         
@@ -35,26 +35,48 @@ class User: NSObject {
     
     func getAllUsers()->NSArray{
         
-        var users : NSMutableArray?
-        users = NSMutableArray()
+        var users : NSArray?
+        users = NSArray()
         if((NSUserDefaults.standardUserDefaults().objectForKey("users")) != nil){
-            let tempArr : NSArray  = NSUserDefaults.standardUserDefaults().objectForKey("users") as NSArray
-            users?.addObjectsFromArray(tempArr)
+            users  = NSUserDefaults.standardUserDefaults().objectForKey("users") as? NSArray
         }
         
-//        let firstNameSortDescriptor = NSSortDescriptor(key: "score", ascending: true, selector: "localizedStandardCompare:")
-//        let sortedByAge = (users as NSArray).sortedArrayUsingDescriptors([firstNameSortDescriptor])
-//        
-////        var descriptor: NSSortDescriptor = NSSortDescriptor(key: "score", ascending: true)
-////        var sortedResults: NSMutableArray = users?.sortedArrayUsingDescriptors(descriptor)
-////        
-////        var sortedResults= users.sorted {
-////            (dictOne) -> Bool in
-////            // put your comparison logic here
-////            return dictOne["name"]! > dictTwo["name"]!
-////        }
+        var descriptor = NSSortDescriptor(key: "score", ascending: true)
+        var sortedResults: NSArray = users!.sortedArrayUsingDescriptors([descriptor])
         
-        return users!
+        return sortedResults
+    }
+    
+    func updateUserWithScore(score : NSNumber){
+        
+        var delegate : AppDelegate?
+        delegate = UIApplication.sharedApplication().delegate as? AppDelegate
+        
+        if((delegate?.presentUser) != nil){
+            var tempUserArray :NSMutableArray?
+            tempUserArray = NSMutableArray();
+            if((NSUserDefaults.standardUserDefaults().objectForKey("users")) != nil){
+                tempUserArray?.addObjectsFromArray(NSUserDefaults.standardUserDefaults().objectForKey("users") as NSMutableArray);
+            }
+            
+            var presetDict = delegate?.presentUser
+            
+            var dict : NSMutableDictionary!
+            dict = NSMutableDictionary ()
+            
+            dict.addEntriesFromDictionary(presetDict!)
+            
+            tempUserArray?.removeObject(presetDict!)
+            
+            dict.setObject(score, forKey: "score")
+            
+            tempUserArray?.addObject(dict)
+            
+            delegate?.presentUser = dict as NSDictionary
+            
+            NSUserDefaults.standardUserDefaults().setObject(tempUserArray, forKey: "users")
+        }
+        
     }
     
 }
