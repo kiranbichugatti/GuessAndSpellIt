@@ -258,21 +258,18 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S7T-cQ-sPt">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="Reveal">
+                                <state key="normal" title="3">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=regular" fixedFrame="YES">
                                     <rect key="frame" x="670" y="160" width="47" height="30"/>
                                 </variation>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ZJ-Hm-T4K">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="Remove letter">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="650" y="229" width="96" height="30"/>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="699" y="118" width="53" height="30"/>
                                 </variation>
+                                <connections>
+                                    <action selector="revealHintTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="b4R-fN-6qX"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bpa-4Q-Jrj">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -646,7 +643,7 @@
                                     <action selector="revealButtonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="v1p-sM-hKj"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 reveal remaining!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fLx-MD-hzA">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reveal Remaining: 5" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fLx-MD-hzA">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -693,13 +690,36 @@
                                     <rect key="frame" x="585" y="32" width="159" height="31"/>
                                 </variation>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reveal" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FrQ-Kh-QW8">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="639" y="122" width="52" height="21"/>
+                                </variation>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ZJ-Hm-T4K">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Remove letter">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="650" y="229" width="96" height="30"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="650" y="184" width="96" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="RemoveLetterPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rKa-NO-dFd"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.91362527591623277" green="1" blue="0.8726143978328198" alpha="1" colorSpace="calibratedRGB"/>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="eC1-pC-Nch"/>
                                 <exclude reference="S7T-cQ-sPt"/>
-                                <exclude reference="1ZJ-Hm-T4K"/>
                                 <exclude reference="Bpa-4Q-Jrj"/>
                                 <exclude reference="OgZ-8x-9FW"/>
                                 <exclude reference="pNV-3p-tkc"/>
@@ -732,17 +752,19 @@
                                 <exclude reference="RwG-NU-cEQ"/>
                                 <exclude reference="ii2-ru-aMc"/>
                                 <exclude reference="Wtj-ru-SAJ"/>
+                                <exclude reference="FrQ-Kh-QW8"/>
+                                <exclude reference="1ZJ-Hm-T4K"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=regular">
                             <mask key="subviews">
                                 <include reference="eC1-pC-Nch"/>
                                 <include reference="S7T-cQ-sPt"/>
-                                <include reference="1ZJ-Hm-T4K"/>
                                 <include reference="Bpa-4Q-Jrj"/>
                                 <include reference="RwG-NU-cEQ"/>
                                 <include reference="ii2-ru-aMc"/>
                                 <include reference="Wtj-ru-SAJ"/>
+                                <include reference="1ZJ-Hm-T4K"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=regular">
@@ -775,6 +797,7 @@
                                 <include reference="h19-k7-hEj"/>
                                 <include reference="7If-ps-KcO"/>
                                 <include reference="fLx-MD-hzA"/>
+                                <include reference="FrQ-Kh-QW8"/>
                             </mask>
                         </variation>
                     </view>
@@ -782,6 +805,7 @@
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                     <connections>
+                        <outlet property="RevealHint" destination="S7T-cQ-sPt" id="XgE-md-wHL"/>
                         <outlet property="levelLabel" destination="RwG-NU-cEQ" id="rYc-W8-GH4"/>
                         <outlet property="puzzleLabel" destination="eC1-pC-Nch" id="cSa-4z-ISF"/>
                         <outlet property="remainingReveal" destination="fLx-MD-hzA" id="bzi-Pn-u2H"/>
@@ -816,7 +840,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1710" y="165"/>
+            <point key="canvasLocation" x="2097.75" y="67.5"/>
         </scene>
         <!--List User View Controller-->
         <scene sceneID="DhF-H7-GfW">
