@@ -32,12 +32,12 @@ class ListUserViewController: UIViewController,UITableViewDataSource,UITableView
         
         dict = users?.objectAtIndex(indexPath.row) as? NSDictionary
         
-        var image : UIImage?
-        let base64: String? = dict?.objectForKey("pic") as? String
-        
-        var decodedData = NSData(base64EncodedString: base64!, options: NSDataBase64DecodingOptions(0))
-        
-        var decodedimage = UIImage(data: decodedData!)
+//        var image : UIImage?
+//        let base64: String? = dict?.objectForKey("pic") as? String
+//        
+//        var decodedData = NSData(base64EncodedString: base64!, options: NSDataBase64DecodingOptions(0))
+//        
+//        var decodedimage = UIImage(data: decodedData!)
         
         var name : NSString?
         name = dict?.objectForKey("userName") as? NSString
@@ -46,7 +46,7 @@ class ListUserViewController: UIViewController,UITableViewDataSource,UITableView
         score = dict?.objectForKey("score") as? NSNumber
         let s:String = String(format:"%@,         %@",name!, score!)
         cell_?.textLabel?.text = s;
-        cell_?.imageView?.image = decodedimage;
+      //  cell_?.imageView?.image = decodedimage;
         
         return cell_!
     }
