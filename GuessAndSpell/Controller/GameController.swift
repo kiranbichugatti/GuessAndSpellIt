@@ -36,6 +36,7 @@ class GameController: TileDragDelegateProtocol {
     private var audioController:  AudioController
     private var puzzleWord: String = ""
     var onPuzzleSolved: (( ) -> ( ))!
+    private var randomString : NSMutableString = ""
     
 
     
@@ -77,7 +78,7 @@ class GameController: TileDragDelegateProtocol {
         let targetSide = TargetSideLength
         
         //get the left margin for first tile
-        var xOffset = (ScreenWidth - CGFloat(puzzleWordLength) * (tileSide + TileMargin)) / 5.0
+        var xOffset = (ScreenWidth - CGFloat(puzzleWordLength) * (tileSide + TileMargin)) / 3.0
         
         //adjust for tile center (instead of the tile's origin)
         xOffset += tileSide / 2.0
@@ -92,7 +93,7 @@ class GameController: TileDragDelegateProtocol {
         for(index,letter) in enumerate(puzzleWord) {
             if letter != " " {
                 let target = TargetView(letter: letter)
-                target.center = CGPointMake(xOffset + CGFloat(index)*(targetSide + TileMargin), ScreenHeight/4*3.2)
+                target.center = CGPointMake(xOffset + CGFloat(index)*(targetSide + TileMargin), ScreenHeight/4*2.7)
                 
                 targetViewArray.append([target.center.x - TargetSideLength/2, target.center.y - TargetSideLength/2 ])
                 targetCheckPoint.append(-1)
@@ -127,7 +128,7 @@ class GameController: TileDragDelegateProtocol {
             if letter != " " {
                 let tile = TileView(letter: letter)
                // println("\(tile)")
-                tile.center = CGPointMake(xOffset + CGFloat(index)*(tileSide + TileMargin), ScreenHeight/4*3.6)
+                tile.center = CGPointMake(xOffset + CGFloat(index)*(tileSide + TileMargin), ScreenHeight/4*3.1)
                 
                 println("tile location is \(tile.center)")
                 
@@ -144,7 +145,7 @@ class GameController: TileDragDelegateProtocol {
             if letter != " " {
                 let tile = TileView(letter: letter)
                 // println("\(tile)")
-                tile.center = CGPointMake(xOffset + CGFloat(index)*(tileSide + TileMargin), ScreenHeight/4*3.9)
+                tile.center = CGPointMake(xOffset + CGFloat(index)*(tileSide + TileMargin), ScreenHeight/4*3.4)
                 
                 //6 supply the drag delegate to tiles
                 
@@ -194,7 +195,7 @@ class GameController: TileDragDelegateProtocol {
         let letters : NSString = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
         println("random letters \(letters)")
         
-        var randomString : NSMutableString = NSMutableString(capacity: len)
+        randomString  = NSMutableString(capacity: len)
         
         for (var i=0; i < len; i++){
             var length = UInt32 (letters.length)
@@ -334,10 +335,17 @@ class GameController: TileDragDelegateProtocol {
         
     }
     
+    func returnRandomSring() -> NSString {
+        return randomString
+    }
+    
     
     //these functions are for hints record
-    func revealBlock(){
-        data.revealHintLeft -= 1
+    func revealBlock() -> Int{
+        if data.revealHintLeft > 0 {
+            data.revealHintLeft--
+        }
+        return data.revealHintLeft
     }
     
     func getMoreReveal(){
@@ -350,6 +358,20 @@ class GameController: TileDragDelegateProtocol {
     
     func getRidOfBadLetter(){
         data.badLetterHintLeft -= 1
+        
+        let len = randomString.length
+        var anotherstr = randomString as NSString
+        var randomIndex = Int(arc4random_uniform(UInt32(len)))
+        var badletter  = anotherstr.substringWithRange(NSRange(location: randomIndex, length: 1))
+        
+        println("bad letter : \(badletter)")
+        
+       
+          //  let tile = TileView(letter: badletter)
+  
+        
+        
+       
     }
     
     //if success

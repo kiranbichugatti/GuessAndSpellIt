@@ -18,6 +18,7 @@ class ViewController: UIViewController {
     var animator : UIDynamicAnimator
     var gameView : UIView
     var level : Level!
+    var revealChance = 3
 
     
     @IBOutlet weak var puzzleLabel: UILabel!
@@ -27,6 +28,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var remainingReveal: UILabel!
     @IBOutlet var theRevealButtons: [UIButton]!
     
+    @IBOutlet weak var RevealHint: UIButton!
     
     var selectCount: Int = 0 {
         didSet { 
@@ -44,7 +46,23 @@ class ViewController: UIViewController {
         super.init(coder: aDecoder)
     }
    
+    @IBAction func revealHintTouched(sender: UIButton) {
+        var left = controller.revealBlock()
+        sender.setTitle(toString(left), forState: UIControlState.Normal)
+        if left == 0 {sender.enabled = false}
+        if left >= 0 {selectCount--}
+        
+       gamedata.points -= 10
+     scoreLabel.text = "Score: \(controller.currentScore())"
+        
+    }
 
+    @IBAction func RemoveLetterPressed(sender: UIButton) {
+        controller.getRidOfBadLetter()
+        gamedata.points -= 10
+        updateGUI()
+        
+    }
     
     @IBAction func Back(sender: AnyObject) {
         
@@ -87,9 +105,12 @@ class ViewController: UIViewController {
         controller.level = level
         controller.tempLevelData = NSMutableArray(array: level.puzzles)
         controller.DrawRandomPuzzles(thebackgroundImage,choosenLevel: level)
+        
         for button in theRevealButtons {
             button.hidden = false
+            button.enabled = true
         }
+        selectCount = 0
     }
     
     //we need this to update the reveal info and hints.
