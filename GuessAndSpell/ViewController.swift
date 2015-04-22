@@ -116,7 +116,7 @@ class ViewController: UIViewController {
     //we need this to update the reveal info and hints.
     func updateGUI(){
         
-        controller.updateColor()
+        //controller.updateColor()
 
         if (controller.isMatched){
 
@@ -154,7 +154,7 @@ class ViewController: UIViewController {
             var smally = coor[1] as CGFloat
             var bigx = (coor[0] + TargetSideLength ) as CGFloat
             var bigy = (coor[1] + TargetSideLength ) as CGFloat
-
+            println(i)
             if (location.x > smallx) && location.x < bigx && location.y > smally &&
                 (location.y < bigy)&&(controller.targetCheckPoint[i] > -1) && (!controller.isMatched){
                 controller.targetClicked(i)

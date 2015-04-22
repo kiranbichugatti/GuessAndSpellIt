@@ -24,7 +24,7 @@ class TargetView: UIImageView {
         self.letter = letter
         //println("target view letter \(self.letter)")
         
-        let image = UIImage(named: "slot")!
+        let image = UIImage(named: "target")!
         super.init(image:image)
         
         let scale = TargetSideLength / image.size.width

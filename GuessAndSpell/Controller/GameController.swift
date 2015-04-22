@@ -53,32 +53,25 @@ class GameController: TileDragDelegateProtocol {
     func DrawRandomPuzzles (theImageView: UIImageView, choosenLevel: Level) {
         //1
         assert(level.puzzles.count > 0, "no level loaded")
+        isMatched = false
         
         currentIndex = randomNumber(minX:0, maxX:UInt32(tempLevelData.count-1))
         
         let puzzlePair = tempLevelData[currentIndex] as NSMutableArray
         
         
-        //3
+
         let puzzleImage = puzzlePair[0] as String
         
         populatePuzzleImage(theImageView, imageurl: puzzleImage)
         puzzleWord = puzzlePair[1] as String
         
-        //4
         let puzzleWordLength = countElements(puzzleWord)
-        
-        //5
-        println("Image \(puzzleImage)")
-        println("phrase1[\(puzzleWordLength)]: \(puzzleWord)")
-        
-        //calculate the tile size
-        //let tileSide = ceil(ScreenWidth * 0.9 / CGFloat(puzzleWordLength)) - TileMargin
         let tileSide = TileSideLength
         let targetSide = TargetSideLength
         
         //get the left margin for first tile
-        var xOffset = (ScreenWidth - CGFloat(puzzleWordLength) * (tileSide + TileMargin)) / 3.0
+        var xOffset = (ScreenWidth - CGFloat(puzzleWordLength) * (tileSide + TileMargin)) / 2.0
         
         //adjust for tile center (instead of the tile's origin)
         xOffset += tileSide / 2.0
@@ -86,7 +79,7 @@ class GameController: TileDragDelegateProtocol {
         
         // initialize the target list
         targets = []
-        
+        targetViewArray = []
         targetCheckPoint = []
         
         //create targets
@@ -234,14 +227,7 @@ class GameController: TileDragDelegateProtocol {
                 break
             }
         }
-        
-        /*for tv in targets {
-            if CGRectContainsPoint(tv.frame, point) {
-                targetView = tv
-                break
-            }
-        }*/
-        
+
         //1 check if target was found
         if let foundTargetView = targetView {
             
@@ -257,12 +243,15 @@ class GameController: TileDragDelegateProtocol {
                 
                 if puzzleWord == selectedWord {
                     isMatched = true
+                    updateColor("greenblock")
+                    audioController.playEffect(SoundWin)
                     puzzleSucceed()
                 } else {
                     isMatched = false
+                    updateColor("redblock")
+                    audioController.playEffect(SoundWrong)
                 }
-                
-                updateColor()
+
                 self.viewControllerInstance.updateGUI()
                 
             }
@@ -311,6 +300,7 @@ class GameController: TileDragDelegateProtocol {
     }
     
     func targetClicked(indexInArray: Int) {
+        println("target get clicked \(indexInArray)")
         
         filled--
         
@@ -318,8 +308,7 @@ class GameController: TileDragDelegateProtocol {
         println("tileIndex is : \(tileIndex)")
         targetCheckPoint[indexInArray] = -1
         targets[indexInArray].hidden = false
-        //var x = targetViewArray[indexInArray][2] as CGFloat
-        //var y = targetViewArray[indexInArray][3] as CGFloat
+
         var clickedTileView = tiles[tileIndex]
         clickedTileView.center = clickedTileView.origin
         clickedTileView.image = UIImage(named:"tile")
@@ -369,9 +358,7 @@ class GameController: TileDragDelegateProtocol {
        
           //  let tile = TileView(letter: badletter)
   
-        
-        
-       
+
     }
     
     //if success
@@ -379,15 +366,13 @@ class GameController: TileDragDelegateProtocol {
         data.points += level.points
     }
     
-    func updateColor(){
+    func updateColor(color:String){
         
-        var color = "redblock"
-        if isMatched {
-            color="greenblock"
+       /* if isMatched {
            audioController.playEffect(SoundWin)
         } else {
             audioController.playEffect(SoundWrong)
-        }
+        }*/
         for i in targetCheckPoint {
             if i > -1 {
                 var theTile = tiles[i]
@@ -396,6 +381,7 @@ class GameController: TileDragDelegateProtocol {
         }
 
     }
+
     
     func puzzleSucceed(){
         
@@ -449,7 +435,8 @@ class GameController: TileDragDelegateProtocol {
               
                 
         })
-          self.viewControllerInstance.updateGUI()
+        self.viewControllerInstance.updateGUI()
+       // isMatched = false
 
     }
     
@@ -478,6 +465,9 @@ class GameController: TileDragDelegateProtocol {
     
     func levelFinished() {
         //start new game, go to next level
+        if tempLevelData.count == 0 {
+            //startNewLevel()
+        }
     }
 
     
