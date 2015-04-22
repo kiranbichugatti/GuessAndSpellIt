@@ -58,7 +58,10 @@ class ViewController: UIViewController {
     }
 
     @IBAction func RemoveLetterPressed(sender: UIButton) {
-        controller.getRidOfBadLetter()
+        let removeLeft = controller.getRidOfBadLetter()
+        sender.setTitle(toString(removeLeft), forState: UIControlState.Normal)
+        if removeLeft == 0 { sender.enabled = false }
+        
         gamedata.points -= 10
         updateGUI()
         
@@ -106,7 +109,8 @@ class ViewController: UIViewController {
     
     //create a function to pick a new game which should have new image, username, userscore
     
-    func startNewLevel() {
+    func startNewPuzzle() {
+        
         var level = Level(levelNumber:2)
         controller.level = level
         controller.tempLevelData = NSMutableArray(array: level.puzzles)
@@ -117,6 +121,8 @@ class ViewController: UIViewController {
             button.enabled = true
         }
         selectCount = 0
+        
+                controller.returntempLevelData()
     }
     
     //we need this to update the reveal info and hints.
@@ -137,9 +143,11 @@ class ViewController: UIViewController {
             //animator.addBehavior(gravity)
             
             scoreLabel.text = "Score: \(controller.currentScore())"
-          
-            
+       
         }
+        
+
+        
       // scoreLabel.text = "Score: \(gamedata.points)"
         //println("point is \(gamedata.points)")
         
@@ -196,13 +204,13 @@ class ViewController: UIViewController {
         
         //need to get the level by checking some parameter and change it to level1 or level2
         
-        controller.onPuzzleSolved =  self.startNewLevel
+        controller.onPuzzleSolved =  self.startNewPuzzle
         
         updateGUI()
     }
     
     override func viewDidAppear(animated: Bool) {
-        self.startNewLevel()
+        self.startNewPuzzle()
     }
     
 
