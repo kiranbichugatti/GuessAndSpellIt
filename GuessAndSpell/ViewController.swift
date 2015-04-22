@@ -64,6 +64,12 @@ class ViewController: UIViewController {
         
     }
     
+    @IBAction func correctHintTouched(sender: UIButton) {
+        var left = controller.getCorrectLetter()
+        sender.setTitle(toString(left), forState: UIControlState.Normal)
+        if left == 0 {sender.enabled = false}
+    }
+    
     @IBAction func Back(sender: AnyObject) {
         
         self.navigationController?.popViewControllerAnimated(true)

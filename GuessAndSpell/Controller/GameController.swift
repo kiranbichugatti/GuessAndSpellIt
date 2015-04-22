@@ -58,6 +58,7 @@ class GameController: TileDragDelegateProtocol {
         currentIndex = randomNumber(minX:0, maxX:UInt32(tempLevelData.count-1))
         
         let puzzlePair = tempLevelData[currentIndex] as NSMutableArray
+        println("temp level data value: \(tempLevelData)")
         
         
 
@@ -149,6 +150,11 @@ class GameController: TileDragDelegateProtocol {
         }
         
    }
+    
+    func returnTempLevelData() -> NSMutableArray {
+        println("temp level data value: \(tempLevelData)")
+        return tempLevelData
+    }
     
     
     func shuffle(puzzleWord: String)-> NSString {
@@ -332,9 +338,47 @@ class GameController: TileDragDelegateProtocol {
         data.revealHintLeft += 1
     }
     
-    func getCorrectLetter(){
-        data.correctLetterHintLeft -= 1
+    func getCorrectLetter() -> Int{
+        if data.correctLetterHintLeft > 0 {
+            data.correctLetterHintLeft -= 1
+        }
+        var indexInPuzzle = 0
+        var badIndex : Int = -1
+        
+        for i in targetCheckPoint {
+            if i == -1 { badIndex = indexInPuzzle }
+            if i != -1 && tiles[i].letter != puzzleWord[advance(puzzleWord.startIndex, indexInPuzzle)] {
+                //println("i is: \(i) and letter is: \(puzzleWord[advance(puzzleWord.startIndex, indexInPuzzle)])")
+                badIndex = indexInPuzzle
+                targetClicked(badIndex)
+                break
+            }
+            indexInPuzzle++
+        }
+        //if badindex found, bring good letter up to badIndex
+        if badIndex != -1 {
+            for tv in tiles {
+                var tileIndex = find(tiles, tv)!
+                if tv.letter == puzzleWord[advance(puzzleWord.startIndex, badIndex)] && (!contains(targetCheckPoint, tileIndex)){
+                    var targetView = targets[badIndex]
+                    
+                    UIView.animateWithDuration(1.0,
+                        animations:{
+                            tv.center = targetView.center
+                        })
+                    targetView.hidden = true
+                    filled++
+                    
+                    tv.userInteractionEnabled = false
+                    tv.image = UIImage(named: "greenblock")
+                    targetCheckPoint[badIndex] = tileIndex
+                    break
+                }
+            }
+        }
+        return data.correctLetterHintLeft
     }
+
     
     func getRidOfBadLetter(){
         data.badLetterHintLeft -= 1
