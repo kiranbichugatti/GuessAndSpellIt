@@ -256,21 +256,6 @@
                                     <rect key="frame" x="80" y="27" width="79" height="31"/>
                                 </variation>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S7T-cQ-sPt">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="3">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="670" y="160" width="47" height="30"/>
-                                </variation>
-                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="699" y="118" width="53" height="30"/>
-                                </variation>
-                                <connections>
-                                    <action selector="revealHintTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="b4R-fN-6qX"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bpa-4Q-Jrj">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <state key="normal" title="Correct letter">
@@ -301,11 +286,11 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FVF-sw-ynN">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <color key="backgroundColor" red="0.60000002384185791" green="0.40000000596046448" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" backgroundImage="why">
+                                <state key="normal" backgroundImage="Yellow">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="420" y="88" width="105" height="89"/>
+                                    <rect key="frame" x="420" y="88" width="105" height="90"/>
                                 </variation>
                                 <connections>
                                     <action selector="revealButtonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Z2w-Je-MWo"/>
@@ -314,11 +299,11 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DG6-v8-HYK">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <color key="backgroundColor" red="0.60000002384185791" green="0.40000000596046448" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" backgroundImage="why">
+                                <state key="normal" backgroundImage="Yellow">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="208" y="177" width="105" height="89"/>
+                                    <rect key="frame" x="208" y="177" width="105" height="90"/>
                                 </variation>
                                 <connections>
                                     <action selector="revealButtonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hK9-g3-Sn4"/>
@@ -326,8 +311,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T6K-RY-UtH">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <color key="backgroundColor" red="0.60000002384185791" green="0.40000000596046448" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" backgroundImage="why">
+                                <state key="normal" backgroundImage="Yellow">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -337,7 +321,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="526" y="357" width="105" height="89"/>
+                                    <rect key="frame" x="526" y="357" width="105" height="90"/>
                                 </variation>
                                 <connections>
                                     <action selector="revealButtonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2GK-fi-WsA"/>
@@ -346,7 +330,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ycv-Td-fkh">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <color key="backgroundColor" red="0.60000002384185791" green="0.40000000596046448" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" backgroundImage="why">
+                                <state key="normal" backgroundImage="Yellow">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -356,7 +340,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="102" y="88" width="105" height="89"/>
+                                    <rect key="frame" x="102" y="88" width="105" height="90"/>
                                 </variation>
                                 <connections>
                                     <action selector="revealButtonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kc6-Ev-Jln"/>
@@ -365,7 +349,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1vi-Sf-hoO">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <color key="backgroundColor" red="0.60000002384185791" green="0.40000000596046448" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" backgroundImage="why">
+                                <state key="normal" backgroundImage="Yellow">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -374,7 +358,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="208" y="88" width="105" height="89"/>
+                                    <rect key="frame" x="208" y="88" width="105" height="90"/>
                                 </variation>
                                 <connections>
                                     <action selector="revealButtonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IsF-aO-ZsF"/>
@@ -383,11 +367,11 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="csr-Ih-cya">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <color key="backgroundColor" red="0.60000002384185791" green="0.40000000596046448" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" backgroundImage="why">
+                                <state key="normal" backgroundImage="Yellow">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="314" y="88" width="105" height="89"/>
+                                    <rect key="frame" x="314" y="88" width="105" height="90"/>
                                 </variation>
                                 <connections>
                                     <action selector="revealButtonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DMD-XX-v4X"/>
@@ -396,11 +380,11 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5ZI-kn-d9g">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <color key="backgroundColor" red="0.60000002384185791" green="0.40000000596046448" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" backgroundImage="why">
+                                <state key="normal" backgroundImage="Yellow">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="102" y="267" width="105" height="89"/>
+                                    <rect key="frame" x="102" y="267" width="105" height="90"/>
                                 </variation>
                                 <connections>
                                     <action selector="revealButtonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CAW-NB-twH"/>
@@ -409,11 +393,11 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7RP-9a-pNw">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <color key="backgroundColor" red="0.60000002384185791" green="0.40000000596046448" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" backgroundImage="why">
+                                <state key="normal" backgroundImage="Yellow">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="208" y="267" width="105" height="89"/>
+                                    <rect key="frame" x="208" y="268" width="105" height="90"/>
                                 </variation>
                                 <connections>
                                     <action selector="revealButtonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cLg-Bc-Kx7"/>
@@ -422,11 +406,11 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OaF-nj-l6w">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <color key="backgroundColor" red="0.60000002384185791" green="0.40000000596046448" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" backgroundImage="why">
+                                <state key="normal" backgroundImage="Yellow">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="314" y="267" width="105" height="89"/>
+                                    <rect key="frame" x="314" y="267" width="105" height="90"/>
                                 </variation>
                                 <connections>
                                     <action selector="revealButtonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bdF-z0-HzM"/>
@@ -435,11 +419,11 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U0Y-xe-noT">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <color key="backgroundColor" red="0.60000002384185791" green="0.40000000596046448" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" backgroundImage="why">
+                                <state key="normal" backgroundImage="Yellow">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="420" y="267" width="105" height="89"/>
+                                    <rect key="frame" x="420" y="267" width="105" height="90"/>
                                 </variation>
                                 <connections>
                                     <action selector="revealButtonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xHd-RV-4h7"/>
@@ -447,12 +431,11 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2iy-YN-Qja">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <color key="backgroundColor" red="0.60000002384185791" green="0.40000000596046448" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" backgroundImage="why">
+                                <state key="normal" backgroundImage="Yellow">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="526" y="88" width="105" height="89"/>
+                                    <rect key="frame" x="526" y="88" width="105" height="90"/>
                                 </variation>
                                 <connections>
                                     <action selector="revealButtonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5nx-vy-jCJ"/>
@@ -461,11 +444,11 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lGL-8i-XFZ">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <color key="backgroundColor" red="0.60000002384185791" green="0.40000000596046448" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" backgroundImage="why">
+                                <state key="normal" backgroundImage="Yellow">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="102" y="177" width="105" height="89"/>
+                                    <rect key="frame" x="102" y="176" width="105" height="90"/>
                                 </variation>
                                 <connections>
                                     <action selector="revealButtonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bNP-Ak-W7B"/>
@@ -474,11 +457,11 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dF6-Zv-z0c">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <color key="backgroundColor" red="0.60000002384185791" green="0.40000000596046448" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" backgroundImage="why">
+                                <state key="normal" backgroundImage="Yellow">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="314" y="177" width="105" height="89"/>
+                                    <rect key="frame" x="314" y="177" width="105" height="90"/>
                                 </variation>
                                 <connections>
                                     <action selector="revealButtonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fX8-PH-wES"/>
@@ -487,11 +470,11 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IY9-n1-jL9">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <color key="backgroundColor" red="0.60000002384185791" green="0.40000000596046448" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" backgroundImage="why">
+                                <state key="normal" backgroundImage="Yellow">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="420" y="177" width="105" height="89"/>
+                                    <rect key="frame" x="420" y="177" width="105" height="90"/>
                                 </variation>
                                 <connections>
                                     <action selector="revealButtonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lFu-2v-KQZ"/>
@@ -499,15 +482,14 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o6X-Mm-hlx">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <color key="backgroundColor" red="0.60000002384185791" green="0.40000000596046448" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" none="YES" button="YES" playsSound="YES"/>
                                 </accessibility>
-                                <state key="normal" backgroundImage="why">
+                                <state key="normal" backgroundImage="Yellow">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="526" y="177" width="105" height="89"/>
+                                    <rect key="frame" x="526" y="177" width="105" height="90"/>
                                 </variation>
                                 <connections>
                                     <action selector="revealButtonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dXT-L0-d03"/>
@@ -516,11 +498,11 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ODd-Sz-EVp">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <color key="backgroundColor" red="0.60000002384185791" green="0.40000000596046448" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" backgroundImage="why">
+                                <state key="normal" backgroundImage="Yellow">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="102" y="357" width="105" height="89"/>
+                                    <rect key="frame" x="102" y="357" width="105" height="90"/>
                                 </variation>
                                 <connections>
                                     <action selector="revealButtonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fQQ-T2-SOe"/>
@@ -529,11 +511,11 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PjT-ix-4kN">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <color key="backgroundColor" red="0.60000002384185791" green="0.40000000596046448" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" backgroundImage="why">
+                                <state key="normal" backgroundImage="Yellow">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="208" y="357" width="105" height="89"/>
+                                    <rect key="frame" x="208" y="357" width="105" height="90"/>
                                 </variation>
                                 <connections>
                                     <action selector="revealButtonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aKi-bM-7wg"/>
@@ -542,11 +524,11 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cyt-Vx-ih6">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <color key="backgroundColor" red="0.60000002384185791" green="0.40000000596046448" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" backgroundImage="why">
+                                <state key="normal" backgroundImage="Yellow">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="314" y="357" width="105" height="89"/>
+                                    <rect key="frame" x="314" y="357" width="105" height="90"/>
                                 </variation>
                                 <connections>
                                     <action selector="revealButtonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LjF-gy-xph"/>
@@ -555,11 +537,11 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mGq-6X-A0P">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <color key="backgroundColor" red="0.60000002384185791" green="0.40000000596046448" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" backgroundImage="why">
+                                <state key="normal" backgroundImage="Yellow">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="420" y="357" width="105" height="89"/>
+                                    <rect key="frame" x="420" y="357" width="105" height="90"/>
                                 </variation>
                                 <connections>
                                     <action selector="revealButtonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wvq-TJ-L0s"/>
@@ -567,12 +549,11 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cub-YF-6Vh">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <color key="backgroundColor" red="0.60000002384185791" green="0.40000000596046448" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" backgroundImage="why">
+                                <state key="normal" backgroundImage="Yellow">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="102" y="449" width="105" height="89"/>
+                                    <rect key="frame" x="102" y="448" width="105" height="90"/>
                                 </variation>
                                 <connections>
                                     <action selector="revealButtonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PPQ-tc-kcY"/>
@@ -581,11 +562,11 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lyg-Gp-fAN">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <color key="backgroundColor" red="0.60000002384185791" green="0.40000000596046448" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" backgroundImage="why">
+                                <state key="normal" backgroundImage="Yellow">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="208" y="449" width="105" height="89"/>
+                                    <rect key="frame" x="208" y="448" width="105" height="90"/>
                                 </variation>
                                 <connections>
                                     <action selector="revealButtonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ja9-Nq-q5B"/>
@@ -594,11 +575,11 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2iS-1F-HG7">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <color key="backgroundColor" red="0.60000002384185791" green="0.40000000596046448" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" backgroundImage="why">
+                                <state key="normal" backgroundImage="Yellow">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="314" y="449" width="105" height="89"/>
+                                    <rect key="frame" x="314" y="448" width="105" height="90"/>
                                 </variation>
                                 <connections>
                                     <action selector="revealButtonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DmN-Bw-ejr"/>
@@ -607,11 +588,11 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4cc-qx-kH7">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <color key="backgroundColor" red="0.60000002384185791" green="0.40000000596046448" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" backgroundImage="why">
+                                <state key="normal" backgroundImage="Yellow">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="420" y="449" width="105" height="89"/>
+                                    <rect key="frame" x="420" y="448" width="105" height="90"/>
                                 </variation>
                                 <connections>
                                     <action selector="revealButtonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iId-bx-fVB"/>
@@ -619,12 +600,11 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h19-k7-hEj">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <color key="backgroundColor" red="0.60000002384185791" green="0.40000000596046448" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" backgroundImage="why">
+                                <state key="normal" backgroundImage="Yellow">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="526" y="449" width="105" height="89"/>
+                                    <rect key="frame" x="526" y="448" width="105" height="90"/>
                                 </variation>
                                 <connections>
                                     <action selector="revealButtonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dhW-DU-cQu"/>
@@ -632,12 +612,11 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7If-ps-KcO">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <color key="backgroundColor" red="0.60000002384185791" green="0.40000000596046448" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" backgroundImage="why">
+                                <state key="normal" backgroundImage="Yellow">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="526" y="267" width="105" height="89"/>
+                                    <rect key="frame" x="526" y="267" width="105" height="90"/>
                                 </variation>
                                 <connections>
                                     <action selector="revealButtonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="v1p-sM-hKj"/>
@@ -696,7 +675,7 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="639" y="122" width="52" height="21"/>
+                                    <rect key="frame" x="670" y="97" width="60" height="21"/>
                                 </variation>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ZJ-Hm-T4K">
@@ -714,12 +693,28 @@
                                     <action selector="RemoveLetterPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rKa-NO-dFd"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S7T-cQ-sPt">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="0.78989270119999999" green="1" blue="0.3354631743" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="3">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <variation key="widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="670" y="160" width="47" height="30"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="670" y="116" width="60" height="33"/>
+                                </variation>
+                                <connections>
+                                    <action selector="revealHintTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="b4R-fN-6qX"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.91362527591623277" green="1" blue="0.8726143978328198" alpha="1" colorSpace="calibratedRGB"/>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="eC1-pC-Nch"/>
-                                <exclude reference="S7T-cQ-sPt"/>
                                 <exclude reference="Bpa-4Q-Jrj"/>
                                 <exclude reference="OgZ-8x-9FW"/>
                                 <exclude reference="pNV-3p-tkc"/>
@@ -754,17 +749,18 @@
                                 <exclude reference="Wtj-ru-SAJ"/>
                                 <exclude reference="FrQ-Kh-QW8"/>
                                 <exclude reference="1ZJ-Hm-T4K"/>
+                                <exclude reference="S7T-cQ-sPt"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=regular">
                             <mask key="subviews">
                                 <include reference="eC1-pC-Nch"/>
-                                <include reference="S7T-cQ-sPt"/>
                                 <include reference="Bpa-4Q-Jrj"/>
                                 <include reference="RwG-NU-cEQ"/>
                                 <include reference="ii2-ru-aMc"/>
                                 <include reference="Wtj-ru-SAJ"/>
                                 <include reference="1ZJ-Hm-T4K"/>
+                                <include reference="S7T-cQ-sPt"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=regular">
@@ -1046,10 +1042,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Yellow" width="110" height="110"/>
         <image name="background" width="1024" height="1024"/>
         <image name="frontscreen" width="1300" height="1300"/>
         <image name="pauseButton" width="200" height="200"/>
-        <image name="why" width="410" height="364"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="go3-3p-0Z4"/>

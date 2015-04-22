@@ -71,11 +71,12 @@ class GameController: TileDragDelegateProtocol {
         let targetSide = TargetSideLength
         
         //get the left margin for first tile
-        var xOffset = (ScreenWidth - CGFloat(puzzleWordLength) * (tileSide + TileMargin)) / 2.0
+        var xOffsetTarget = (ScreenWidth - CGFloat(puzzleWordLength) * (tileSide + TileMargin)) / 2.0
+        var xOffsetTile = (ScreenWidth - CGFloat(7) * (tileSide + TileMargin)) / 2.0
         
         //adjust for tile center (instead of the tile's origin)
-        xOffset += tileSide / 2.0
-        
+        xOffsetTarget += targetSide / 2.0
+        xOffsetTile += tileSide / 2.0
         
         // initialize the target list
         targets = []
@@ -86,7 +87,7 @@ class GameController: TileDragDelegateProtocol {
         for(index,letter) in enumerate(puzzleWord) {
             if letter != " " {
                 let target = TargetView(letter: letter)
-                target.center = CGPointMake(xOffset + CGFloat(index)*(targetSide + TileMargin), ScreenHeight/4*2.7)
+                target.center = CGPointMake(xOffsetTarget + CGFloat(index)*(targetSide + TileMargin), ScreenHeight/4*2.8)
                 
                 targetViewArray.append([target.center.x - TargetSideLength/2, target.center.y - TargetSideLength/2 ])
                 targetCheckPoint.append(-1)
@@ -121,9 +122,7 @@ class GameController: TileDragDelegateProtocol {
             if letter != " " {
                 let tile = TileView(letter: letter)
                // println("\(tile)")
-                tile.center = CGPointMake(xOffset + CGFloat(index)*(tileSide + TileMargin), ScreenHeight/4*3.1)
-                
-                println("tile location is \(tile.center)")
+                tile.center = CGPointMake(xOffsetTile + CGFloat(index)*(tileSide + TileMargin), ScreenHeight/4*3.2)
                 
                 //6 supply the drag delegate to tiles
                 tile.dragDelegate = self
@@ -138,7 +137,7 @@ class GameController: TileDragDelegateProtocol {
             if letter != " " {
                 let tile = TileView(letter: letter)
                 // println("\(tile)")
-                tile.center = CGPointMake(xOffset + CGFloat(index)*(tileSide + TileMargin), ScreenHeight/4*3.4)
+                tile.center = CGPointMake(xOffsetTile + CGFloat(index)*(tileSide + TileMargin), ScreenHeight/4*3.5)
                 
                 //6 supply the drag delegate to tiles
                 
@@ -159,9 +158,6 @@ class GameController: TileDragDelegateProtocol {
         
         var newWord = puzzleWord+puzzleLetters
         
-        println("selected word \(newWord)")
-       // var newWord = selectedword.capitalizedString
-        
         var shuffledWord: String = ""
     
         while countElements(newWord) > 0 {
@@ -177,8 +173,6 @@ class GameController: TileDragDelegateProtocol {
             // Remove the character from the original selectedWord string
             newWord.removeAtIndex(advance(newWord.startIndex, position))
          }
-        println("shuffled word \(shuffledWord)")
-
         
         return shuffledWord
     }
@@ -186,7 +180,7 @@ class GameController: TileDragDelegateProtocol {
     func randomStringWithLength (len : Int) -> NSString {
         
         let letters : NSString = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-        println("random letters \(letters)")
+        //println("random letters \(letters)")
         
         randomString  = NSMutableString(capacity: len)
         
@@ -270,12 +264,9 @@ class GameController: TileDragDelegateProtocol {
 
 
     func placeTile(tileView: TileView, targetView: TargetView) {
-        
-        //selectedTileView.append(tileView)
-        
-        //1
-        targetView.isMatched = true
-        tileView.isMatched = true
+
+        //targetView.isMatched = true
+        //tileView.isMatched = true
         
         //2
         tileView.userInteractionEnabled = false
@@ -300,7 +291,7 @@ class GameController: TileDragDelegateProtocol {
     }
     
     func targetClicked(indexInArray: Int) {
-        println("target get clicked \(indexInArray)")
+        //println("target get clicked \(indexInArray)")
         
         filled--
         

@@ -154,7 +154,7 @@ class ViewController: UIViewController {
             var smally = coor[1] as CGFloat
             var bigx = (coor[0] + TargetSideLength ) as CGFloat
             var bigy = (coor[1] + TargetSideLength ) as CGFloat
-            println(i)
+
             if (location.x > smallx) && location.x < bigx && location.y > smally &&
                 (location.y < bigy)&&(controller.targetCheckPoint[i] > -1) && (!controller.isMatched){
                 controller.targetClicked(i)
@@ -177,7 +177,6 @@ class ViewController: UIViewController {
         thebackgroundImage.clipsToBounds = true
         
         //add one layer for all game elements
-        //gameView = UIView(frame: CGRectMake(0, 0, ScreenWidth, ScreenHeight))
         self.view.addSubview(gameView)
         controller.gameView = gameView
         
@@ -192,10 +191,6 @@ class ViewController: UIViewController {
         //need to get the level by checking some parameter and change it to level1 or level2
         
         controller.onPuzzleSolved =  self.startNewLevel
-        
-      
-       // println("anagrams: \(level.puzzles)")
-        
         
         updateGUI()
     }
