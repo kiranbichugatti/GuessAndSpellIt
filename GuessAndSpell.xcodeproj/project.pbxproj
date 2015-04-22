@@ -17,7 +17,6 @@
 		A57BEBC91ACA74CE008EFAB0 /* ListUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57BEBC81ACA74CE008EFAB0 /* ListUserViewController.swift */; };
 		A589B59D1AD9BE0B00F1A395 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A589B59C1AD9BE0B00F1A395 /* User.swift */; };
 		A5CA5E111AE6C239007A8B20 /* ListUserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5CA5E101AE6C239007A8B20 /* ListUserCell.swift */; };
-		A5CA5E131AE6CBBE007A8B20 /* titlescreen.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A5CA5E121AE6CBBE007A8B20 /* titlescreen.mp3 */; };
 		A5D4AD081AC7BE6200B18171 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D4AD071AC7BE6200B18171 /* RootViewController.swift */; };
 		AE57BBAF1AC496C30098E5A5 /* Level.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE57BBAE1AC496C30098E5A5 /* Level.swift */; };
 		AE57BBB31AC4972D0098E5A5 /* PictureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE57BBB21AC4972D0098E5A5 /* PictureView.swift */; };
@@ -27,6 +26,8 @@
 		AE57BBBB1AC5B3470098E5A5 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE57BBBA1AC5B3470098E5A5 /* Config.swift */; };
 		AEF289A91ACD9C6A00F1D997 /* GameData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF289A81ACD9C6900F1D997 /* GameData.swift */; };
 		D65494F61AC9E53B00F26A78 /* TargetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65494F51AC9E53B00F26A78 /* TargetView.swift */; };
+		D6A36C2A1AE6FB8A00B5F486 /* 02-titlescreen.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D6A36C291AE6FB8A00B5F486 /* 02-titlescreen.mp3 */; };
+		D6A36C2C1AE6FBDA00B5F486 /* titlescreen.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D6A36C2B1AE6FBDA00B5F486 /* titlescreen.mp3 */; };
 		D6B0F3D31AE0BDCC0079A522 /* particle.png in Resources */ = {isa = PBXBuildFile; fileRef = D6B0F3D21AE0BDCC0079A522 /* particle.png */; };
 		D6B0F3D51AE0BE9B0079A522 /* ShowStars.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B0F3D41AE0BE9B0079A522 /* ShowStars.swift */; };
 		D6D786141AD1CD83003CF6A2 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6D786131AD1CD83003CF6A2 /* AVFoundation.framework */; };
@@ -62,7 +63,6 @@
 		A57BEBC81ACA74CE008EFAB0 /* ListUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListUserViewController.swift; sourceTree = "<group>"; };
 		A589B59C1AD9BE0B00F1A395 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		A5CA5E101AE6C239007A8B20 /* ListUserCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListUserCell.swift; sourceTree = "<group>"; };
-		A5CA5E121AE6CBBE007A8B20 /* titlescreen.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = titlescreen.mp3; path = ../../../../../Downloads/titlescreen.mp3; sourceTree = "<group>"; };
 		A5D4AD071AC7BE6200B18171 /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RootViewController.swift; path = ../RootViewController.swift; sourceTree = "<group>"; };
 		AE57BBAE1AC496C30098E5A5 /* Level.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Level.swift; sourceTree = SOURCE_ROOT; };
 		AE57BBB21AC4972D0098E5A5 /* PictureView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PictureView.swift; sourceTree = SOURCE_ROOT; };
@@ -72,6 +72,8 @@
 		AE57BBBA1AC5B3470098E5A5 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		AEF289A81ACD9C6900F1D997 /* GameData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameData.swift; sourceTree = SOURCE_ROOT; };
 		D65494F51AC9E53B00F26A78 /* TargetView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TargetView.swift; sourceTree = SOURCE_ROOT; };
+		D6A36C291AE6FB8A00B5F486 /* 02-titlescreen.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "02-titlescreen.mp3"; sourceTree = "<group>"; };
+		D6A36C2B1AE6FBDA00B5F486 /* titlescreen.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = titlescreen.mp3; sourceTree = "<group>"; };
 		D6B0F3D21AE0BDCC0079A522 /* particle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = particle.png; sourceTree = "<group>"; };
 		D6B0F3D41AE0BE9B0079A522 /* ShowStars.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowStars.swift; sourceTree = SOURCE_ROOT; };
 		D6D786131AD1CD83003CF6A2 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -172,9 +174,10 @@
 		D6D786181AD9AE73003CF6A2 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				D6A36C2B1AE6FBDA00B5F486 /* titlescreen.mp3 */,
 				D6B0F3D21AE0BDCC0079A522 /* particle.png */,
 				D6D786191AD9AE73003CF6A2 /* ding.mp3 */,
-				A5CA5E121AE6CBBE007A8B20 /* titlescreen.mp3 */,
+				D6A36C291AE6FB8A00B5F486 /* 02-titlescreen.mp3 */,
 				D6D7861A1AD9AE73003CF6A2 /* win.mp3 */,
 				D6D7861B1AD9AE73003CF6A2 /* wrong.m4a */,
 			);
@@ -304,10 +307,11 @@
 				D6D7861D1AD9AE73003CF6A2 /* win.mp3 in Resources */,
 				D6D7861C1AD9AE73003CF6A2 /* ding.mp3 in Resources */,
 				A547CB331AAD77BC0084F2A9 /* LaunchScreen.xib in Resources */,
-				A5CA5E131AE6CBBE007A8B20 /* titlescreen.mp3 in Resources */,
 				D6B0F3D31AE0BDCC0079A522 /* particle.png in Resources */,
 				A547CB301AAD77BC0084F2A9 /* Images.xcassets in Resources */,
 				D6D7861E1AD9AE73003CF6A2 /* wrong.m4a in Resources */,
+				D6A36C2C1AE6FBDA00B5F486 /* titlescreen.mp3 in Resources */,
+				D6A36C2A1AE6FB8A00B5F486 /* 02-titlescreen.mp3 in Resources */,
 				D6F93E9E1AC4690400BA27CF /* Level1.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
