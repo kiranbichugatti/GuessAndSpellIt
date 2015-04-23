@@ -84,7 +84,7 @@ class ViewController: UIViewController {
         if (selectCount < 5) {
             UIView.animateWithDuration(2,
                 delay:0.01,
-                options:UIViewAnimationOptions.CurveEaseInOut,
+                options:UIViewAnimationOptions.CurveEaseOut,
                 animations: {
                     
                     let newPoint = CGPointMake(buttonAtIndex.center.x,

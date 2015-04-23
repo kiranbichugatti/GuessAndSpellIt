@@ -391,7 +391,7 @@ class GameController: TileDragDelegateProtocol {
         println("bad letter : \(badletter)")
         
        
-          //  let tile = TileView(letter: badletter)
+        //let tile = TileView(letter: badletter)
   
 
     }
