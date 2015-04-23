@@ -21,7 +21,7 @@ class StardustView:UIView {
         super.init(frame:frame)
         //initialize the emitter
         emitter = self.layer as CAEmitterLayer
-        emitter.emitterPosition = CGPointMake(self.bounds.size.width/2, self.bounds.size.height/2)
+        emitter.emitterPosition = CGPointMake(self.bounds.size.width/4, self.bounds.size.height/4)
         emitter.emitterSize = self.bounds.size
         emitter.emitterMode = kCAEmitterLayerAdditive
         emitter.emitterShape = kCAEmitterLayerRectangle
@@ -46,9 +46,9 @@ class StardustView:UIView {
         let emitterCell = CAEmitterCell()
         emitterCell.contents = texture!.CGImage
         emitterCell.name = "cell"
-        emitterCell.birthRate = 200
-        emitterCell.lifetime = 1.5
-        emitterCell.blueRange = 0.33
+        emitterCell.birthRate = 600
+        emitterCell.lifetime = 2.5
+        emitterCell.blueRange = 0.50
         emitterCell.blueSpeed = -0.33
         emitterCell.yAcceleration = 100
         emitterCell.xAcceleration = -200

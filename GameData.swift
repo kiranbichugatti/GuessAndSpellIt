@@ -15,7 +15,7 @@ class GameData {
             points = max(points, 0)
         }
     }
-    var revealHintLeft: Int = 3
-    var badLetterHintLeft:Int = 3
-    var correctLetterHintLeft :Int = 3
+    var revealHintLeft: Int = 2
+    var badLetterHintLeft:Int = 2
+    var correctLetterHintLeft :Int = 2
 }

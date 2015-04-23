@@ -58,10 +58,7 @@ class GameController: TileDragDelegateProtocol {
         currentIndex = randomNumber(minX:0, maxX:UInt32(tempLevelData.count-1))
         
         let puzzlePair = tempLevelData[currentIndex] as NSMutableArray
-        println("temp level data value: \(tempLevelData)")
         
-        
-
         let puzzleImage = puzzlePair[0] as String
         
         populatePuzzleImage(theImageView, imageurl: puzzleImage)
@@ -150,12 +147,7 @@ class GameController: TileDragDelegateProtocol {
         }
         
    }
-    
-    func returnTempLevelData() -> NSMutableArray {
-        println("temp level data value: \(tempLevelData)")
-        return tempLevelData
-    }
-    
+
     
     func shuffle(puzzleWord: String)-> NSString {
         
@@ -380,19 +372,28 @@ class GameController: TileDragDelegateProtocol {
     }
 
     
-    func getRidOfBadLetter(){
-        data.badLetterHintLeft -= 1
+    func getRidOfBadLetter() -> Int{
+        
+        if data.badLetterHintLeft > 0 {
+            data.badLetterHintLeft -= 1
+        }
         
         let len = randomString.length
         var anotherstr = randomString as NSString
-        var randomIndex = Int(arc4random_uniform(UInt32(len)))
+        var randomIndex = Int(arc4random_uniform(UInt32(len)-1))
         var badletter  = anotherstr.substringWithRange(NSRange(location: randomIndex, length: 1))
         
         println("bad letter : \(badletter)")
-        
-       
-        //let tile = TileView(letter: badletter)
-  
+      
+        for tv in tiles {
+              for tt in targets {
+                     println("tiles: \(tv.letter) : target letter : \(tt.letter) and bad letter: \(badletter)")
+                    if (toString(tv.letter) == badletter) && (toString(tt.letter) != badletter) {
+                        tv.removeFromSuperview()
+                    }
+             }
+        }
+        return data.badLetterHintLeft
 
     }
     
@@ -417,6 +418,12 @@ class GameController: TileDragDelegateProtocol {
 
     }
 
+    func returntempLevelData() -> Int {
+        
+        println("count of tempLevelData \(tempLevelData.count)")
+        let count = tempLevelData.count
+        return count
+    }
     
     func puzzleSucceed(){
         
@@ -444,11 +451,17 @@ class GameController: TileDragDelegateProtocol {
         
         //success animation
         
-        let firstTarget = targets[0]
-        let startX:CGFloat = 0
-        let endX:CGFloat = ScreenWidth + 300
-        let startY = firstTarget.center.y
+        var xOffsetTile = (ScreenWidth + CGFloat(7) * (TileSideLength + TileMargin)) / 3.0
         
+
+         var xOffset = (ScreenWidth + CGFloat(7)/4*2.9)
+        var yOffset = (ScreenHeight )
+        
+        let startX:CGFloat = xOffsetTile
+        
+        let endX:CGFloat = ScreenWidth - 100
+        let startY = yOffset
+        let endY = ScreenHeight - 500
         
         let stars = StardustView(frame: CGRectMake(startX, startY, 10, 10))
         
@@ -460,11 +473,11 @@ class GameController: TileDragDelegateProtocol {
             delay:0.5,
             options:UIViewAnimationOptions.CurveEaseOut,
             animations:{
-                stars.center = CGPointMake(endX, startY)
+                stars.center = CGPointMake(startX, endY)
             }, completion: {(value:Bool) in
                 //game finished
                 stars.removeFromSuperview()
-                //when animation is finished, show menu
+                //when animation is finished, start new game
                 self.clearBoard()
                  self.onPuzzleSolved()
               
