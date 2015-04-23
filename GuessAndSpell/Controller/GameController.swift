@@ -87,7 +87,7 @@ class GameController: TileDragDelegateProtocol {
                 let target = TargetView(letter: letter)
                 target.center = CGPointMake(xOffsetTarget + CGFloat(index)*(targetSide + TileMargin), ScreenHeight/4*2.8)
                 
-                targetViewArray.append([target.center.x - TargetSideLength/2, target.center.y - TargetSideLength/2 ])
+                targetViewArray.append([target.center.x - TargetSideLength/2, target.center.y - TargetSideLength/2, 0 ])
                 targetCheckPoint.append(-1)
                 
                 gameView.addSubview(target)
@@ -119,10 +119,8 @@ class GameController: TileDragDelegateProtocol {
             //5
             if letter != " " {
                 let tile = TileView(letter: letter)
-               // println("\(tile)")
                 tile.center = CGPointMake(xOffsetTile + CGFloat(index)*(tileSide + TileMargin), ScreenHeight/4*3.2)
                 
-                //6 supply the drag delegate to tiles
                 tile.dragDelegate = self
                 
                 gameView.addSubview(tile)
@@ -134,11 +132,8 @@ class GameController: TileDragDelegateProtocol {
             //5
             if letter != " " {
                 let tile = TileView(letter: letter)
-                // println("\(tile)")
+
                 tile.center = CGPointMake(xOffsetTile + CGFloat(index)*(tileSide + TileMargin), ScreenHeight/4*3.5)
-                
-                //6 supply the drag delegate to tiles
-                
                 tile.dragDelegate = self
                 
                 gameView.addSubview(tile)
@@ -227,7 +222,7 @@ class GameController: TileDragDelegateProtocol {
             
             if filled==targets.count {
 
-                for i in targetCheckPoint {
+                /*for i in targetCheckPoint {
                     selectedWord = selectedWord + [tiles[i].letter]
                 }
                 
@@ -244,7 +239,8 @@ class GameController: TileDragDelegateProtocol {
                     audioController.playEffect(SoundWrong)
                 }
 
-                self.viewControllerInstance.updateGUI()
+                self.viewControllerInstance.updateGUI()*/
+                checkAnswer()
                 
             }
             
@@ -262,23 +258,18 @@ class GameController: TileDragDelegateProtocol {
 
 
     func placeTile(tileView: TileView, targetView: TargetView) {
-
-        //targetView.isMatched = true
-        //tileView.isMatched = true
-        
-        //2
+ 
         tileView.userInteractionEnabled = false
-        
-        //3
+
         UIView.animateWithDuration(0.35,
             delay:0.00,
             options:UIViewAnimationOptions.CurveEaseOut,
-            //4
+          
             animations:{
                 tileView.center = targetView.center
                 tileView.transform = CGAffineTransformIdentity
             },
-            //5
+         
             completion: {
                 (value:Bool) in
                 targetView.hidden = true
@@ -291,26 +282,33 @@ class GameController: TileDragDelegateProtocol {
     func targetClicked(indexInArray: Int) {
         //println("target get clicked \(indexInArray)")
         
-        filled--
-        
-        var tileIndex = targetCheckPoint[indexInArray]
-        println("tileIndex is : \(tileIndex)")
-        targetCheckPoint[indexInArray] = -1
-        targets[indexInArray].hidden = false
-
-        var clickedTileView = tiles[tileIndex]
-        clickedTileView.center = clickedTileView.origin
-        clickedTileView.image = UIImage(named:"tile")
-        clickedTileView.userInteractionEnabled = true
-        
-        if filled == targets.count - 1 {
-            for i in targetCheckPoint {
-                if i > -1 {
-                    tiles[i].image = UIImage(named : "tile")
+        if targetViewArray[indexInArray][2] == 0 {
+            filled--
+            
+            var tileIndex = targetCheckPoint[indexInArray]
+            println("tileIndex is : \(tileIndex)")
+            targetCheckPoint[indexInArray] = -1
+            targets[indexInArray].hidden = false
+            
+            var clickedTileView = tiles[tileIndex]
+            clickedTileView.center = clickedTileView.origin
+            clickedTileView.image = UIImage(named:"tile")
+            clickedTileView.userInteractionEnabled = true
+            
+            if filled == targets.count - 1 {
+                var j : Int = 0
+                for i in targetCheckPoint {
+                    if i > -1 {
+                        if targetViewArray[j][2] == 1 {
+                            tiles[i].image = UIImage(named : "greenblock")
+                        } else {
+                            tiles[i].image = UIImage(named : "tile")
+                        }
+                    }
+                    j++
                 }
             }
         }
-        
     }
     
     func returnRandomSring() -> NSString {
@@ -338,7 +336,10 @@ class GameController: TileDragDelegateProtocol {
         var badIndex : Int = -1
         
         for i in targetCheckPoint {
-            if i == -1 { badIndex = indexInPuzzle }
+            if i == -1 {
+                badIndex = indexInPuzzle
+                break
+            }
             if i != -1 && tiles[i].letter != puzzleWord[advance(puzzleWord.startIndex, indexInPuzzle)] {
                 //println("i is: \(i) and letter is: \(puzzleWord[advance(puzzleWord.startIndex, indexInPuzzle)])")
                 badIndex = indexInPuzzle
@@ -347,23 +348,40 @@ class GameController: TileDragDelegateProtocol {
             }
             indexInPuzzle++
         }
+        
         //if badindex found, bring good letter up to badIndex
+        
         if badIndex != -1 {
             for tv in tiles {
                 var tileIndex = find(tiles, tv)!
-                if tv.letter == puzzleWord[advance(puzzleWord.startIndex, badIndex)] && (!contains(targetCheckPoint, tileIndex)){
+                if tv.letter == puzzleWord[advance(puzzleWord.startIndex, badIndex)]{
+                    //found it in the target area
+                    //if contains(targetCheckPoint, tileIndex) {
+                    if let indexInTarget = find(targetCheckPoint, tileIndex) {
+                        if targetViewArray[indexInTarget][2] == 1 {continue}
+                        filled--
+                        targetCheckPoint[indexInTarget] = -1
+                        targets[indexInTarget].hidden = false
+                    }
+                    
                     var targetView = targets[badIndex]
                     
-                    UIView.animateWithDuration(1.0,
+                    UIView.animateWithDuration(0.3,
                         animations:{
                             tv.center = targetView.center
                         })
-                    targetView.hidden = true
-                    filled++
                     
+                    filled++
                     tv.userInteractionEnabled = false
                     tv.image = UIImage(named: "greenblock")
                     targetCheckPoint[badIndex] = tileIndex
+                    targetViewArray[badIndex][2] = 1
+                    targetView.hidden = true
+                    
+                    if filled == targets.count {
+                        checkAnswer()
+                    }
+                    
                     break
                 }
             }
@@ -518,6 +536,30 @@ class GameController: TileDragDelegateProtocol {
         }
     }
 
+    func checkAnswer() {
+        var i : Int
+        var selectedWord = ""
+        
+        for i in targetCheckPoint {
+            selectedWord = selectedWord + [tiles[i].letter]
+        }
+                
+        println("selected : \(selectedWord)")
+                
+        if puzzleWord == selectedWord {
+            isMatched = true
+            updateColor("greenblock")
+            audioController.playEffect(SoundWin)
+            puzzleSucceed()
+        } else {
+            isMatched = false
+            updateColor("redblock")
+            audioController.playEffect(SoundWrong)
+        }
+
+        self.viewControllerInstance.updateGUI()
+    
+    }
     
 }
 
