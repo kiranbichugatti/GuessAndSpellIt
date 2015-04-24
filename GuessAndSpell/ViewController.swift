@@ -21,6 +21,7 @@ class ViewController: UIViewController {
     var revealChance = 3
 
     
+    @IBOutlet weak var hintImage: UIImageView!
     @IBOutlet weak var puzzleLabel: UILabel!
     @IBOutlet weak var levelLabel: UILabel!
     @IBOutlet weak var scoreLabel: UILabel!
@@ -100,12 +101,31 @@ class ViewController: UIViewController {
                     self.theRevealButtons[buttonIndex].hidden = true
             })
             
-
-          
             selectCount++
         }
         
     }
+    
+
+    @IBAction func flashHintTouched(sender: UIButton) {
+        var left = controller.flash()
+        var timer = NSTimer()
+        for but in theRevealButtons {
+            UIView.animateWithDuration(0.2, delay: 0.2, options: UIViewAnimationOptions.CurveEaseOut, animations: {
+                but.alpha = 0.7
+                }, completion: {
+                    (value:Bool) in
+                    but.alpha = 1.0
+            }
+        )
+        
+        }
+        sender.setTitle(toString(left), forState: UIControlState.Normal)
+        if left == 0 {sender.enabled = false}
+    }
+
+
+    
     
     //create a function to pick a new game which should have new image, username, userscore
     
@@ -127,8 +147,6 @@ class ViewController: UIViewController {
     
     //we need this to update the reveal info and hints.
     func updateGUI(){
-        
-        //controller.updateColor()
 
         if (controller.isMatched){
 
@@ -179,6 +197,10 @@ class ViewController: UIViewController {
        
     }
     
+    func setupGUI() {
+        hintImage.backgroundColor = UIColor(patternImage: UIImage(named: "hint.png")!)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -206,7 +228,8 @@ class ViewController: UIViewController {
         
         controller.onPuzzleSolved =  self.startNewPuzzle
         
-        updateGUI()
+        //updateGUI()
+        setupGUI()
     }
     
     override func viewDidAppear(animated: Bool) {

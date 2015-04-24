@@ -366,17 +366,28 @@ class GameController: TileDragDelegateProtocol {
                     
                     var targetView = targets[badIndex]
                     
-                    UIView.animateWithDuration(0.3,
+                    /*UIView.animateWithDuration(0.3,
                         animations:{
                             tv.center = targetView.center
-                        })
+                        })*/
+                    UIView.animateWithDuration(0.2,
+                        delay:0.01,
+                        options:UIViewAnimationOptions.CurveEaseOut,
+                        animations: {
+                            tv.center = targetView.center
+                            
+                        },
+                        completion: {
+                            (value:Bool) in
+                            //self.theRevealButtons[buttonIndex].hidden = true
+                            targetView.hidden = true
+                    })
                     
                     filled++
                     tv.userInteractionEnabled = false
                     tv.image = UIImage(named: "greenblock")
                     targetCheckPoint[badIndex] = tileIndex
                     targetViewArray[badIndex][2] = 1
-                    targetView.hidden = true
                     
                     if filled == targets.count {
                         checkAnswer()
@@ -415,18 +426,21 @@ class GameController: TileDragDelegateProtocol {
 
     }
     
+    func flash()-> Int{
+        if data.flashHintLeft > 0 {
+            data.flashHintLeft -= 1
+        }
+        
+        return data.flashHintLeft
+    }
+    
     //if success
     func getBonus(){
         data.points += level.points
     }
     
     func updateColor(color:String){
-        
-       /* if isMatched {
-           audioController.playEffect(SoundWin)
-        } else {
-            audioController.playEffect(SoundWrong)
-        }*/
+
         for i in targetCheckPoint {
             if i > -1 {
                 var theTile = tiles[i]
