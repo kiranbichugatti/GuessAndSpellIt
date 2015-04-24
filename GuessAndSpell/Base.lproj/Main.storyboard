@@ -786,10 +786,22 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="685" y="497" width="35" height="30"/>
+                                    <rect key="frame" x="685" y="478" width="35" height="30"/>
                                 </variation>
                                 <connections>
                                     <action selector="Back:" destination="BYZ-38-t0r" eventType="touchUpInside" id="voR-XR-sVJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qa2-nP-0Hl">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Button" image="large-home-purple">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="668" y="557" width="68" height="57"/>
+                                </variation>
+                                <connections>
+                                    <action selector="homeButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vPU-ts-FyC"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -837,6 +849,7 @@
                                 <exclude reference="LMc-qw-UMr"/>
                                 <exclude reference="aMR-bR-lJH"/>
                                 <exclude reference="OgZ-8x-9FW"/>
+                                <exclude reference="qa2-nP-0Hl"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=regular">
@@ -886,6 +899,7 @@
                                 <include reference="LMc-qw-UMr"/>
                                 <include reference="aMR-bR-lJH"/>
                                 <include reference="OgZ-8x-9FW"/>
+                                <include reference="qa2-nP-0Hl"/>
                             </mask>
                         </variation>
                     </view>
@@ -1163,6 +1177,7 @@
         <image name="Yellow" width="110" height="110"/>
         <image name="background" width="1024" height="1024"/>
         <image name="frontscreen" width="1300" height="1300"/>
+        <image name="large-home-purple" width="401" height="401"/>
         <image name="leaderboard" width="1286" height="997"/>
         <image name="logo" width="423" height="80"/>
         <image name="pauseButton" width="200" height="200"/>

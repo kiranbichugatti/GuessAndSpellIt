@@ -271,6 +271,10 @@ class ViewController: UIViewController {
         }
     }
 
+    @IBAction func homeButton(sender: UIButton) {
+        
+        self.navigationController?.popToRootViewControllerAnimated(true)
+    }
     override func viewDidAppear(animated: Bool) {
         self.startNewPuzzle()
     }
