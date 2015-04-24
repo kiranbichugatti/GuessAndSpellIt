@@ -18,9 +18,9 @@ class ViewController: UIViewController {
     var animator : UIDynamicAnimator
     var gameView : UIView
     var level : Level!
-    var revealChance = 3
 
     
+    @IBOutlet weak var progress: UILabel!
     @IBOutlet weak var userLabel: UILabel!
     @IBOutlet weak var hintImage: UIImageView!
     @IBOutlet weak var puzzleLabel: UILabel!
@@ -126,41 +126,49 @@ class ViewController: UIViewController {
     }
 
     
-    //create a function to pick a new game which should have new image, username, userscore
-    
     func startNewPuzzle() {
-        
-        var level = Level(levelNumber:3)
-        controller.level = level
-        controller.tempLevelData = NSMutableArray(array: level.puzzles)
-        controller.DrawRandomPuzzles(thebackgroundImage,choosenLevel: level)
+        controller.currentPuzzle += 1
+        if controller.currentPuzzle > 3 {
+            initNewLevel()
+        }
+        controller.DrawRandomPuzzles(thebackgroundImage)
         
         for button in theRevealButtons {
             button.hidden = false
             button.enabled = true
         }
         selectCount = 0
-        
-                controller.returntempLevelData()
+        updateGUI()
+        //controller.returntempLevelData()
+    }
+    
+    func initNewLevel(){
+        if controller.currentLevel < 3 {
+            controller.currentLevel = controller.currentLevel + 1
+            level = Level(levelNumber:controller.currentLevel)
+            controller.level = level
+            controller.tempLevelData = NSMutableArray(array: level.puzzles)
+            //controller.currentPuzzle = 1
+        } else {
+            //all game is finished. Congrats!
+        }
     }
     
     //we need this to update the reveal info and hints.
     func updateGUI(){
-
+        
         if (controller.isMatched){
-
+            
             //remove all the buttons on the image, we can add some effect later
             for button in theRevealButtons {
                 UIView.animateWithDuration(1.0, animations:{
                     button.hidden = true
                 })
-
+                
             }
-            //gravity = UIGravityBehavior(items: [theRevealButtons])
-            //animator.addBehavior(gravity)
             
             scoreLabel.text = "Score: \(controller.currentScore())"
-
+            
             var tempuser = User?()
             tempuser = User()
             let balance: AnyObject? = controller.currentScore()
@@ -168,7 +176,7 @@ class ViewController: UIViewController {
             //use var instead of let
             var mybalance = balance as NSNumber
             tempuser?.updateUserWithScore(mybalance)
-       
+            
         }
         
     }
@@ -184,51 +192,42 @@ class ViewController: UIViewController {
             var smally = coor[1] as CGFloat
             var bigx = (coor[0] + TargetSideLength ) as CGFloat
             var bigy = (coor[1] + TargetSideLength ) as CGFloat
-
+            
             if (location.x > smallx) && location.x < bigx && location.y > smally &&
                 (location.y < bigy)&&(controller.targetCheckPoint[i] > -1) && (!controller.isMatched){
-                controller.targetClicked(i)
-                break
+                    controller.targetClicked(i)
+                    break
             }
             i++
         }
-       
+        
     }
     
     func setupGUI() {
-        hintImage.backgroundColor = UIColor(patternImage: UIImage(named: "hint.png")!)
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        // Do any additional setup after loading the view, typically from a nib.
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "background.png")!)
-        
-        //this should be done dynamically
-       // theImageView.layer.contents = UIImage(named: "chair.jpg")?.CGImage
+        hintImage.backgroundColor = UIColor(patternImage: UIImage(named: "hint.png")!)
+        // theImageView.layer.contents = UIImage(named: "chair.jpg")?.CGImage
         thebackgroundImage.layer.cornerRadius = 8.0
         thebackgroundImage.clipsToBounds = true
         
         //add one layer for all game elements
         self.view.addSubview(gameView)
         controller.gameView = gameView
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
         
-        //get the level and puzzle number
-       
-        puzzleLabel.text = "Puzzle: \(controller.currentPuzzleIndex())"
-        println("puzzle is \(controller.currentPuzzleIndex())")
-        
-        //pass a reference of viewController to gameController
         controller.viewControllerInstance = self
-        
-        //need to get the level by checking some parameter and change it to level1 or level2
-        
         controller.onPuzzleSolved =  self.startNewPuzzle
+        
+        self.initNewLevel()
+        //self.startNewPuzzle()
         self.updateUserDetails()
         
-        //updateGUI()
+        updateGUI()
         setupGUI()
+        
     }
     
     func updateUserDetails(){
