@@ -5,24 +5,24 @@
 	<key>puzzles</key>
 	<array>
 		<array>
-			<string>soccer.jpg</string>
-			<string>SOCCER</string>
+			<string>recursion.jpg</string>
+			<string>RECURSION</string>
 			<integer>0</integer>
 		</array>
 		<array>
-			<string>coffee.jpg</string>
-			<string>COFFEE</string>
+			<string>paris.jpg</string>
+			<string>PARIS</string>
 			<integer>0</integer>
 		</array>
 		<array>
-			<string>nails.jpg</string>
-			<string>NAILS</string>
+			<string>vivien.jpg</string>
+			<string>VIVIEN</string>
 			<integer>0</integer>
 		</array>
 	</array>
 	<key>timeToSolve</key>
-	<integer>180</integer>
+	<integer>120</integer>
 	<key>points</key>
-	<integer>30</integer>
+	<integer>50</integer>
 </dict>
 </plist>
