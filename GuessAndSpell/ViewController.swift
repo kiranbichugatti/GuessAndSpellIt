@@ -87,7 +87,7 @@ class ViewController: UIViewController {
         let buttonAtIndex = theRevealButtons[buttonIndex]
         
         if (selectCount < 5) {
-            UIView.animateWithDuration(2,
+           UIView.animateWithDuration(0.8,
                 delay:0.01,
                 options:UIViewAnimationOptions.CurveEaseOut,
                 animations: {
@@ -95,12 +95,14 @@ class ViewController: UIViewController {
                     let newPoint = CGPointMake(buttonAtIndex.center.x,
                         buttonAtIndex.center.y - 70)
 
+                    println("point is: \(newPoint)")
                     buttonAtIndex.center = newPoint
                 },
                 completion: {
                     (value:Bool) in
                     self.theRevealButtons[buttonIndex].hidden = true
             })
+            //animateButton(buttonAtIndex)
             
             selectCount++
         }
@@ -117,22 +119,18 @@ class ViewController: UIViewController {
                 }, completion: {
                     (value:Bool) in
                     but.alpha = 1.0
-            }
-        )
-        
+            })
         }
         sender.setTitle(toString(left), forState: UIControlState.Normal)
         if left == 0 {sender.enabled = false}
     }
 
-
-    
     
     //create a function to pick a new game which should have new image, username, userscore
     
     func startNewPuzzle() {
         
-        var level = Level(levelNumber:2)
+        var level = Level(levelNumber:3)
         controller.level = level
         controller.tempLevelData = NSMutableArray(array: level.puzzles)
         controller.DrawRandomPuzzles(thebackgroundImage,choosenLevel: level)
@@ -162,6 +160,7 @@ class ViewController: UIViewController {
             //animator.addBehavior(gravity)
             
             scoreLabel.text = "Score: \(controller.currentScore())"
+
             var tempuser = User?()
             tempuser = User()
             let balance: AnyObject? = controller.currentScore()
@@ -171,15 +170,6 @@ class ViewController: UIViewController {
             tempuser?.updateUserWithScore(mybalance)
        
         }
-        
-
-        
-      // scoreLabel.text = "Score: \(gamedata.points)"
-        //println("point is \(gamedata.points)")
-        
-        //update hints view
-        
-        //update reveals left text
         
     }
     

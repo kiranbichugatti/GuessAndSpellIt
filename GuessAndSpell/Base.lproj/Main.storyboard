@@ -256,20 +256,8 @@
                                     <rect key="frame" x="653" y="294" width="91" height="30"/>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="670" y="334" width="64" height="21"/>
+                                    <rect key="frame" x="670" y="318" width="64" height="21"/>
                                 </variation>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OgZ-8x-9FW">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="Back">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="685" y="503" width="35" height="30"/>
-                                </variation>
-                                <connections>
-                                    <action selector="Back:" destination="BYZ-38-t0r" eventType="touchUpInside" id="voR-XR-sVJ"/>
-                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="pNV-3p-tkc">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
@@ -616,6 +604,18 @@
                                     <action selector="revealButtonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="v1p-sM-hKj"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Remaining Reveals: 5" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fLx-MD-hzA">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <color key="backgroundColor" red="0.84591138783635167" green="0.88320462359334262" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="1" green="0.10764254474844592" blue="0.1746005864313277" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="highlightedColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="shadowColor" red="0.46124914119999999" green="0.87802049000000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                    <rect key="frame" x="262" y="560" width="220" height="31"/>
+                                </variation>
+                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Level 1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RwG-NU-cEQ">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -676,7 +676,7 @@
                                     <rect key="frame" x="650" y="229" width="96" height="30"/>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="672" y="275" width="64" height="39"/>
+                                    <rect key="frame" x="672" y="268" width="64" height="33"/>
                                 </variation>
                                 <connections>
                                     <action selector="RemoveLetterPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rKa-NO-dFd"/>
@@ -693,7 +693,7 @@
                                     <rect key="frame" x="670" y="160" width="47" height="30"/>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="670" y="198" width="64" height="39"/>
+                                    <rect key="frame" x="670" y="196" width="64" height="33"/>
                                 </variation>
                                 <connections>
                                     <action selector="revealHintTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="b4R-fN-6qX"/>
@@ -710,7 +710,7 @@
                                     <rect key="frame" x="670" y="160" width="47" height="30"/>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="670" y="352" width="64" height="39"/>
+                                    <rect key="frame" x="670" y="338" width="64" height="33"/>
                                 </variation>
                                 <connections>
                                     <action selector="correctHintTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EJM-Jz-Dlb"/>
@@ -724,7 +724,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="672" y="257" width="64" height="21"/>
+                                    <rect key="frame" x="672" y="248" width="64" height="21"/>
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Puzzel 1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eC1-pC-Nch">
@@ -746,7 +746,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="670" y="410" width="64" height="21"/>
+                                    <rect key="frame" x="670" y="391" width="64" height="21"/>
                                 </variation>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LMc-qw-UMr">
@@ -760,7 +760,7 @@
                                     <rect key="frame" x="670" y="160" width="47" height="30"/>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="670" y="429" width="64" height="38"/>
+                                    <rect key="frame" x="670" y="409" width="64" height="33"/>
                                 </variation>
                                 <connections>
                                     <action selector="flashHintTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iBn-25-Xw9"/>
@@ -772,24 +772,23 @@
                                     <rect key="frame" x="675" y="115" width="54" height="47"/>
                                 </variation>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Remaining Reveals: 5" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fLx-MD-hzA">
-                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <color key="backgroundColor" red="0.84591138783635167" green="0.88320462359334262" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <color key="textColor" red="1" green="0.10764254474844592" blue="0.1746005864313277" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="highlightedColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="shadowColor" red="0.46124914119999999" green="0.87802049000000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OgZ-8x-9FW">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
-                                    <rect key="frame" x="262" y="560" width="220" height="31"/>
+                                    <rect key="frame" x="685" y="497" width="35" height="30"/>
                                 </variation>
-                            </label>
+                                <connections>
+                                    <action selector="Back:" destination="BYZ-38-t0r" eventType="touchUpInside" id="voR-XR-sVJ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.91362527591623277" green="1" blue="0.8726143978328198" alpha="1" colorSpace="calibratedRGB"/>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="Bpa-4Q-Jrj"/>
-                                <exclude reference="OgZ-8x-9FW"/>
                                 <exclude reference="pNV-3p-tkc"/>
                                 <exclude reference="FVF-sw-ynN"/>
                                 <exclude reference="DG6-v8-HYK"/>
@@ -816,6 +815,7 @@
                                 <exclude reference="4cc-qx-kH7"/>
                                 <exclude reference="h19-k7-hEj"/>
                                 <exclude reference="7If-ps-KcO"/>
+                                <exclude reference="fLx-MD-hzA"/>
                                 <exclude reference="RwG-NU-cEQ"/>
                                 <exclude reference="ii2-ru-aMc"/>
                                 <exclude reference="Wtj-ru-SAJ"/>
@@ -828,7 +828,7 @@
                                 <exclude reference="c7X-st-vNg"/>
                                 <exclude reference="LMc-qw-UMr"/>
                                 <exclude reference="aMR-bR-lJH"/>
-                                <exclude reference="fLx-MD-hzA"/>
+                                <exclude reference="OgZ-8x-9FW"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=regular">
@@ -844,7 +844,6 @@
                         </variation>
                         <variation key="heightClass=regular-widthClass=regular">
                             <mask key="subviews">
-                                <include reference="OgZ-8x-9FW"/>
                                 <include reference="pNV-3p-tkc"/>
                                 <include reference="FVF-sw-ynN"/>
                                 <include reference="DG6-v8-HYK"/>
@@ -871,13 +870,14 @@
                                 <include reference="4cc-qx-kH7"/>
                                 <include reference="h19-k7-hEj"/>
                                 <include reference="7If-ps-KcO"/>
+                                <include reference="fLx-MD-hzA"/>
                                 <include reference="FrQ-Kh-QW8"/>
                                 <include reference="GjJ-Vg-lUZ"/>
                                 <include reference="Efu-b7-MYp"/>
                                 <include reference="c7X-st-vNg"/>
                                 <include reference="LMc-qw-UMr"/>
                                 <include reference="aMR-bR-lJH"/>
-                                <include reference="fLx-MD-hzA"/>
+                                <include reference="OgZ-8x-9FW"/>
                             </mask>
                         </variation>
                     </view>

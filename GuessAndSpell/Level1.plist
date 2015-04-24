@@ -2,56 +2,27 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>Puzzles</key>
+	<key>puzzles</key>
 	<array>
 		<array>
-			<string>chair.jpg</string>
-			<string>chair</string>
+			<string>boat.jpg</string>
+			<string>BOAT</string>
+			<integer>0</integer>
 		</array>
 		<array>
 			<string>train.jpg</string>
-			<string>train</string>
+			<string>TRAIN</string>
+			<integer>0</integer>
 		</array>
 		<array>
-			<string></string>
-			<string></string>
-		</array>
-		<array>
-			<string></string>
-			<string></string>
-		</array>
-		<array>
-			<string></string>
-			<string></string>
-		</array>
-		<array>
-			<string></string>
-			<string></string>
-		</array>
-		<array>
-			<string></string>
-			<string></string>
-		</array>
-		<array>
-			<string></string>
-			<string></string>
-		</array>
-		<array>
-			<string></string>
-			<string></string>
-		</array>
-		<array>
-			<string></string>
-			<string></string>
-		</array>
-		<array>
-			<string></string>
-			<string></string>
+			<string>panda.jpg</string>
+			<string>PANDA</string>
+			<integer>0</integer>
 		</array>
 	</array>
 	<key>timeToSolve</key>
 	<integer>250</integer>
 	<key>points</key>
-	<integer>100</integer>
+	<integer>10</integer>
 </dict>
 </plist>

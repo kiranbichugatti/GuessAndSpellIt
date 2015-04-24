@@ -19,6 +19,7 @@
 		A5CA5E111AE6C239007A8B20 /* ListUserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5CA5E101AE6C239007A8B20 /* ListUserCell.swift */; };
 		A5D4AD081AC7BE6200B18171 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D4AD071AC7BE6200B18171 /* RootViewController.swift */; };
 		AE294C201AE827650041373C /* Level1.plist in Resources */ = {isa = PBXBuildFile; fileRef = AE294C1F1AE827650041373C /* Level1.plist */; };
+		AE294C221AEA9B100041373C /* Level3.plist in Resources */ = {isa = PBXBuildFile; fileRef = AE294C211AEA9B100041373C /* Level3.plist */; };
 		AE57BBAF1AC496C30098E5A5 /* Level.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE57BBAE1AC496C30098E5A5 /* Level.swift */; };
 		AE57BBB31AC4972D0098E5A5 /* PictureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE57BBB21AC4972D0098E5A5 /* PictureView.swift */; };
 		AE57BBB51AC497490098E5A5 /* TileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE57BBB41AC497490098E5A5 /* TileView.swift */; };
@@ -65,6 +66,7 @@
 		A5CA5E101AE6C239007A8B20 /* ListUserCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListUserCell.swift; sourceTree = "<group>"; };
 		A5D4AD071AC7BE6200B18171 /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RootViewController.swift; path = ../RootViewController.swift; sourceTree = "<group>"; };
 		AE294C1F1AE827650041373C /* Level1.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Level1.plist; path = GuessAndSpell/Level1.plist; sourceTree = SOURCE_ROOT; };
+		AE294C211AEA9B100041373C /* Level3.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Level3.plist; sourceTree = SOURCE_ROOT; };
 		AE57BBAE1AC496C30098E5A5 /* Level.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Level.swift; sourceTree = SOURCE_ROOT; };
 		AE57BBB21AC4972D0098E5A5 /* PictureView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PictureView.swift; sourceTree = SOURCE_ROOT; };
 		AE57BBB41AC497490098E5A5 /* TileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TileView.swift; sourceTree = SOURCE_ROOT; };
@@ -218,6 +220,7 @@
 			children = (
 				AE294C1F1AE827650041373C /* Level1.plist */,
 				AE57BBB81AC498DF0098E5A5 /* Level2.plist */,
+				AE294C211AEA9B100041373C /* Level3.plist */,
 			);
 			path = Levels;
 			sourceTree = "<group>";
@@ -307,6 +310,7 @@
 				D6D7861D1AD9AE73003CF6A2 /* win.mp3 in Resources */,
 				D6D7861C1AD9AE73003CF6A2 /* ding.mp3 in Resources */,
 				A547CB331AAD77BC0084F2A9 /* LaunchScreen.xib in Resources */,
+				AE294C221AEA9B100041373C /* Level3.plist in Resources */,
 				D6B0F3D31AE0BDCC0079A522 /* particle.png in Resources */,
 				A547CB301AAD77BC0084F2A9 /* Images.xcassets in Resources */,
 				D6D7861E1AD9AE73003CF6A2 /* wrong.m4a in Resources */,
