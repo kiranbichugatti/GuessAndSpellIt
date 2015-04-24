@@ -48,9 +48,22 @@ class UserViewController: UIViewController, UIImagePickerControllerDelegate,UINa
         
         var usr : User?
         usr = User()
+        var length = countElements(UserName.text)
+        if(length<1)
+        {
+            let alert = UIAlertView()
+            alert.title = "Invalid"
+            alert.message = "Please enter your name"
+            alert.addButtonWithTitle("OK")
+            alert.show()
+            
+        }
+        else
+        {
         usr?.userInput(UserName.text)
         
         self.navigationController?.popViewControllerAnimated(true)
+        }
     }
 
     override func viewDidLoad() {

@@ -18,7 +18,8 @@ class GameController: TileDragDelegateProtocol {
     var level: Level!
     var isMatched = false
     var gameover = false
-    private var score = 0
+    
+    var score = 0
     var viewControllerInstance: ViewController!
     var tempLevelData : NSMutableArray!
     var currentTileOrigin : CGPoint!

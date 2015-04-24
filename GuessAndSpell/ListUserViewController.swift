@@ -14,6 +14,18 @@ class ListUserViewController: UIViewController,UITableViewDataSource,UITableView
     
    var ListCell : ListUserCell?
     
+    @IBAction func playGuest(sender: UIButton) {
+        var delegate : AppDelegate?
+        delegate = UIApplication.sharedApplication().delegate as? AppDelegate
+        delegate?.presentUser = nil;
+        
+        let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        var profileViewController = mainStoryboard.instantiateViewControllerWithIdentifier("gamecontroller") as ViewController
+        
+        self.navigationController!.pushViewController(profileViewController, animated: true)
+        
+
+    }
     @IBOutlet weak var UserList: UITableView!
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
@@ -57,18 +69,15 @@ class ListUserViewController: UIViewController,UITableViewDataSource,UITableView
     {
         var delegate : AppDelegate?
         delegate = UIApplication.sharedApplication().delegate as? AppDelegate
+        
+        delegate?.presentUser = NSDictionary()
+        
         delegate?.presentUser = users?.objectAtIndex(indexPath.row) as? NSDictionary
-        //        let dict = delegate?.presentUser
-        var tempuser = User?()
-        tempuser = User()
         
-        let balance: AnyObject? = delegate?.presentUser?.objectForKey("score")
+        let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        var profileViewController = mainStoryboard.instantiateViewControllerWithIdentifier("gamecontroller") as ViewController
         
-        //use var instead of let
-        var mybalance = balance as NSNumber
-        mybalance = mybalance.integerValue + 50
-        tempuser?.updateUserWithScore(mybalance)
-        getUsers()
+        self.navigationController!.pushViewController(profileViewController, animated: true)
         
         
     }

@@ -21,6 +21,7 @@ class ViewController: UIViewController {
     var revealChance = 3
 
     
+    @IBOutlet weak var userLabel: UILabel!
     @IBOutlet weak var hintImage: UIImageView!
     @IBOutlet weak var puzzleLabel: UILabel!
     @IBOutlet weak var levelLabel: UILabel!
@@ -161,6 +162,13 @@ class ViewController: UIViewController {
             //animator.addBehavior(gravity)
             
             scoreLabel.text = "Score: \(controller.currentScore())"
+            var tempuser = User?()
+            tempuser = User()
+            let balance: AnyObject? = controller.currentScore()
+            
+            //use var instead of let
+            var mybalance = balance as NSNumber
+            tempuser?.updateUserWithScore(mybalance)
        
         }
         
@@ -227,11 +235,52 @@ class ViewController: UIViewController {
         //need to get the level by checking some parameter and change it to level1 or level2
         
         controller.onPuzzleSolved =  self.startNewPuzzle
+        self.updateUserDetails()
         
         //updateGUI()
         setupGUI()
     }
     
+    func updateUserDetails(){
+        
+        var delegate : AppDelegate?
+        delegate = UIApplication.sharedApplication().delegate as? AppDelegate
+        
+        if(delegate?.presentUser != nil){
+            var dict = delegate?.presentUser
+            // Setting the Current User Name
+            let userName : AnyObject? = dict?.objectForKey("userName")
+            var names = userName as NSString
+            userLabel.text = "Hi: \(names)"
+            
+            
+            //
+            
+            //      Get present Game Level
+//            let level: AnyObject? = dict?.objectForKey("presentLevel")
+//            var presentLevel = level as NSNumber
+//            println("Present Level ===== \(presentLevel)")
+            //
+            // setting user current Score
+            let balance: AnyObject? = dict?.objectForKey("score")
+            
+            var mybalance = balance as NSNumber
+            controller.score = mybalance.integerValue
+            scoreLabel.text = "Score: \(controller.currentScore())"
+            
+            let levels: AnyObject? = dict?.objectForKey("presentLevel")
+            
+         //   var presentLevels = levels as NSNumber
+          //  totalLevels.text = "Present Level: \(presentLevels)"
+            
+            //
+        }
+        else{
+            userLabel.text = "Hi Guest"
+            //totalLevels.text = ""
+        }
+    }
+
     override func viewDidAppear(animated: Bool) {
         self.startNewPuzzle()
     }
