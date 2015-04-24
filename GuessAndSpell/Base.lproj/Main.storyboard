@@ -156,6 +156,12 @@
                                     <segue destination="jKi-fG-ULy" kind="push" id="X0l-25-sI1"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="hld-Zd-bAs">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="161" y="270" width="447" height="128"/>
+                                </variation>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
@@ -166,6 +172,7 @@
                                 <exclude reference="GGj-bh-Nsf"/>
                                 <exclude reference="OkK-zb-mnM"/>
                                 <exclude reference="ZKH-1t-ZNq"/>
+                                <exclude reference="hld-Zd-bAs"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=regular">
@@ -176,6 +183,7 @@
                                 <include reference="GGj-bh-Nsf"/>
                                 <include reference="OkK-zb-mnM"/>
                                 <include reference="ZKH-1t-ZNq"/>
+                                <include reference="hld-Zd-bAs"/>
                             </mask>
                         </variation>
                     </view>
@@ -1131,6 +1139,7 @@
         <image name="Yellow" width="110" height="110"/>
         <image name="background" width="1024" height="1024"/>
         <image name="frontscreen" width="1300" height="1300"/>
+        <image name="logo" width="423" height="80"/>
         <image name="pauseButton" width="200" height="200"/>
     </resources>
 </document>
