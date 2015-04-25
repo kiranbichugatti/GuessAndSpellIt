@@ -185,15 +185,15 @@ class GameController: TileDragDelegateProtocol {
         outerloop: for (var i=0; i < len; i++){
                         var length = UInt32 (letters.length)
                         var rand = arc4random_uniform(length)
-            
-                     /*   let ch = toString(letters.characterAtIndex(Int(rand)))
+                      println("rand: \rand")
+                        let ch = toString(letters.characterAtIndex(Int(rand)))
             
                         println(toString(letters.characterAtIndex(Int(rand))))
                         for character in puzzleWord.utf8 {
                             if(toString(character) == ch) {
                                 continue outerloop
                             }
-                   }*/
+                   }
             
             randomString.appendFormat("%C", letters.characterAtIndex(Int(rand)))
         }
@@ -431,20 +431,21 @@ class GameController: TileDragDelegateProtocol {
                             }
                             if (toString(tv.letter) == badletter) {
                                 count += 1
+                                println("count is \(count)")
                                 if count == 2 {break}
                                 tv.removeFromSuperview()
                             }
                     }
 
         
-        for tv in tiles {
+     /*   for tv in tiles {
             for tt in targets {
                 println("tiles: \(tv.letter) : target letter : \(tt.letter) and bad letter: \(badletter)")
                 if (toString(tv.letter) == badletter) && (toString(tt.letter) != badletter) {
                     tv.removeFromSuperview()
                 }
             }
-        }
+        }*/
 
         return data.badLetterHintLeft
         
