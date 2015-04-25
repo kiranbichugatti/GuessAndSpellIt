@@ -23,14 +23,14 @@ class ViewController: UIViewController {
     @IBOutlet weak var progress: UILabel!
     @IBOutlet weak var userLabel: UILabel!
     @IBOutlet weak var hintImage: UIImageView!
-    @IBOutlet weak var puzzleLabel: UILabel!
-    @IBOutlet weak var levelLabel: UILabel!
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var thebackgroundImage: UIImageView!
     @IBOutlet weak var remainingReveal: UILabel!
     @IBOutlet var theRevealButtons: [UIButton]!
-    
     @IBOutlet weak var RevealHint: UIButton!
+    @IBOutlet weak var removeHint: UIButton!
+    @IBOutlet weak var correctHint: UIButton!
+    @IBOutlet weak var flashHint: UIButton!
     
     var selectCount: Int = 0 {
         didSet { 
@@ -130,6 +130,8 @@ class ViewController: UIViewController {
         controller.currentPuzzle += 1
         if controller.currentPuzzle > 3 {
             initNewLevel()
+            controller.currentPuzzle = 1
+            
         }
         controller.DrawRandomPuzzles(thebackgroundImage)
         
@@ -178,6 +180,7 @@ class ViewController: UIViewController {
             tempuser?.updateUserWithScore(mybalance)
             
         }
+        progress.text = "Level \(controller.currentLevel)/\(controller.currentPuzzle)"
         
     }
     
@@ -206,6 +209,9 @@ class ViewController: UIViewController {
     func setupGUI() {
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "background.png")!)
         hintImage.backgroundColor = UIColor(patternImage: UIImage(named: "hint.png")!)
+        progress.text = "Level \(controller.currentLevel)/\(controller.currentPuzzle)"
+        
+        
         // theImageView.layer.contents = UIImage(named: "chair.jpg")?.CGImage
         thebackgroundImage.layer.cornerRadius = 8.0
         thebackgroundImage.clipsToBounds = true
