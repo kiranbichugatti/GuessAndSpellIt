@@ -174,16 +174,26 @@ class GameController: TileDragDelegateProtocol {
     func randomStringWithLength (len : Int) -> NSString {
         
         let letters : NSString = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-        //println("random letters \(letters)")
-        
+      
         randomString  = NSMutableString(capacity: len)
         
-        for (var i=0; i < len; i++){
-            var length = UInt32 (letters.length)
-            var rand = arc4random_uniform(length)
+        outerloop: for (var i=0; i < len; i++){
+                        var length = UInt32 (letters.length)
+                        var rand = arc4random_uniform(length)
+            
+                     /*   let ch = toString(letters.characterAtIndex(Int(rand)))
+            
+                        println(toString(letters.characterAtIndex(Int(rand))))
+                        for character in puzzleWord.utf8 {
+                            if(toString(character) == ch) {
+                                continue outerloop
+                            }
+                   }*/
+            
             randomString.appendFormat("%C", letters.characterAtIndex(Int(rand)))
         }
-        
+        println("random strig \(randomString)")
+
         return randomString
     }
     
@@ -404,6 +414,8 @@ class GameController: TileDragDelegateProtocol {
     
     func getRidOfBadLetter() -> Int{
         
+        var count: Int = 0
+        
         if data.badLetterHintLeft > 0 {
             data.badLetterHintLeft -= 1
         }
@@ -415,16 +427,21 @@ class GameController: TileDragDelegateProtocol {
         
         println("bad letter : \(badletter)")
       
-        for tv in tiles {
-              for tt in targets {
-                     println("tiles: \(tv.letter) : target letter : \(tt.letter) and bad letter: \(badletter)")
-                    if (toString(tv.letter) == badletter) && (toString(tt.letter) != badletter) {
-                        tv.removeFromSuperview()
+        outsideloop:     for tv in tiles {
+                            for tt in targets {
+                                println("tiles: \(tv.letter) : target letter : \(tt.letter) and bad letter: \(badletter)")
+                                if (toString(tt.letter) == badletter) {
+                                    continue outsideloop
+                                }
+                            }
+                            if (toString(tv.letter) == badletter) {
+                                count += 1
+                                if count == 2 {break}
+                                tv.removeFromSuperview()
+                            }
                     }
-             }
-        }
         return data.badLetterHintLeft
-
+        
     }
     
     func flash()-> Int{
