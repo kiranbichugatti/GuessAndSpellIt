@@ -22,19 +22,6 @@
                                     <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                                 </variation>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lcZ-tj-Gxx">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <color key="backgroundColor" red="1" green="0.62249018971758008" blue="0.55399207011053497" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="BACK">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="253" y="983" width="278" height="33"/>
-                                </variation>
-                                <connections>
-                                    <action selector="back:" destination="lA7-JA-YsC" eventType="touchUpInside" id="FR4-wz-d6g"/>
-                                </connections>
-                            </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="149" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="MBv-uD-NHX">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -84,23 +71,35 @@
                                     </tableViewCell>
                                 </prototypes>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="0.0" width="768" height="970"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="768" height="946"/>
                                 </variation>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lcZ-tj-Gxx">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" image="back">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="338" y="954" width="109" height="70"/>
+                                </variation>
+                                <connections>
+                                    <action selector="back:" destination="lA7-JA-YsC" eventType="touchUpInside" id="FR4-wz-d6g"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="esE-fR-svr"/>
-                                <exclude reference="lcZ-tj-Gxx"/>
                                 <exclude reference="MBv-uD-NHX"/>
+                                <exclude reference="lcZ-tj-Gxx"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=regular">
                             <mask key="subviews">
                                 <include reference="esE-fR-svr"/>
-                                <include reference="lcZ-tj-Gxx"/>
                                 <include reference="MBv-uD-NHX"/>
+                                <include reference="lcZ-tj-Gxx"/>
                             </mask>
                         </variation>
                     </view>
@@ -1208,15 +1207,13 @@
                                     <action selector="SaveUser:" destination="aBz-MA-5kN" eventType="touchUpInside" id="zss-Eu-gxp"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rc8-Rs-lGl">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rc8-Rs-lGl">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <color key="backgroundColor" red="0.46124914119999999" green="0.87802049000000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="BACK">
-                                    <color key="titleColor" red="1" green="0.1076425447" blue="0.17460058640000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" image="back">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="290" y="594" width="239" height="53"/>
+                                    <rect key="frame" x="560" y="28" width="109" height="60"/>
                                 </variation>
                                 <connections>
                                     <action selector="backButton:" destination="aBz-MA-5kN" eventType="touchUpInside" id="FkG-RY-F0J"/>
