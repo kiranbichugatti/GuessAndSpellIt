@@ -41,7 +41,7 @@ class User: NSObject {
             users  = NSUserDefaults.standardUserDefaults().objectForKey("users") as? NSArray
         }
         
-        var descriptor = NSSortDescriptor(key: "score", ascending: true)
+        var descriptor = NSSortDescriptor(key: "score", ascending: false)
         var sortedResults: NSArray = users!.sortedArrayUsingDescriptors([descriptor])
         
         return sortedResults
