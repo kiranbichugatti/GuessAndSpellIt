@@ -13,6 +13,7 @@ class RootViewController: UIViewController {
     
     var backgroundMusicPlayer: AVAudioPlayer!
     var togglestate = 2
+    var delegate : AppDelegate?
     
 //    func playBackgroundMusic(filename: String) {
 //        let url = NSBundle.mainBundle().URLForResource(
@@ -37,13 +38,15 @@ class RootViewController: UIViewController {
     
     
     @IBAction func pauseButton(sender: UIButton) {
-                if togglestate == 1 {
-            backgroundMusicPlayer.play()
-            togglestate = 2
+        
+        
+        
+                if delegate?.backgroundMusicPlayer.playing == false{
+            delegate?.backgroundMusicPlayer.play()
             sender.setImage(UIImage(named:"pauseButton.jpg"),forState:UIControlState.Normal)
         } else {
-            backgroundMusicPlayer.pause()
-            togglestate = 1
+            
+            delegate?.backgroundMusicPlayer.pause()
             sender.setImage(UIImage(named:"playButton.jpg"),forState:UIControlState.Normal)
         }
         
@@ -52,7 +55,7 @@ class RootViewController: UIViewController {
     
     override func viewDidLoad() {
         
-        var delegate : AppDelegate?
+        delegate = UIApplication.sharedApplication().delegate as? AppDelegate
         delegate?.playBackgroundMusic("titlescreen.mp3");
         
        // playBackgroundMusic("titlescreen.mp3")

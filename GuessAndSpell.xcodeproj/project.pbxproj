@@ -27,6 +27,7 @@
 		AE57BBB91AC498DF0098E5A5 /* Level2.plist in Resources */ = {isa = PBXBuildFile; fileRef = AE57BBB81AC498DF0098E5A5 /* Level2.plist */; };
 		AE57BBBB1AC5B3470098E5A5 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE57BBBA1AC5B3470098E5A5 /* Config.swift */; };
 		AEF289A91ACD9C6A00F1D997 /* GameData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF289A81ACD9C6900F1D997 /* GameData.swift */; };
+		D60259FF1AED6B0700C6C7B8 /* HighscoreController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60259FE1AED6B0700C6C7B8 /* HighscoreController.swift */; };
 		D65494F61AC9E53B00F26A78 /* TargetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65494F51AC9E53B00F26A78 /* TargetView.swift */; };
 		D6A36C2C1AE6FBDA00B5F486 /* titlescreen.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D6A36C2B1AE6FBDA00B5F486 /* titlescreen.mp3 */; };
 		D6A77AD41AEAC65700B6FAE8 /* bulb-512.png in Resources */ = {isa = PBXBuildFile; fileRef = D6A77AD31AEAC65700B6FAE8 /* bulb-512.png */; };
@@ -74,6 +75,7 @@
 		AE57BBB81AC498DF0098E5A5 /* Level2.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Level2.plist; sourceTree = SOURCE_ROOT; };
 		AE57BBBA1AC5B3470098E5A5 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		AEF289A81ACD9C6900F1D997 /* GameData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameData.swift; sourceTree = SOURCE_ROOT; };
+		D60259FE1AED6B0700C6C7B8 /* HighscoreController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HighscoreController.swift; sourceTree = "<group>"; };
 		D65494F51AC9E53B00F26A78 /* TargetView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TargetView.swift; sourceTree = SOURCE_ROOT; };
 		D6A36C2B1AE6FBDA00B5F486 /* titlescreen.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = titlescreen.mp3; sourceTree = "<group>"; };
 		D6A77AD31AEAC65700B6FAE8 /* bulb-512.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bulb-512.png"; sourceTree = "<group>"; };
@@ -138,6 +140,7 @@
 				A547CB2A1AAD77BC0084F2A9 /* ViewController.swift */,
 				A5D4AD071AC7BE6200B18171 /* RootViewController.swift */,
 				A547CB2C1AAD77BC0084F2A9 /* Main.storyboard */,
+				D60259FE1AED6B0700C6C7B8 /* HighscoreController.swift */,
 				A57BEBC81ACA74CE008EFAB0 /* ListUserViewController.swift */,
 				A5CA5E101AE6C239007A8B20 /* ListUserCell.swift */,
 				A57BEBC61ACA5939008EFAB0 /* UserViewController.swift */,
@@ -337,6 +340,7 @@
 				AE57BBAF1AC496C30098E5A5 /* Level.swift in Sources */,
 				AEF289A91ACD9C6A00F1D997 /* GameData.swift in Sources */,
 				A57BEBC71ACA5939008EFAB0 /* UserViewController.swift in Sources */,
+				D60259FF1AED6B0700C6C7B8 /* HighscoreController.swift in Sources */,
 				AE57BBB71AC497790098E5A5 /* GameController.swift in Sources */,
 				A547CB2B1AAD77BC0084F2A9 /* ViewController.swift in Sources */,
 				AE57BBBB1AC5B3470098E5A5 /* Config.swift in Sources */,

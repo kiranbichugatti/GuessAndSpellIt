@@ -18,6 +18,7 @@ class ViewController: UIViewController {
     var animator : UIDynamicAnimator
     var gameView : UIView
     var level : Level!
+    
 
     
     @IBOutlet weak var progress: UILabel!
@@ -281,12 +282,26 @@ class ViewController: UIViewController {
     
     
     @IBAction func pauseButton(sender: UIButton) {
+        var delegate : AppDelegate?
+        delegate = UIApplication.sharedApplication().delegate as? AppDelegate
+        
+        if delegate?.backgroundMusicPlayer.playing == false{
+            delegate?.backgroundMusicPlayer.play()
+            sender.setImage(UIImage(named:"pauseButton.jpg"),forState:UIControlState.Normal)
+        } else {
+            
+            delegate?.backgroundMusicPlayer.pause()
+            sender.setImage(UIImage(named:"playButton.jpg"),forState:UIControlState.Normal)
+        }
+        
+
         //let vc:ViewController = RootViewController()
         
     }
     
     override func viewDidAppear(animated: Bool) {
         self.startNewPuzzle()
+        
     }
     
 
