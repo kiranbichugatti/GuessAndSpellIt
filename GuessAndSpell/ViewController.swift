@@ -96,14 +96,12 @@ class ViewController: UIViewController {
                     let newPoint = CGPointMake(buttonAtIndex.center.x,
                         buttonAtIndex.center.y - 70)
 
-                    println("point is: \(newPoint)")
                     buttonAtIndex.center = newPoint
                 },
                 completion: {
                     (value:Bool) in
                     self.theRevealButtons[buttonIndex].hidden = true
             })
-            //animateButton(buttonAtIndex)
             
             selectCount++
         }
@@ -141,7 +139,6 @@ class ViewController: UIViewController {
         }
         selectCount = 0
         updateGUI()
-        //controller.returntempLevelData()
     }
     
     func initNewLevel(){
@@ -152,6 +149,7 @@ class ViewController: UIViewController {
             controller.tempLevelData = NSMutableArray(array: level.puzzles)
         } else {
             //all game is finished. Congrats!
+            //this code will be implemented in beta version
         }
     }
     
@@ -187,7 +185,7 @@ class ViewController: UIViewController {
     override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
         var touch : UITouch = touches.anyObject() as UITouch
         let location = touch.locationInView(self.view)
-        //println("touched \(location)")
+
         var i = 0
         for coor in controller.targetViewArray {
             var smallx = coor[0] as CGFloat
@@ -227,7 +225,6 @@ class ViewController: UIViewController {
         controller.onPuzzleSolved =  self.startNewPuzzle
         
         self.initNewLevel()
-        //self.startNewPuzzle()
         self.updateUserDetails()
         
         updateGUI()
@@ -246,15 +243,7 @@ class ViewController: UIViewController {
             let userName : AnyObject? = dict?.objectForKey("userName")
             var names = userName as NSString
             userLabel.text = "Hi: \(names)"
-            
-            
-            //
-            
-            //      Get present Game Level
-//            let level: AnyObject? = dict?.objectForKey("presentLevel")
-//            var presentLevel = level as NSNumber
-//            println("Present Level ===== \(presentLevel)")
-            //
+
             // setting user current Score
             let balance: AnyObject? = dict?.objectForKey("score")
             
@@ -263,15 +252,10 @@ class ViewController: UIViewController {
             scoreLabel.text = "Score: \(controller.currentScore())"
             
             let levels: AnyObject? = dict?.objectForKey("presentLevel")
-            
-         //   var presentLevels = levels as NSNumber
-          //  totalLevels.text = "Present Level: \(presentLevels)"
-            
-            //
+
         }
         else{
             userLabel.text = "Hi Guest"
-            //totalLevels.text = ""
         }
     }
 
@@ -293,9 +277,6 @@ class ViewController: UIViewController {
             delegate?.backgroundMusicPlayer.pause()
             sender.setImage(UIImage(named:"playButton.jpg"),forState:UIControlState.Normal)
         }
-        
-
-        //let vc:ViewController = RootViewController()
         
     }
     
