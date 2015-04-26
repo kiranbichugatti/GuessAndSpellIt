@@ -404,7 +404,6 @@ class GameController: TileDragDelegateProtocol {
     
     func getRidOfBadLetter() -> Int{
         
-        var count: Int = 0
         
         if data.badLetterHintLeft > 0 {
             data.badLetterHintLeft -= 1

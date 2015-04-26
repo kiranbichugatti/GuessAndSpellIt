@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ADd-BX-Vh5">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="13F1066" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ADd-BX-Vh5">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -124,18 +124,6 @@
                                     <segue destination="lA7-JA-YsC" kind="push" id="9au-fw-Rtu"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OkK-zb-mnM">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" backgroundImage="pauseButton">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="611" y="820" width="31" height="30"/>
-                                </variation>
-                                <connections>
-                                    <action selector="pauseButton:" destination="4Be-6z-cTx" eventType="touchUpInside" id="BhW-ur-blV"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZKH-1t-ZNq">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <color key="backgroundColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -162,6 +150,18 @@
                                     <rect key="frame" x="161" y="270" width="447" height="128"/>
                                 </variation>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OkK-zb-mnM">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" image="pauseButton">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="627" y="837" width="36" height="33"/>
+                                </variation>
+                                <connections>
+                                    <action selector="pauseButton:" destination="4Be-6z-cTx" eventType="touchUpInside" id="BhW-ur-blV"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
@@ -170,9 +170,9 @@
                                 <exclude reference="u9Q-6r-pvd"/>
                                 <exclude reference="UHf-JF-hr9"/>
                                 <exclude reference="GGj-bh-Nsf"/>
-                                <exclude reference="OkK-zb-mnM"/>
                                 <exclude reference="ZKH-1t-ZNq"/>
                                 <exclude reference="hld-Zd-bAs"/>
+                                <exclude reference="OkK-zb-mnM"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=regular">
@@ -181,9 +181,9 @@
                                 <include reference="u9Q-6r-pvd"/>
                                 <include reference="UHf-JF-hr9"/>
                                 <include reference="GGj-bh-Nsf"/>
-                                <include reference="OkK-zb-mnM"/>
                                 <include reference="ZKH-1t-ZNq"/>
                                 <include reference="hld-Zd-bAs"/>
+                                <include reference="OkK-zb-mnM"/>
                             </mask>
                         </variation>
                     </view>
@@ -207,28 +207,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CEa-Xl-0pS">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XCm-Hj-WdU">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="Play the Game">
+                                <state key="normal" title="Got It ! Play the game">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="462" y="616" width="101" height="30"/>
+                                    <rect key="frame" x="305" y="854" width="187" height="49"/>
                                 </variation>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="presentation" id="ZPi-dZ-8EE"/>
+                                    <segue destination="NU9-9e-qS0" kind="push" id="F4k-3L-pji"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="CEa-Xl-0pS"/>
+                                <exclude reference="XCm-Hj-WdU"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=regular">
                             <mask key="subviews">
-                                <include reference="CEa-Xl-0pS"/>
+                                <include reference="XCm-Hj-WdU"/>
                             </mask>
                         </variation>
                     </view>
@@ -632,7 +632,7 @@
                                     <rect key="frame" x="33" y="8" width="89" height="31"/>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="340" y="28" width="89" height="31"/>
+                                    <rect key="frame" x="288" y="28" width="173" height="31"/>
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score: 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wtj-ru-SAJ">
@@ -792,6 +792,18 @@
                                     <action selector="homeButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vPU-ts-FyC"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HV6-F9-QSZ">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Button" image="pauseButton">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="357" width="53" height="51"/>
+                                </variation>
+                                <connections>
+                                    <action selector="pauseButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DDE-7T-v2m"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.91362527591623277" green="1" blue="0.8726143978328198" alpha="1" colorSpace="calibratedRGB"/>
                         <variation key="default">
@@ -837,6 +849,7 @@
                                 <exclude reference="OgZ-8x-9FW"/>
                                 <exclude reference="FVF-sw-ynN"/>
                                 <exclude reference="qa2-nP-0Hl"/>
+                                <exclude reference="HV6-F9-QSZ"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=regular">
@@ -886,6 +899,7 @@
                                 <include reference="OgZ-8x-9FW"/>
                                 <include reference="FVF-sw-ynN"/>
                                 <include reference="qa2-nP-0Hl"/>
+                                <include reference="HV6-F9-QSZ"/>
                             </mask>
                         </variation>
                     </view>
@@ -949,15 +963,15 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="leaderboard" translatesAutoresizingMaskIntoConstraints="NO" id="MuJ-47-P36">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="-4" y="0.0" width="775" height="1024"/>
+                                    <rect key="frame" x="-7" y="0.0" width="775" height="1024"/>
                                 </variation>
                             </imageView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="89" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="7gq-gV-Jtb">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="104" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="7gq-gV-Jtb">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <color key="sectionIndexBackgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TCell" rowHeight="89" id="cLF-7D-Jvj" customClass="ListUserCell" customModule="GuessAndSpell" customModuleProvider="target">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TCell" rowHeight="104" id="cLF-7D-Jvj" customClass="ListUserCell" customModule="GuessAndSpell" customModuleProvider="target">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cLF-7D-Jvj" id="YaI-ko-7oW">
                                             <autoresizingMask key="autoresizingMask"/>
@@ -968,7 +982,7 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                     <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                                        <rect key="frame" x="51" y="18" width="225" height="50"/>
+                                                        <rect key="frame" x="68" y="36" width="225" height="50"/>
                                                     </variation>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AN3-bA-WCw">
@@ -977,7 +991,7 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                     <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                                        <rect key="frame" x="536" y="18" width="182" height="50"/>
+                                                        <rect key="frame" x="301" y="36" width="182" height="50"/>
                                                     </variation>
                                                 </label>
                                             </subviews>
@@ -1001,29 +1015,9 @@
                                     </tableViewCell>
                                 </prototypes>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="-3" y="20" width="775" height="847"/>
+                                    <rect key="frame" x="123" y="274" width="523" height="543"/>
                                 </variation>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="omb-fH-o8q">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Play as Guest">
-                                    <color key="titleColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="10"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="ayer.masksToBounds" value="YES"/>
-                                </userDefinedRuntimeAttributes>
-                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="295" y="886" width="178" height="30"/>
-                                </variation>
-                                <connections>
-                                    <action selector="playGuest:" destination="NU9-9e-qS0" eventType="touchUpInside" id="Ozv-Kz-rVQ"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yb0-gZ-cyn">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <color key="backgroundColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -1043,22 +1037,42 @@
                                     <segue destination="aBz-MA-5kN" kind="push" id="U00-R8-w7k"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="omb-fH-o8q">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Play as Guest">
+                                    <color key="titleColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="ayer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="250" y="863" width="269" height="53"/>
+                                </variation>
+                                <connections>
+                                    <action selector="playGuest:" destination="NU9-9e-qS0" eventType="touchUpInside" id="Ozv-Kz-rVQ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="MuJ-47-P36"/>
                                 <exclude reference="7gq-gV-Jtb"/>
-                                <exclude reference="omb-fH-o8q"/>
                                 <exclude reference="yb0-gZ-cyn"/>
+                                <exclude reference="omb-fH-o8q"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=regular">
                             <mask key="subviews">
                                 <include reference="MuJ-47-P36"/>
                                 <include reference="7gq-gV-Jtb"/>
-                                <include reference="omb-fH-o8q"/>
                                 <include reference="yb0-gZ-cyn"/>
+                                <include reference="omb-fH-o8q"/>
                             </mask>
                         </variation>
                     </view>
@@ -1169,6 +1183,9 @@
         <image name="large-home-purple" width="401" height="401"/>
         <image name="leaderboard" width="1286" height="997"/>
         <image name="logo" width="423" height="80"/>
-        <image name="pauseButton" width="200" height="200"/>
+        <image name="pauseButton" width="80" height="80"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="WdN-FP-lrA"/>
+    </inferredMetricsTieBreakers>
 </document>

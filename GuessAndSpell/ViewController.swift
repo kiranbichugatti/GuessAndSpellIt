@@ -278,6 +278,13 @@ class ViewController: UIViewController {
         
         self.navigationController?.popToRootViewControllerAnimated(true)
     }
+    
+    
+    @IBAction func pauseButton(sender: UIButton) {
+        //let vc:ViewController = RootViewController()
+        
+    }
+    
     override func viewDidAppear(animated: Bool) {
         self.startNewPuzzle()
     }

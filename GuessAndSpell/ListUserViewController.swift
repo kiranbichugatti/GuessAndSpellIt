@@ -38,6 +38,10 @@ class ListUserViewController: UIViewController,UITableViewDataSource,UITableView
         
     var cell: ListUserCell = tableView.dequeueReusableCellWithIdentifier("TCell") as ListUserCell
         
+      //  cell.backgroundColor = [UIColor clearColor];
+        tableView.backgroundColor = UIColor.clearColor();
+        cell.backgroundColor = UIColor.clearColor();
+        
         var dict : NSDictionary?
         dict = NSDictionary()
         
