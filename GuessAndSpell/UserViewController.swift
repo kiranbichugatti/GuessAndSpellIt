@@ -65,6 +65,12 @@ class UserViewController: UIViewController, UIImagePickerControllerDelegate,UINa
         self.navigationController?.popViewControllerAnimated(true)
         }
     }
+    
+    @IBAction func backButton(sender: UIButton) {
+        
+        self.navigationController?.popViewControllerAnimated(true)
+    }
+
 
     override func viewDidLoad() {
         super.viewDidLoad()

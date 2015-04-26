@@ -92,6 +92,12 @@ class ListUserViewController: UIViewController,UITableViewDataSource,UITableView
         // Do any additional setup after loading the view.
     }
     
+    @IBAction func homeButton(sender: UIButton) {
+        
+        self.navigationController?.popToRootViewControllerAnimated(true)
+    }
+
+    
     override func viewDidAppear(animated: Bool) {
         getUsers()
     }
