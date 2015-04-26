@@ -27,7 +27,7 @@ class GameController: TileDragDelegateProtocol {
     var currentTileOrigin : CGPoint!
     var targetViewArray : [[CGFloat]] = []
     var targetCheckPoint:[Int] = []
-    
+    var tilesCheckPoint:[Int] = []
     private var tiles: [TileView] = []
     private var targets: [TargetView] = []
     private var puzzlesDatasource = [String]()
@@ -53,7 +53,7 @@ class GameController: TileDragDelegateProtocol {
     
     
     func DrawRandomPuzzles (theImageView: UIImageView) {
-        //1
+
         assert(level.puzzles.count > 0, "no level loaded")
         isMatched = false
         
@@ -85,6 +85,7 @@ class GameController: TileDragDelegateProtocol {
         targets = []
         targetViewArray = []
         targetCheckPoint = []
+        tilesCheckPoint = []
         
         //create targets
         for(index,letter) in enumerate(puzzleWord) {
@@ -122,7 +123,7 @@ class GameController: TileDragDelegateProtocol {
         //4 create tiles
         
         for (index, letter) in enumerate(firstWord) {
-            //5
+            
             if letter != " " {
                 let tile = TileView(letter: letter)
                 tile.center = CGPointMake(xOffsetTile + CGFloat(index)*(tileSide + TileMargin), ScreenHeight/4*3.2)
@@ -131,11 +132,12 @@ class GameController: TileDragDelegateProtocol {
                 
                 gameView.addSubview(tile)
                 tiles.append(tile)
+                tilesCheckPoint.append(1)
             }
         }
         
         for (index, letter) in enumerate(secondWord) {
-            //5
+            
             if letter != " " {
                 let tile = TileView(letter: letter)
                 
@@ -144,6 +146,7 @@ class GameController: TileDragDelegateProtocol {
                 
                 gameView.addSubview(tile)
                 tiles.append(tile)
+                tilesCheckPoint.append(1)
             }
         }
         
@@ -154,7 +157,6 @@ class GameController: TileDragDelegateProtocol {
         
         var len = countElements(puzzleWord)
         var puzzleLetters = randomStringWithLength(14 - len)
-        
         var newWord = puzzleWord+puzzleLetters
         
         var shuffledWord: String = ""
@@ -182,7 +184,7 @@ class GameController: TileDragDelegateProtocol {
       
         randomString  = NSMutableString(capacity: len)
         
-        outerloop: for (var i=0; i < len; i++){
+        /*outerloop: for (var i=0; i < len; i++){
                         var length = UInt32 (letters.length)
                         var rand = arc4random_uniform(length)
                       println("rand: \rand")
@@ -193,10 +195,19 @@ class GameController: TileDragDelegateProtocol {
                             if(toString(character) == ch) {
                                 continue outerloop
                             }
-                   }
+            }
             
             randomString.appendFormat("%C", letters.characterAtIndex(Int(rand)))
+        }*/
+
+        var length = UInt32 (letters.length)
+        
+        for i in 0..<len {
+            var rand = arc4random_uniform(length)
+            let ch = letters.characterAtIndex(Int(rand))
+            randomString.appendFormat("%C", ch)
         }
+        
         println("random strig \(randomString)")
 
         return randomString
@@ -237,25 +248,7 @@ class GameController: TileDragDelegateProtocol {
             self.placeTile(tileView, targetView: targetView!)
             
             if filled==targets.count {
-                
-                /*for i in targetCheckPoint {
-                selectedWord = selectedWord + [tiles[i].letter]
-                }
-                
-                println("selected : \(selectedWord)")
-                
-                if puzzleWord == selectedWord {
-                isMatched = true
-                updateColor("greenblock")
-                audioController.playEffect(SoundWin)
-                puzzleSucceed()
-                } else {
-                isMatched = false
-                updateColor("redblock")
-                audioController.playEffect(SoundWrong)
-                }
-                
-                self.viewControllerInstance.updateGUI()*/
+
                 checkAnswer()
                 
             }
@@ -417,7 +410,7 @@ class GameController: TileDragDelegateProtocol {
             data.badLetterHintLeft -= 1
         }
         
-        let len = randomString.length
+        /*let len = randomString.length
         var anotherstr = randomString as NSString
         var randomIndex = Int(arc4random_uniform(UInt32(len)-1))
         var badletter  = anotherstr.substringWithRange(NSRange(location: randomIndex, length: 1))
@@ -435,18 +428,21 @@ class GameController: TileDragDelegateProtocol {
                                 if count == 2 {break}
                                 tv.removeFromSuperview()
                             }
-                    }
+                    }*/
 
+        var puzzleWordArray = Array(puzzleWord)
         
-     /*   for tv in tiles {
-            for tt in targets {
-                println("tiles: \(tv.letter) : target letter : \(tt.letter) and bad letter: \(badletter)")
-                if (toString(tv.letter) == badletter) && (toString(tt.letter) != badletter) {
-                    tv.removeFromSuperview()
-                }
+        while(true){
+            var randomIndex = Int(arc4random_uniform(UInt32(14)-1))
+            var tv = tiles[randomIndex]
+            if !contains(puzzleWordArray, tv.letter) && tilesCheckPoint[randomIndex] == 1 {
+                tv.removeFromSuperview()
+                tilesCheckPoint[randomIndex] = 0
+                break
             }
-        }*/
-
+        
+        }
+        println("tiles has \(tiles.count) elements")
         return data.badLetterHintLeft
         
     }

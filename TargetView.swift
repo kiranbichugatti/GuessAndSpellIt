@@ -22,8 +22,6 @@ class TargetView: UIImageView {
     init(letter:Character) {
         
         self.letter = letter
-        //println("target view letter \(self.letter)")
-        
         let image = UIImage(named: "target")!
         super.init(image:image)
         

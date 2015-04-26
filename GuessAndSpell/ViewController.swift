@@ -34,7 +34,7 @@ class ViewController: UIViewController {
     
     var selectCount: Int = 0 {
         didSet { 
-            remainingReveal.text = "Remaining Reveal: \(5 - selectCount)"
+            remainingReveal.text = "Remaining Reveals: \(5 - selectCount)"
         }
     }
     
@@ -128,10 +128,9 @@ class ViewController: UIViewController {
     
     func startNewPuzzle() {
         controller.currentPuzzle += 1
-        if controller.currentPuzzle > 3 {
+        if controller.currentPuzzle > level.puzzles.count {
             initNewLevel()
             controller.currentPuzzle = 1
-            
         }
         controller.DrawRandomPuzzles(thebackgroundImage)
         
@@ -150,7 +149,6 @@ class ViewController: UIViewController {
             level = Level(levelNumber:controller.currentLevel)
             controller.level = level
             controller.tempLevelData = NSMutableArray(array: level.puzzles)
-            //controller.currentPuzzle = 1
         } else {
             //all game is finished. Congrats!
         }
