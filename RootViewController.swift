@@ -14,6 +14,7 @@ class RootViewController: UIViewController {
     var backgroundMusicPlayer: AVAudioPlayer!
     var togglestate = 2
     var delegate : AppDelegate?
+
     
 //    func playBackgroundMusic(filename: String) {
 //        let url = NSBundle.mainBundle().URLForResource(
@@ -49,8 +50,6 @@ class RootViewController: UIViewController {
             delegate?.backgroundMusicPlayer.pause()
             sender.setImage(UIImage(named:"playButton.jpg"),forState:UIControlState.Normal)
         }
-        
-        
     }
     
     override func viewDidLoad() {

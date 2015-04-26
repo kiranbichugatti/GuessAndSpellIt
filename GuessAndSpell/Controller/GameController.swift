@@ -434,6 +434,7 @@ class GameController: TileDragDelegateProtocol {
         while(true){
             var randomIndex = Int(arc4random_uniform(UInt32(14)-1))
             var tv = tiles[randomIndex]
+            //if the letter is not one of the pazzle word, and it has not been removed before
             if !contains(puzzleWordArray, tv.letter) && tilesCheckPoint[randomIndex] == 1 {
                 tv.removeFromSuperview()
                 tilesCheckPoint[randomIndex] = 0
