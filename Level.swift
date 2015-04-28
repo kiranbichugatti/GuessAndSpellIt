@@ -25,9 +25,9 @@ struct Level {
         assert(levelDictionary != nil, "Level configuration file not found")
         
         //4 initialize the object from the dictionary
-        self.points = levelDictionary!["points"] as Int
-        self.timeToSolve = levelDictionary!["timeToSolve"] as Int
-        self.puzzles = levelDictionary!["puzzles"] as [NSArray]
+        self.points = levelDictionary!["points"] as! Int
+        self.timeToSolve = levelDictionary!["timeToSolve"] as! Int
+        self.puzzles = levelDictionary!["puzzles"] as! [NSArray]
     }
 }
 

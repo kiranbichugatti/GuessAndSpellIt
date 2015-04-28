@@ -59,23 +59,25 @@ class TileView:UIImageView {
     }
     
     //Dragging option is provided for the tiles
-    override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
-        let point = touches.anyObject()!.locationInView(self.superview)
+    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
+        let touch = touches.first as! UITouch
+        let point = touch.locationInView(self.superview)
         xOffset = point.x - self.center.x
         yOffset = point.y - self.center.y
         self.origin = self.center
     }
     
-    override func touchesMoved(touches: NSSet, withEvent event: UIEvent) {
-        let point = touches.anyObject()!.locationInView(self.superview)
+    override func touchesMoved(touches: Set<NSObject>, withEvent event: UIEvent) {
+        let touch = touches.first as! UITouch
+        let point = touch.locationInView(self.superview)
         self.center = CGPointMake(point.x - xOffset, point.y - yOffset)
     }
-    override func touchesEnded(touches: NSSet, withEvent event: UIEvent) {
+    override func touchesEnded(touches: Set<NSObject>, withEvent event: UIEvent) {
         self.touchesMoved(touches, withEvent: event)
         dragDelegate?.tileView(self, didDragToPoint: self.center, from:self.origin)
     }
     
-    override func touchesCancelled(touches: NSSet!, withEvent event: UIEvent!) {
+    override func touchesCancelled(touches: Set<NSObject>!, withEvent event: UIEvent!) {
         self.center = CGPointMake(xOffset, yOffset)
     }
     

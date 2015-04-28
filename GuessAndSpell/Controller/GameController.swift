@@ -58,14 +58,14 @@ class GameController: TileDragDelegateProtocol {
         
         currentIndex = randomNumber(minX:0, maxX:UInt32(tempLevelData.count-1))
 
-        let puzzlePair = tempLevelData[currentIndex] as NSMutableArray
+        let puzzlePair = tempLevelData[currentIndex] as! NSMutableArray
         
-        let puzzleImage = puzzlePair[0] as String
+        let puzzleImage = puzzlePair[0] as! String
         
         populatePuzzleImage(theImageView, imageurl: puzzleImage)
-        puzzleWord = puzzlePair[1] as String
+        puzzleWord = puzzlePair[1] as! String
         
-        let puzzleWordLength = countElements(puzzleWord)
+        let puzzleWordLength = count(puzzleWord)
         let tileSide = TileSideLength
         let targetSide = TargetSideLength
         
@@ -101,11 +101,11 @@ class GameController: TileDragDelegateProtocol {
         tiles = []
         
         //2 create random letters
-        var shuffledPuzzleWord : String = shuffle(puzzleWord)
+        var shuffledPuzzleWord : String = shuffle(puzzleWord as String) as String
         
         //Split the shuffled string into half
         
-        let len = countElements(shuffledPuzzleWord)
+        let len = count(shuffledPuzzleWord)
         let halfLEn = len/2
         
         let halfOfString = advance(shuffledPuzzleWord.startIndex, halfLEn)
@@ -150,16 +150,16 @@ class GameController: TileDragDelegateProtocol {
     
     func shuffle(puzzleWord: String)-> NSString {
         
-        var len = countElements(puzzleWord)
+        var len = count(puzzleWord)
         var puzzleLetters = randomStringWithLength(14 - len)
-        var newWord = puzzleWord+puzzleLetters
+        var newWord = puzzleWord+(puzzleLetters as String)
         
         var shuffledWord: String = ""
         
-        while countElements(newWord) > 0 {
+        while count(newWord) > 0 {
             
             // Get the random index
-            var length = countElements(newWord)
+            var length = count(newWord)
             var position = Int(arc4random_uniform(UInt32(length)))
             
             // Get the character at that random index

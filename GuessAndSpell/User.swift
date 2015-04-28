@@ -14,7 +14,7 @@ class User: NSObject {
         var tempUserArray :NSMutableArray?
         tempUserArray = NSMutableArray();
         if((NSUserDefaults.standardUserDefaults().objectForKey("users")) != nil){
-            tempUserArray?.addObjectsFromArray(NSUserDefaults.standardUserDefaults().objectForKey("users") as NSMutableArray);
+            tempUserArray?.addObjectsFromArray(NSUserDefaults.standardUserDefaults().objectForKey("users") as! NSMutableArray as [AnyObject]);
         }
         
         var tempDict : NSMutableDictionary?
@@ -56,7 +56,7 @@ class User: NSObject {
             var tempUserArray :NSMutableArray?
             tempUserArray = NSMutableArray();
             if((NSUserDefaults.standardUserDefaults().objectForKey("users")) != nil){
-                tempUserArray?.addObjectsFromArray(NSUserDefaults.standardUserDefaults().objectForKey("users") as NSMutableArray);
+                tempUserArray?.addObjectsFromArray(NSUserDefaults.standardUserDefaults().objectForKey("users") as! NSMutableArray as [AnyObject]);
             }
             
             var presetDict = delegate?.presentUser
@@ -64,7 +64,7 @@ class User: NSObject {
             var dict : NSMutableDictionary!
             dict = NSMutableDictionary ()
             
-            dict.addEntriesFromDictionary(presetDict!)
+            dict.addEntriesFromDictionary(presetDict! as [NSObject : AnyObject])
             
             tempUserArray?.removeObject(presetDict!)
             

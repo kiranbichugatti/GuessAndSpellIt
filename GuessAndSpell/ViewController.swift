@@ -173,7 +173,7 @@ class ViewController: UIViewController {
             let balance: AnyObject? = controller.currentScore()
             
             //use var instead of let
-            var mybalance = balance as NSNumber
+            var mybalance = balance as! NSNumber
             tempuser?.updateUserWithScore(mybalance)
             
         }
@@ -182,8 +182,8 @@ class ViewController: UIViewController {
     }
     
     //detect touch, if it's in range of target tile, bring it back to original place
-    override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
-        var touch : UITouch = touches.anyObject() as UITouch
+    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
+        var touch : UITouch = touches.first as! UITouch
         let location = touch.locationInView(self.view)
 
         var i = 0
@@ -241,13 +241,13 @@ class ViewController: UIViewController {
             var dict = delegate?.presentUser
             // Setting the Current User Name
             let userName : AnyObject? = dict?.objectForKey("userName")
-            var names = userName as NSString
+            var names = userName as! NSString
             userLabel.text = "Hi: \(names)"
 
             // setting user current Score
             let balance: AnyObject? = dict?.objectForKey("score")
             
-            var mybalance = balance as NSNumber
+            var mybalance = balance as! NSNumber
             controller.score = mybalance.integerValue
             scoreLabel.text = "Score: \(controller.currentScore())"
             

@@ -33,7 +33,7 @@ class HighscoreController: UIViewController, UITableViewDelegate, UITableViewDat
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
         
-        var cell: ListUserCell = tableView.dequeueReusableCellWithIdentifier("cell") as ListUserCell
+        var cell: ListUserCell = tableView.dequeueReusableCellWithIdentifier("cell") as! ListUserCell
         tableView.backgroundColor = UIColor.clearColor();
         cell.backgroundColor = UIColor.clearColor();
         
@@ -45,8 +45,8 @@ class HighscoreController: UIViewController, UITableViewDelegate, UITableViewDat
         var player : NSString?
         player = dict?.objectForKey("userName") as? NSString
         
-        cell.name.text = player
-        cell.score.text = String(format:"Score : %@",dict?.objectForKey("score") as NSNumber)
+        cell.name.text = player as? String
+        cell.score.text = String(format:"Score : %@",dict?.objectForKey("score") as! NSNumber)
         
         return cell;
         

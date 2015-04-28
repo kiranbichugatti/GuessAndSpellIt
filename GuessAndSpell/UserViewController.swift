@@ -48,7 +48,7 @@ class UserViewController: UIViewController, UIImagePickerControllerDelegate,UINa
         
         var usr : User?
         usr = User()
-        var length = countElements(UserName.text)
+        var length = count(UserName.text)
         if(length<1)
         {
             let alert = UIAlertView()

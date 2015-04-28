@@ -20,7 +20,7 @@ class StardustView:UIView {
     override init(frame:CGRect) {
         super.init(frame:frame)
         //initialize the emitter
-        emitter = self.layer as CAEmitterLayer
+        emitter = self.layer as! CAEmitterLayer
         emitter.emitterPosition = CGPointMake(self.bounds.size.width/4, self.bounds.size.height/4)
         emitter.emitterSize = self.bounds.size
         emitter.emitterMode = kCAEmitterLayerAdditive
@@ -58,7 +58,7 @@ class StardustView:UIView {
         emitterCell.scaleSpeed = -0.2
         emitterCell.emissionRange = CGFloat(M_PI*2)
         
-        let emitter = self.layer as CAEmitterLayer
+        let emitter = self.layer as! CAEmitterLayer
         emitter.emitterCells = [emitterCell]
     }
     

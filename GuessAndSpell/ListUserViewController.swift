@@ -20,7 +20,7 @@ class ListUserViewController: UIViewController,UITableViewDataSource,UITableView
         delegate?.presentUser = nil;
         
         let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        var profileViewController = mainStoryboard.instantiateViewControllerWithIdentifier("gamecontroller") as ViewController
+        var profileViewController = mainStoryboard.instantiateViewControllerWithIdentifier("gamecontroller") as! ViewController
         
         self.navigationController!.pushViewController(profileViewController, animated: true)
         
@@ -36,7 +36,7 @@ class ListUserViewController: UIViewController,UITableViewDataSource,UITableView
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
         
-    var cell: ListUserCell = tableView.dequeueReusableCellWithIdentifier("TCell") as ListUserCell
+    var cell: ListUserCell = tableView.dequeueReusableCellWithIdentifier("TCell") as! ListUserCell
         
       //  cell.backgroundColor = [UIColor clearColor];
         tableView.backgroundColor = UIColor.clearColor();
@@ -57,8 +57,8 @@ class ListUserViewController: UIViewController,UITableViewDataSource,UITableView
         var player : NSString?
         player = dict?.objectForKey("userName") as? NSString
       
-       cell.name.text = player
-       cell.score.text = String(format:"Score : %@",dict?.objectForKey("score") as NSNumber)
+       cell.name.text = player as? String
+       cell.score.text = String(format:"Score : %@",dict?.objectForKey("score") as! NSNumber)
 //        //cell_?.imageView?.image = decodedimage
      
    return cell;
@@ -79,7 +79,7 @@ class ListUserViewController: UIViewController,UITableViewDataSource,UITableView
         delegate?.presentUser = users?.objectAtIndex(indexPath.row) as? NSDictionary
         
         let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        var profileViewController = mainStoryboard.instantiateViewControllerWithIdentifier("gamecontroller") as ViewController
+        var profileViewController = mainStoryboard.instantiateViewControllerWithIdentifier("gamecontroller") as! ViewController
         
         self.navigationController!.pushViewController(profileViewController, animated: true)
         
