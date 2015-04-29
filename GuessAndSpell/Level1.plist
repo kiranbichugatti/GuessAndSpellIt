@@ -7,17 +7,14 @@
 		<array>
 			<string>boat.jpg</string>
 			<string>BOAT</string>
-			<integer>0</integer>
 		</array>
 		<array>
 			<string>train.jpg</string>
 			<string>TRAIN</string>
-			<integer>0</integer>
 		</array>
 		<array>
 			<string>panda.jpg</string>
 			<string>PANDA</string>
-			<integer>0</integer>
 		</array>
 	</array>
 	<key>timeToSolve</key>
