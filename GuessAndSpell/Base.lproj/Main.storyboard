@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ADd-BX-Vh5">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ADd-BX-Vh5">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
     </dependencies>
@@ -664,40 +664,28 @@
                                     <action selector="revealButtonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="v1p-sM-hKj"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Remaining Reveals: 5" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fLx-MD-hzA">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fLx-MD-hzA">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <color key="backgroundColor" red="0.84591138783635167" green="0.88320462359334262" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <color key="textColor" red="1" green="0.10764254474844592" blue="0.1746005864313277" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.91436497875340073" green="0.84009401905328829" blue="0.15171173337937729" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <color key="textColor" red="0.30196079611778259" green="0.0" blue="0.98431378602981567" alpha="1" colorSpace="deviceRGB"/>
                                 <color key="highlightedColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="shadowColor" red="0.46124914119999999" green="0.87802049000000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
-                                    <rect key="frame" x="262" y="560" width="220" height="31"/>
+                                    <rect key="frame" x="461" y="546" width="47" height="52"/>
                                 </variation>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Level " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RwG-NU-cEQ">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hi, Guest" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ii2-ru-aMc">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="701" y="77" width="65" height="29"/>
-                                </variation>
-                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="38" y="28" width="79" height="29"/>
-                                </variation>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hi, Guest" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ii2-ru-aMc">
-                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Superclarendon-BoldItalic" family="Superclarendon" pointSize="34"/>
+                                <color key="textColor" red="0.54520990709999995" green="1" blue="0.97769380699999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="widthClass=regular" fixedFrame="YES">
                                     <rect key="frame" x="33" y="8" width="89" height="31"/>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="288" y="28" width="173" height="31"/>
+                                    <rect key="frame" x="248" y="22" width="237" height="32"/>
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score: 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wtj-ru-SAJ">
@@ -869,6 +857,24 @@
                                     <action selector="pauseButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DDE-7T-v2m"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="RevealLabel" translatesAutoresizingMaskIntoConstraints="NO" id="dUR-QZ-pVv">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="209" y="546" width="253" height="52"/>
+                                </variation>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Level " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RwG-NU-cEQ">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="24"/>
+                                <color key="textColor" red="1" green="0.7208591231" blue="0.017840234390000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="701" y="77" width="65" height="29"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="38" y="29" width="120" height="32"/>
+                                </variation>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.91362527591623277" green="1" blue="0.8726143978328198" alpha="1" colorSpace="calibratedRGB"/>
                         <variation key="default">
@@ -900,7 +906,6 @@
                                 <exclude reference="h19-k7-hEj"/>
                                 <exclude reference="7If-ps-KcO"/>
                                 <exclude reference="fLx-MD-hzA"/>
-                                <exclude reference="RwG-NU-cEQ"/>
                                 <exclude reference="ii2-ru-aMc"/>
                                 <exclude reference="Wtj-ru-SAJ"/>
                                 <exclude reference="FrQ-Kh-QW8"/>
@@ -915,16 +920,18 @@
                                 <exclude reference="FVF-sw-ynN"/>
                                 <exclude reference="qa2-nP-0Hl"/>
                                 <exclude reference="HV6-F9-QSZ"/>
+                                <exclude reference="dUR-QZ-pVv"/>
+                                <exclude reference="RwG-NU-cEQ"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=regular">
                             <mask key="subviews">
                                 <include reference="Bpa-4Q-Jrj"/>
-                                <include reference="RwG-NU-cEQ"/>
                                 <include reference="ii2-ru-aMc"/>
                                 <include reference="Wtj-ru-SAJ"/>
                                 <include reference="1ZJ-Hm-T4K"/>
                                 <include reference="S7T-cQ-sPt"/>
+                                <include reference="RwG-NU-cEQ"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=regular">
@@ -965,6 +972,7 @@
                                 <include reference="FVF-sw-ynN"/>
                                 <include reference="qa2-nP-0Hl"/>
                                 <include reference="HV6-F9-QSZ"/>
+                                <include reference="dUR-QZ-pVv"/>
                             </mask>
                         </variation>
                     </view>
@@ -1281,6 +1289,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="RevealLabel" width="230" height="41"/>
         <image name="Yellow" width="110" height="110"/>
         <image name="back" width="60" height="60"/>
         <image name="background" width="1024" height="1024"/>
