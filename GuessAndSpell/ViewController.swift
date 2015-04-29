@@ -35,7 +35,7 @@ class ViewController: UIViewController {
     
     var selectCount: Int = 0 {
         didSet { 
-            remainingReveal.text = " \(5 - selectCount)"
+            remainingReveal.text = "Remaining Reveals: \(5 - selectCount)"
         }
     }
     
@@ -242,7 +242,7 @@ class ViewController: UIViewController {
             // Setting the Current User Name
             let userName : AnyObject? = dict?.objectForKey("userName")
             var names = userName as! NSString
-            userLabel.text = "Hi \(names)"
+            userLabel.text = "Hi: \(names)"
 
             // setting user current Score
             let balance: AnyObject? = dict?.objectForKey("score")
