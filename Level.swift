@@ -15,7 +15,7 @@ struct Level {
     
     init(levelNumber: Int) {
         //1 find .plist file for this level
-        let fileName = "level\(levelNumber).plist"
+        let fileName = "Level\(levelNumber).plist"
         let levelPath = "\(NSBundle.mainBundle().resourcePath!)/\(fileName)"
         
         //2 load .plist file
