@@ -35,7 +35,7 @@ class ViewController: UIViewController {
     
     var selectCount: Int = 0 {
         didSet { 
-            remainingReveal.text = "Remaining Reveals: \(5 - selectCount)"
+            remainingReveal.text = " \(5 - selectCount)"
         }
     }
     
