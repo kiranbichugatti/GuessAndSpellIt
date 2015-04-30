@@ -31,7 +31,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let url = NSBundle.mainBundle().URLForResource(
                 filename, withExtension: nil)
             if (url == nil) {
-                println("Could not find file: \(filename)")
+//                println("Could not find file: \(filename)")
                 return
             }
             
@@ -39,7 +39,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             backgroundMusicPlayer =
                 AVAudioPlayer(contentsOfURL: url, error: &error)
             if backgroundMusicPlayer == nil {
-                println("Could not create audio player: \(error!)")
+//                println("Could not create audio player: \(error!)")
                 return
             }
             

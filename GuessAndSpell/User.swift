@@ -22,11 +22,14 @@ class User: NSObject {
         
         tempDict?.setObject(NSNumber(int: 0), forKey: "score")
         tempDict?.setObject(name, forKey: "userName")
+        tempDict?.setObject(NSNumber(int: 0), forKey: "currentIndex")
+        tempDict?.setObject(NSNumber(int: 0), forKey: "currentPuzzle")
+        tempDict?.setObject(NSNumber(int: 0), forKey: "currentLevel")
         
-//        var image : UIImage = pic
-//        var imageData = UIImagePNGRepresentation(image)
-//        let base64String = imageData.base64EncodedStringWithOptions(.allZeros)
-//        // tempDict?.setObject(base64String, forKey: "pic")
+        var tempArr : NSArray!
+        tempArr = NSArray()
+        
+       // tempDict?.setObject(tempArr, forKey: "levelData")
         
         tempUserArray?.addObject(tempDict!)
         
@@ -47,7 +50,7 @@ class User: NSObject {
         return sortedResults
     }
     
-    func updateUserWithScore(score : NSNumber){
+    func updateUserWithScore(score : NSNumber, index: NSNumber, puzzle : NSNumber, level : NSNumber, levelData : NSArray){
         
         var delegate : AppDelegate?
         delegate = UIApplication.sharedApplication().delegate as? AppDelegate
@@ -66,13 +69,29 @@ class User: NSObject {
             
             dict.addEntriesFromDictionary(presetDict! as [NSObject : AnyObject])
             
-            tempUserArray?.removeObject(presetDict!)
+            for var i = 0; i < tempUserArray?.count; i++
+            {
+                var temp = tempUserArray?.objectAtIndex(i) as! NSDictionary
+                
+                let x: NSString? = temp.objectForKey("userName") as? NSString
+                let y: NSString? = presetDict?.objectForKey("userName") as? NSString
+                if x == y{
+                    tempUserArray?.removeObject(temp)
+                }
+            }
+            
+           // tempUserArray?.removeObject(presetDict!)
             
             dict.setObject(score, forKey: "score")
-            
+            dict.setObject(index, forKey: "currentIndex")
+            dict.setObject(puzzle, forKey: "currentPuzzle")
+            dict.setObject(level, forKey: "currentLevel")
+            dict.setObject(levelData, forKey: "levelData")
             tempUserArray?.addObject(dict)
             
             delegate?.presentUser = dict as NSDictionary
+            
+            println("\n\nUpdated UserDetaults Data = \(tempUserArray)\n\n")
             
             NSUserDefaults.standardUserDefaults().setObject(tempUserArray, forKey: "users")
         }

@@ -55,8 +55,10 @@ class GameController: TileDragDelegateProtocol {
 
         assert(level.puzzles.count > 0, "no level loaded")
         isMatched = false
-        
+//        println(tempLevelData)
         currentIndex = randomNumber(minX:0, maxX:UInt32(tempLevelData.count-1))
+        
+//        println(currentIndex)
 
         let puzzlePair = tempLevelData[currentIndex] as! NSMutableArray
         

@@ -174,7 +174,17 @@ class ViewController: UIViewController {
             
             //use var instead of let
             var mybalance = balance as! NSNumber
-            tempuser?.updateUserWithScore(mybalance)
+            
+            var tempuserData = controller.tempLevelData as NSArray
+            let tempLevel : AnyObject? = controller.currentLevel - 1
+            let tempPuzzle : AnyObject? = controller.currentPuzzle 
+            let tempindex : AnyObject? = controller.currentPuzzleIndex() 
+            
+            var Level = tempLevel as! NSNumber
+            var puzzel = tempPuzzle as! NSNumber
+            var index = tempindex as! NSNumber
+            
+            tempuser?.updateUserWithScore(mybalance, index: index, puzzle: puzzel, level: Level, levelData: tempuserData)
             
         }
         progress.text = "Level \(controller.currentLevel)/\(controller.currentPuzzle)"
@@ -221,14 +231,16 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        controller.viewControllerInstance = self
-        controller.onPuzzleSolved =  self.startNewPuzzle
-        
-        self.initNewLevel()
         self.updateUserDetails()
         
         updateGUI()
         setupGUI()
+        
+        controller.viewControllerInstance = self
+        controller.onPuzzleSolved =  self.startNewPuzzle
+        
+        self.initNewLevel()
+        
         
     }
     
@@ -251,8 +263,24 @@ class ViewController: UIViewController {
             controller.score = mybalance.integerValue
             scoreLabel.text = "Score: \(controller.currentScore())"
             
-            let levels: AnyObject? = dict?.objectForKey("presentLevel")
-
+            let level: AnyObject? = dict?.objectForKey("currentLevel")
+            var myLevel = level as! NSNumber
+            
+            controller.currentLevel = myLevel.integerValue
+//            println(controller.currentLevel)
+            
+            let puzzle : AnyObject? = dict?.objectForKey("currentPuzzle")
+            var myPuzzle = puzzle as! NSNumber
+            
+            controller.currentPuzzle = myPuzzle.integerValue
+            
+            controller.tempLevelData = dict?.objectForKey("levelData") as? NSMutableArray
+            
+//            println(controller.currentPuzzle)
+//            let currentIndex : AnyObject? = dict?.objectForKey("currentIndex")
+//            var myIndex = currentIndex as! NSNumber
+            
+            
         }
         else{
             userLabel.text = "Hi Guest"
