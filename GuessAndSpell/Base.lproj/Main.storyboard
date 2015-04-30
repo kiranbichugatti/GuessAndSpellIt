@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ADd-BX-Vh5">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ADd-BX-Vh5">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
     </dependencies>
@@ -135,6 +135,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UHf-JF-hr9">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <color key="backgroundColor" red="1" green="0.40000000596046448" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <state key="normal" title="PLAY">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.50196081399917603" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -155,6 +156,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GGj-bh-Nsf">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <color key="backgroundColor" red="0.25098040699958801" green="0.50196081399917603" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <state key="normal" title="HIGHSCORES">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -175,6 +177,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZKH-1t-ZNq">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <color key="backgroundColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <state key="normal" title="RULES">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -200,12 +203,11 @@
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OkK-zb-mnM">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <color key="backgroundColor" red="0.3699382343" green="0.59624738129999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" image="pauseButton">
+                                <state key="normal" image="playButton">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="598" y="790" width="58" height="56"/>
+                                    <rect key="frame" x="561" y="759" width="88" height="81"/>
                                 </variation>
                                 <connections>
                                     <action selector="pauseButton:" destination="4Be-6z-cTx" eventType="touchUpInside" id="BhW-ur-blV"/>
@@ -322,14 +324,14 @@
                                     <rect key="frame" x="653" y="294" width="91" height="30"/>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="670" y="318" width="64" height="21"/>
+                                    <rect key="frame" x="670" y="349" width="64" height="21"/>
                                 </variation>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="pNV-3p-tkc">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <color key="backgroundColor" red="0.50196081399917603" green="0.25098040699958801" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="102" y="88" width="529" height="450"/>
+                                    <rect key="frame" x="109" y="107" width="529" height="450"/>
                                 </variation>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DG6-v8-HYK">
@@ -339,7 +341,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="208" y="177" width="105" height="90"/>
+                                    <rect key="frame" x="215" y="196" width="105" height="90"/>
                                 </variation>
                                 <connections>
                                     <action selector="revealButtonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hK9-g3-Sn4"/>
@@ -358,7 +360,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="526" y="357" width="105" height="90"/>
+                                    <rect key="frame" x="533" y="376" width="105" height="90"/>
                                 </variation>
                                 <connections>
                                     <action selector="revealButtonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2GK-fi-WsA"/>
@@ -377,7 +379,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="102" y="88" width="105" height="90"/>
+                                    <rect key="frame" x="109" y="107" width="105" height="90"/>
                                 </variation>
                                 <connections>
                                     <action selector="revealButtonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kc6-Ev-Jln"/>
@@ -395,7 +397,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="208" y="88" width="105" height="90"/>
+                                    <rect key="frame" x="215" y="107" width="105" height="90"/>
                                 </variation>
                                 <connections>
                                     <action selector="revealButtonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IsF-aO-ZsF"/>
@@ -408,7 +410,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="314" y="88" width="105" height="90"/>
+                                    <rect key="frame" x="321" y="107" width="105" height="90"/>
                                 </variation>
                                 <connections>
                                     <action selector="revealButtonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DMD-XX-v4X"/>
@@ -421,7 +423,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="102" y="267" width="105" height="90"/>
+                                    <rect key="frame" x="109" y="286" width="105" height="90"/>
                                 </variation>
                                 <connections>
                                     <action selector="revealButtonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CAW-NB-twH"/>
@@ -434,7 +436,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="208" y="268" width="105" height="90"/>
+                                    <rect key="frame" x="215" y="287" width="105" height="90"/>
                                 </variation>
                                 <connections>
                                     <action selector="revealButtonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cLg-Bc-Kx7"/>
@@ -447,7 +449,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="314" y="267" width="105" height="90"/>
+                                    <rect key="frame" x="321" y="286" width="105" height="90"/>
                                 </variation>
                                 <connections>
                                     <action selector="revealButtonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bdF-z0-HzM"/>
@@ -460,7 +462,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="420" y="267" width="105" height="90"/>
+                                    <rect key="frame" x="427" y="286" width="105" height="90"/>
                                 </variation>
                                 <connections>
                                     <action selector="revealButtonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xHd-RV-4h7"/>
@@ -473,7 +475,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="526" y="88" width="105" height="90"/>
+                                    <rect key="frame" x="533" y="107" width="105" height="90"/>
                                 </variation>
                                 <connections>
                                     <action selector="revealButtonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5nx-vy-jCJ"/>
@@ -486,7 +488,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="102" y="176" width="105" height="90"/>
+                                    <rect key="frame" x="109" y="195" width="105" height="90"/>
                                 </variation>
                                 <connections>
                                     <action selector="revealButtonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bNP-Ak-W7B"/>
@@ -499,7 +501,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="314" y="177" width="105" height="90"/>
+                                    <rect key="frame" x="321" y="196" width="105" height="90"/>
                                 </variation>
                                 <connections>
                                     <action selector="revealButtonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fX8-PH-wES"/>
@@ -512,7 +514,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="420" y="177" width="105" height="90"/>
+                                    <rect key="frame" x="427" y="196" width="105" height="90"/>
                                 </variation>
                                 <connections>
                                     <action selector="revealButtonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lFu-2v-KQZ"/>
@@ -528,7 +530,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="526" y="177" width="105" height="90"/>
+                                    <rect key="frame" x="533" y="196" width="105" height="90"/>
                                 </variation>
                                 <connections>
                                     <action selector="revealButtonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dXT-L0-d03"/>
@@ -541,7 +543,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="102" y="357" width="105" height="90"/>
+                                    <rect key="frame" x="109" y="376" width="105" height="90"/>
                                 </variation>
                                 <connections>
                                     <action selector="revealButtonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fQQ-T2-SOe"/>
@@ -554,7 +556,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="208" y="357" width="105" height="90"/>
+                                    <rect key="frame" x="215" y="376" width="105" height="90"/>
                                 </variation>
                                 <connections>
                                     <action selector="revealButtonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aKi-bM-7wg"/>
@@ -567,7 +569,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="314" y="357" width="105" height="90"/>
+                                    <rect key="frame" x="321" y="376" width="105" height="90"/>
                                 </variation>
                                 <connections>
                                     <action selector="revealButtonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LjF-gy-xph"/>
@@ -580,7 +582,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="420" y="357" width="105" height="90"/>
+                                    <rect key="frame" x="427" y="376" width="105" height="90"/>
                                 </variation>
                                 <connections>
                                     <action selector="revealButtonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wvq-TJ-L0s"/>
@@ -593,7 +595,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="102" y="448" width="105" height="90"/>
+                                    <rect key="frame" x="109" y="467" width="105" height="90"/>
                                 </variation>
                                 <connections>
                                     <action selector="revealButtonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PPQ-tc-kcY"/>
@@ -606,7 +608,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="208" y="448" width="105" height="90"/>
+                                    <rect key="frame" x="215" y="467" width="105" height="90"/>
                                 </variation>
                                 <connections>
                                     <action selector="revealButtonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ja9-Nq-q5B"/>
@@ -619,7 +621,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="314" y="448" width="105" height="90"/>
+                                    <rect key="frame" x="321" y="467" width="105" height="90"/>
                                 </variation>
                                 <connections>
                                     <action selector="revealButtonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DmN-Bw-ejr"/>
@@ -632,7 +634,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="420" y="448" width="105" height="90"/>
+                                    <rect key="frame" x="427" y="467" width="105" height="90"/>
                                 </variation>
                                 <connections>
                                     <action selector="revealButtonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iId-bx-fVB"/>
@@ -645,7 +647,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="526" y="448" width="105" height="90"/>
+                                    <rect key="frame" x="533" y="467" width="105" height="90"/>
                                 </variation>
                                 <connections>
                                     <action selector="revealButtonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dhW-DU-cQu"/>
@@ -658,7 +660,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="526" y="267" width="105" height="90"/>
+                                    <rect key="frame" x="533" y="286" width="105" height="90"/>
                                 </variation>
                                 <connections>
                                     <action selector="revealButtonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="v1p-sM-hKj"/>
@@ -666,14 +668,14 @@
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fLx-MD-hzA">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <color key="backgroundColor" red="0.91436497875340073" green="0.84009401905328829" blue="0.15171173337937729" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
-                                <color key="textColor" red="0.30196079611778259" green="0.0" blue="0.98431378602981567" alpha="1" colorSpace="deviceRGB"/>
+                                <color key="backgroundColor" red="0.91436497880000001" green="0.84009401910000003" blue="0.15171173339999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <color key="textColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="highlightedColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="shadowColor" red="0.46124914119999999" green="0.87802049000000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
-                                    <rect key="frame" x="461" y="546" width="47" height="52"/>
+                                    <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="26"/>
+                                    <rect key="frame" x="465" y="585" width="47" height="41"/>
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hi, Guest" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ii2-ru-aMc">
@@ -685,21 +687,20 @@
                                     <rect key="frame" x="33" y="8" width="89" height="31"/>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="248" y="22" width="237" height="32"/>
+                                    <rect key="frame" x="261" y="50" width="237" height="32"/>
                                 </variation>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score: 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wtj-ru-SAJ">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score: 0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wtj-ru-SAJ">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <color key="backgroundColor" red="0.62343168699999996" green="1" blue="0.87656623720000004" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <color key="textColor" red="0.60000002379999995" green="0.40000000600000002" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <color key="textColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 <nil key="highlightedColor"/>
                                 <color key="shadowColor" red="0.70488175929999997" green="0.53786836390000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <variation key="widthClass=regular" fixedFrame="YES">
                                     <rect key="frame" x="594" y="28" width="67" height="31"/>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="577" y="24" width="159" height="31"/>
+                                    <rect key="frame" x="582" y="50" width="154" height="31"/>
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reveal" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FrQ-Kh-QW8">
@@ -709,12 +710,12 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="670" y="177" width="64" height="21"/>
+                                    <rect key="frame" x="670" y="196" width="64" height="21"/>
                                 </variation>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ZJ-Hm-T4K">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <color key="backgroundColor" red="0.46124914119999999" green="0.87802049000000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.0" green="0.50196081399917603" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <state key="normal" title="5">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -724,7 +725,7 @@
                                     <rect key="frame" x="650" y="229" width="96" height="30"/>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="672" y="268" width="64" height="39"/>
+                                    <rect key="frame" x="672" y="292" width="64" height="39"/>
                                 </variation>
                                 <connections>
                                     <action selector="RemoveLetterPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rKa-NO-dFd"/>
@@ -741,7 +742,7 @@
                                     <rect key="frame" x="670" y="160" width="47" height="30"/>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="670" y="196" width="64" height="39"/>
+                                    <rect key="frame" x="670" y="215" width="64" height="39"/>
                                 </variation>
                                 <connections>
                                     <action selector="revealHintTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="b4R-fN-6qX"/>
@@ -758,7 +759,7 @@
                                     <rect key="frame" x="670" y="160" width="47" height="30"/>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="670" y="338" width="64" height="39"/>
+                                    <rect key="frame" x="670" y="369" width="64" height="39"/>
                                 </variation>
                                 <connections>
                                     <action selector="correctHintTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EJM-Jz-Dlb"/>
@@ -772,7 +773,7 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="672" y="248" width="64" height="21"/>
+                                    <rect key="frame" x="672" y="272" width="64" height="21"/>
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Flash" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c7X-st-vNg">
@@ -782,7 +783,7 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="670" y="391" width="64" height="21"/>
+                                    <rect key="frame" x="670" y="426" width="64" height="21"/>
                                 </variation>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LMc-qw-UMr">
@@ -796,7 +797,7 @@
                                     <rect key="frame" x="670" y="160" width="47" height="30"/>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="670" y="409" width="64" height="39"/>
+                                    <rect key="frame" x="670" y="444" width="64" height="39"/>
                                 </variation>
                                 <connections>
                                     <action selector="flashHintTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iBn-25-Xw9"/>
@@ -805,7 +806,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aMR-bR-lJH">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="675" y="115" width="54" height="47"/>
+                                    <rect key="frame" x="675" y="134" width="54" height="47"/>
                                 </variation>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OgZ-8x-9FW">
@@ -814,7 +815,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="672" y="482" width="61" height="60"/>
+                                    <rect key="frame" x="29" y="158" width="61" height="60"/>
                                 </variation>
                                 <connections>
                                     <action selector="Back:" destination="BYZ-38-t0r" eventType="touchUpInside" id="voR-XR-sVJ"/>
@@ -827,31 +828,19 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="420" y="88" width="105" height="90"/>
+                                    <rect key="frame" x="427" y="107" width="105" height="90"/>
                                 </variation>
                                 <connections>
                                     <action selector="revealButtonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Z2w-Je-MWo"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qa2-nP-0Hl">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="Button" image="large-home-purple">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="670" y="574" width="61" height="58"/>
-                                </variation>
-                                <connections>
-                                    <action selector="homeButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vPU-ts-FyC"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HV6-F9-QSZ">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="Button" image="pauseButton">
+                                <state key="normal" title="Button" image="music3">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="357" width="53" height="51"/>
+                                    <rect key="frame" x="29" y="392" width="59" height="57"/>
                                 </variation>
                                 <connections>
                                     <action selector="pauseButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DDE-7T-v2m"/>
@@ -860,21 +849,42 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="RevealLabel" translatesAutoresizingMaskIntoConstraints="NO" id="dUR-QZ-pVv">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="209" y="546" width="253" height="52"/>
+                                    <rect key="frame" x="217" y="585" width="253" height="41"/>
                                 </variation>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Level " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RwG-NU-cEQ">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RwG-NU-cEQ">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="24"/>
-                                <color key="textColor" red="1" green="0.7208591231" blue="0.017840234390000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Level ">
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="0.7208591231" blue="0.017840234390000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="26" name="Thonburi"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
                                 <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.79506480690000003" green="0.79172348979999996" blue="0.7985497117" alpha="1" colorSpace="deviceRGB"/>
                                 <variation key="widthClass=regular" fixedFrame="YES">
                                     <rect key="frame" x="701" y="77" width="65" height="29"/>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="38" y="29" width="120" height="32"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <rect key="frame" x="48" y="50" width="120" height="32"/>
                                 </variation>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qa2-nP-0Hl">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Button" image="large-home-purple">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="29" y="276" width="61" height="58"/>
+                                </variation>
+                                <connections>
+                                    <action selector="homeButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vPU-ts-FyC"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.91362527591623277" green="1" blue="0.8726143978328198" alpha="1" colorSpace="calibratedRGB"/>
                         <variation key="default">
@@ -918,10 +928,10 @@
                                 <exclude reference="aMR-bR-lJH"/>
                                 <exclude reference="OgZ-8x-9FW"/>
                                 <exclude reference="FVF-sw-ynN"/>
-                                <exclude reference="qa2-nP-0Hl"/>
                                 <exclude reference="HV6-F9-QSZ"/>
                                 <exclude reference="dUR-QZ-pVv"/>
                                 <exclude reference="RwG-NU-cEQ"/>
+                                <exclude reference="qa2-nP-0Hl"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=regular">
@@ -970,9 +980,9 @@
                                 <include reference="aMR-bR-lJH"/>
                                 <include reference="OgZ-8x-9FW"/>
                                 <include reference="FVF-sw-ynN"/>
-                                <include reference="qa2-nP-0Hl"/>
                                 <include reference="HV6-F9-QSZ"/>
                                 <include reference="dUR-QZ-pVv"/>
+                                <include reference="qa2-nP-0Hl"/>
                             </mask>
                         </variation>
                     </view>
@@ -1019,7 +1029,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2097.75" y="67.5"/>
+            <point key="canvasLocation" x="2097.75" y="66.75"/>
         </scene>
         <!--ListUserViewController-->
         <scene sceneID="DhF-H7-GfW">
@@ -1231,7 +1241,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="560" y="28" width="109" height="60"/>
+                                    <rect key="frame" x="16" y="28" width="109" height="60"/>
                                 </variation>
                                 <connections>
                                     <action selector="backButton:" destination="aBz-MA-5kN" eventType="touchUpInside" id="FkG-RY-F0J"/>
@@ -1299,7 +1309,8 @@
         <image name="launch" width="1024" height="768"/>
         <image name="leaderboard" width="1286" height="997"/>
         <image name="logo" width="423" height="80"/>
-        <image name="pauseButton" width="80" height="80"/>
+        <image name="music3" width="512" height="512"/>
+        <image name="playButton" width="128" height="128"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="WdN-FP-lrA"/>

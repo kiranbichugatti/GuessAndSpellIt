@@ -44,11 +44,11 @@ class RootViewController: UIViewController {
         
                 if delegate?.backgroundMusicPlayer.playing == false{
             delegate?.backgroundMusicPlayer.play()
-            sender.setImage(UIImage(named:"pauseButton.jpg"),forState:UIControlState.Normal)
+            sender.setImage(UIImage(named:"playButton.jpg"),forState:UIControlState.Normal)
         } else {
             
             delegate?.backgroundMusicPlayer.pause()
-            sender.setImage(UIImage(named:"playButton.jpg"),forState:UIControlState.Normal)
+            sender.setImage(UIImage(named:"pauseButton.jpg"),forState:UIControlState.Normal)
         }
     }
     
