@@ -687,20 +687,7 @@
                                     <rect key="frame" x="33" y="8" width="89" height="31"/>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="261" y="50" width="237" height="32"/>
-                                </variation>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score: 0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wtj-ru-SAJ">
-                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
-                                <color key="textColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                <nil key="highlightedColor"/>
-                                <color key="shadowColor" red="0.70488175929999997" green="0.53786836390000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <variation key="widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="594" y="28" width="67" height="31"/>
-                                </variation>
-                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="582" y="50" width="154" height="31"/>
+                                    <rect key="frame" x="266" y="42" width="237" height="44"/>
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reveal" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FrQ-Kh-QW8">
@@ -846,33 +833,6 @@
                                     <action selector="homeButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vPU-ts-FyC"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="RevealLabel" translatesAutoresizingMaskIntoConstraints="NO" id="dUR-QZ-pVv">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="217" y="585" width="253" height="41"/>
-                                </variation>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RwG-NU-cEQ">
-                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <attributedString key="attributedText">
-                                    <fragment content="Level ">
-                                        <attributes>
-                                            <color key="NSColor" red="1" green="0.7208591231" blue="0.017840234390000001" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="26" name="Thonburi"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <nil key="highlightedColor"/>
-                                <color key="shadowColor" red="0.79506480690000003" green="0.79172348979999996" blue="0.7985497117" alpha="1" colorSpace="deviceRGB"/>
-                                <variation key="widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="701" y="77" width="65" height="29"/>
-                                </variation>
-                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                    <rect key="frame" x="48" y="50" width="120" height="32"/>
-                                </variation>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HV6-F9-QSZ">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <state key="normal" title="Button" image="music3">
@@ -885,6 +845,39 @@
                                     <action selector="pauseButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DDE-7T-v2m"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="RevealLabel" translatesAutoresizingMaskIntoConstraints="NO" id="dUR-QZ-pVv">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="217" y="585" width="253" height="41"/>
+                                </variation>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Level " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RwG-NU-cEQ">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" name="Superclarendon-Regular" family="Superclarendon" pointSize="30"/>
+                                <color key="textColor" red="1" green="0.7208591231" blue="0.017840234390000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.79506480690000003" green="0.79172348979999996" blue="0.7985497117" alpha="1" colorSpace="deviceRGB"/>
+                                <variation key="widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="701" y="77" width="65" height="29"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="29"/>
+                                    <rect key="frame" x="33" y="50" width="175" height="32"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score: 0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wtj-ru-SAJ">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <color key="textColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.70488175929999997" green="0.53786836390000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <variation key="widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="594" y="28" width="67" height="31"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="589" y="50" width="147" height="31"/>
+                                </variation>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.91362527591623277" green="1" blue="0.8726143978328198" alpha="1" colorSpace="calibratedRGB"/>
                         <variation key="default">
@@ -917,7 +910,6 @@
                                 <exclude reference="7If-ps-KcO"/>
                                 <exclude reference="fLx-MD-hzA"/>
                                 <exclude reference="ii2-ru-aMc"/>
-                                <exclude reference="Wtj-ru-SAJ"/>
                                 <exclude reference="FrQ-Kh-QW8"/>
                                 <exclude reference="1ZJ-Hm-T4K"/>
                                 <exclude reference="S7T-cQ-sPt"/>
@@ -929,19 +921,20 @@
                                 <exclude reference="OgZ-8x-9FW"/>
                                 <exclude reference="FVF-sw-ynN"/>
                                 <exclude reference="qa2-nP-0Hl"/>
+                                <exclude reference="HV6-F9-QSZ"/>
                                 <exclude reference="dUR-QZ-pVv"/>
                                 <exclude reference="RwG-NU-cEQ"/>
-                                <exclude reference="HV6-F9-QSZ"/>
+                                <exclude reference="Wtj-ru-SAJ"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=regular">
                             <mask key="subviews">
                                 <include reference="Bpa-4Q-Jrj"/>
                                 <include reference="ii2-ru-aMc"/>
-                                <include reference="Wtj-ru-SAJ"/>
                                 <include reference="1ZJ-Hm-T4K"/>
                                 <include reference="S7T-cQ-sPt"/>
                                 <include reference="RwG-NU-cEQ"/>
+                                <include reference="Wtj-ru-SAJ"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=regular">
@@ -981,8 +974,8 @@
                                 <include reference="OgZ-8x-9FW"/>
                                 <include reference="FVF-sw-ynN"/>
                                 <include reference="qa2-nP-0Hl"/>
-                                <include reference="dUR-QZ-pVv"/>
                                 <include reference="HV6-F9-QSZ"/>
+                                <include reference="dUR-QZ-pVv"/>
                             </mask>
                         </variation>
                     </view>
