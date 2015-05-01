@@ -811,11 +811,11 @@
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OgZ-8x-9FW">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" backgroundImage="back">
+                                <state key="normal" backgroundImage="user">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="29" y="158" width="61" height="60"/>
+                                    <rect key="frame" x="38" y="305" width="50" height="63"/>
                                 </variation>
                                 <connections>
                                     <action selector="Back:" destination="BYZ-38-t0r" eventType="touchUpInside" id="voR-XR-sVJ"/>
@@ -834,16 +834,16 @@
                                     <action selector="revealButtonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Z2w-Je-MWo"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HV6-F9-QSZ">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qa2-nP-0Hl">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="Button" image="music3">
+                                <state key="normal" title="Button" image="large-home-purple">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="29" y="392" width="59" height="57"/>
+                                    <rect key="frame" x="33" y="185" width="61" height="58"/>
                                 </variation>
                                 <connections>
-                                    <action selector="pauseButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DDE-7T-v2m"/>
+                                    <action selector="homeButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vPU-ts-FyC"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="RevealLabel" translatesAutoresizingMaskIntoConstraints="NO" id="dUR-QZ-pVv">
@@ -873,16 +873,16 @@
                                     <rect key="frame" x="48" y="50" width="120" height="32"/>
                                 </variation>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qa2-nP-0Hl">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HV6-F9-QSZ">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="Button" image="large-home-purple">
+                                <state key="normal" title="Button" image="music3">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="29" y="276" width="61" height="58"/>
+                                    <rect key="frame" x="29" y="417" width="59" height="57"/>
                                 </variation>
                                 <connections>
-                                    <action selector="homeButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vPU-ts-FyC"/>
+                                    <action selector="pauseButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DDE-7T-v2m"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -928,10 +928,10 @@
                                 <exclude reference="aMR-bR-lJH"/>
                                 <exclude reference="OgZ-8x-9FW"/>
                                 <exclude reference="FVF-sw-ynN"/>
-                                <exclude reference="HV6-F9-QSZ"/>
+                                <exclude reference="qa2-nP-0Hl"/>
                                 <exclude reference="dUR-QZ-pVv"/>
                                 <exclude reference="RwG-NU-cEQ"/>
-                                <exclude reference="qa2-nP-0Hl"/>
+                                <exclude reference="HV6-F9-QSZ"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=regular">
@@ -980,9 +980,9 @@
                                 <include reference="aMR-bR-lJH"/>
                                 <include reference="OgZ-8x-9FW"/>
                                 <include reference="FVF-sw-ynN"/>
-                                <include reference="HV6-F9-QSZ"/>
-                                <include reference="dUR-QZ-pVv"/>
                                 <include reference="qa2-nP-0Hl"/>
+                                <include reference="dUR-QZ-pVv"/>
+                                <include reference="HV6-F9-QSZ"/>
                             </mask>
                         </variation>
                     </view>
@@ -1309,8 +1309,9 @@
         <image name="launch" width="1024" height="768"/>
         <image name="leaderboard" width="1286" height="997"/>
         <image name="logo" width="423" height="80"/>
-        <image name="music3" width="512" height="512"/>
+        <image name="music3" width="256" height="256"/>
         <image name="playButton" width="128" height="128"/>
+        <image name="user" width="105" height="138"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="WdN-FP-lrA"/>
