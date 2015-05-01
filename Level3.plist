@@ -5,8 +5,8 @@
 	<key>puzzles</key>
 	<array>
 		<array>
-			<string>recursion.jpg</string>
-			<string>RECURSION</string>
+			<string>birthday.jpeg</string>
+			<string>BIRTHDAY</string>
 			<integer>0</integer>
 		</array>
 		<array>
@@ -15,8 +15,8 @@
 			<integer>0</integer>
 		</array>
 		<array>
-			<string>vivien.jpg</string>
-			<string>VIVIEN</string>
+			<string>halloween.jpg</string>
+			<string>HALLOWEEN</string>
 			<integer>0</integer>
 		</array>
 	</array>
