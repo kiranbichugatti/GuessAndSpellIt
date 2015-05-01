@@ -150,20 +150,34 @@ class ViewController: UIViewController {
             var delegate : AppDelegate?
             delegate = UIApplication.sharedApplication().delegate as? AppDelegate
             var dict = delegate?.presentUser
-            
+            if(delegate?.presentUser == nil)
+           {
+            controller.tempLevelData = NSMutableArray(array: level.puzzles)
+            }
+            else
+            {
+                
             var tempArr:NSArray  =  dict?.objectForKey("levelData") as! NSArray
             
-            if(tempArr.count>0){
-                controller.tempLevelData = NSMutableArray(array: tempArr)
+            if(tempArr.count > 0)
+            {
+               controller.tempLevelData = NSMutableArray(array: tempArr)
+                
             }
-            else{
-                controller.tempLevelData = NSMutableArray(array: level.puzzles)
+            else
+            {
+              controller.tempLevelData = NSMutableArray(array: level.puzzles)
+                
             }
+            }
+        }
             
-        } else {
+            else
+            {
             //all game is finished. Congrats!
             //this code will be implemented in beta version
-        }
+            }
+        
     }
     
     //we need this to update the reveal info and hints.
