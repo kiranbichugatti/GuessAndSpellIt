@@ -146,7 +146,20 @@ class ViewController: UIViewController {
             controller.currentLevel = controller.currentLevel + 1
             level = Level(levelNumber:controller.currentLevel)
             controller.level = level
-            controller.tempLevelData = NSMutableArray(array: level.puzzles)
+            
+            var delegate : AppDelegate?
+            delegate = UIApplication.sharedApplication().delegate as? AppDelegate
+            var dict = delegate?.presentUser
+            
+            var tempArr:NSArray  =  dict?.objectForKey("levelData") as! NSArray
+            
+            if(tempArr.count>0){
+                controller.tempLevelData = NSMutableArray(array: tempArr)
+            }
+            else{
+                controller.tempLevelData = NSMutableArray(array: level.puzzles)
+            }
+            
         } else {
             //all game is finished. Congrats!
             //this code will be implemented in beta version
@@ -263,8 +276,8 @@ class ViewController: UIViewController {
             controller.score = mybalance.integerValue
             scoreLabel.text = "Score: \(controller.currentScore())"
             
-            let level: AnyObject? = dict?.objectForKey("currentLevel")
-            var myLevel = level as! NSNumber
+            let levell: AnyObject? = dict?.objectForKey("currentLevel")
+            var myLevel = levell as! NSNumber
             
             controller.currentLevel = myLevel.integerValue
 //            println(controller.currentLevel)
@@ -275,11 +288,6 @@ class ViewController: UIViewController {
             controller.currentPuzzle = myPuzzle.integerValue
             
             controller.tempLevelData = dict?.objectForKey("levelData") as? NSMutableArray
-            
-//            println(controller.currentPuzzle)
-//            let currentIndex : AnyObject? = dict?.objectForKey("currentIndex")
-//            var myIndex = currentIndex as! NSNumber
-            
             
         }
         else{
@@ -310,7 +318,7 @@ class ViewController: UIViewController {
     
     override func viewDidAppear(animated: Bool) {
         self.startNewPuzzle()
-        
+        println(controller.currentPuzzleIndex())
     }
     
 

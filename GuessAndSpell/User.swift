@@ -29,7 +29,7 @@ class User: NSObject {
         var tempArr : NSArray!
         tempArr = NSArray()
         
-       // tempDict?.setObject(tempArr, forKey: "levelData")
+        tempDict?.setObject(tempArr, forKey: "levelData")
         
         tempUserArray?.addObject(tempDict!)
         
