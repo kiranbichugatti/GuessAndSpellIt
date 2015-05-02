@@ -49,9 +49,20 @@ class ViewController: UIViewController {
         super.init(coder: aDecoder)
     }
     
+    @IBOutlet weak var leftArrow: UIImageView!
+    
    
     @IBAction func revealHintTouched(sender: UIButton) {
         var left = controller.revealBlock()
+        //leftArrow.hidden = false
+        
+        UIView.animateWithDuration(2.0, delay: 0.01, options: UIViewAnimationOptions.CurveEaseOut, animations: {
+            self.leftArrow.hidden = false
+            }, completion: {
+                (value:Bool) in
+                self.leftArrow.hidden = true
+        })
+        
         sender.setTitle(toString(left), forState: UIControlState.Normal)
         if left == 0 {sender.enabled = false}
         if left >= 0 {selectCount--}
@@ -60,6 +71,7 @@ class ViewController: UIViewController {
      scoreLabel.text = "Score: \(controller.currentScore())"
         
     }
+
 
     @IBAction func RemoveLetterPressed(sender: UIButton) {
         let removeLeft = controller.getRidOfBadLetter()
@@ -248,10 +260,10 @@ class ViewController: UIViewController {
         hintImage.backgroundColor = UIColor(patternImage: UIImage(named: "hint.png")!)
         progress.text = "Level \(controller.currentLevel)/\(controller.currentPuzzle)"
         
-        
         // theImageView.layer.contents = UIImage(named: "chair.jpg")?.CGImage
         thebackgroundImage.layer.cornerRadius = 8.0
         thebackgroundImage.clipsToBounds = true
+        leftArrow.hidden = true
         
         //add one layer for all game elements
         self.view.addSubview(gameView)

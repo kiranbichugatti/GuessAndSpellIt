@@ -30,6 +30,7 @@ class HighscoreController: UIViewController, UITableViewDelegate, UITableViewDat
     @IBAction func back(sender: UIButton) {
         self.navigationController?.popViewControllerAnimated(true)
     }
+    
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
         
