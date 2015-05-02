@@ -112,7 +112,55 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y3f-M4-nYW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1265.25" y="-705.75"/>
+            <point key="canvasLocation" x="408" y="-534.75"/>
+        </scene>
+        <!--Modal View Controller-->
+        <scene sceneID="zVt-5h-YkL">
+            <objects>
+                <viewController storyboardIdentifier="modalView" modalPresentationStyle="formSheet" useStoryboardIdentifierAsRestorationIdentifier="YES" id="tqY-tq-Jcj" customClass="ModalViewController" customModule="GuessAndSpell" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ugE-Y7-HSo"/>
+                        <viewControllerLayoutGuide type="bottom" id="cKs-hP-xc5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1WW-bY-o3e">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="congrats" translatesAutoresizingMaskIntoConstraints="NO" id="gGu-fm-vNf">
+                                <rect key="frame" x="53" y="20" width="456" height="320"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Well done!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Opm-Nf-To7">
+                                <rect key="frame" x="238" y="356" width="98" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="You have passed all the puzzles in this game!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X7z-39-41o">
+                                <rect key="frame" x="79" y="393" width="417" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aOO-oE-huB">
+                                <rect key="frame" x="238" y="443" width="87" height="48"/>
+                                <color key="backgroundColor" red="0.2020915841" green="1" blue="0.16915211569999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <state key="normal" title="Done">
+                                    <color key="titleColor" red="0.50196081399917603" green="0.0" blue="0.50196081399917603" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="donePressed" destination="tqY-tq-Jcj" eventType="touchUpInside" id="YkM-IR-Zuy"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.80000001192092896" green="1" blue="0.40000000596046448" alpha="0.51000000000000001" colorSpace="calibratedRGB"/>
+                    </view>
+                    <modalFormSheetSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Acu-K4-42X" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="963" y="-412"/>
         </scene>
         <!--Root View Controller-->
         <scene sceneID="xPc-mI-HnS">
@@ -690,6 +738,19 @@
                                     <rect key="frame" x="266" y="42" width="237" height="44"/>
                                 </variation>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score: 0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wtj-ru-SAJ">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <color key="textColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.70488175929999997" green="0.53786836390000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <variation key="widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="594" y="28" width="67" height="31"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="589" y="50" width="147" height="31"/>
+                                </variation>
+                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reveal" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FrQ-Kh-QW8">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <color key="backgroundColor" red="0.46124914119999999" green="0.87802049000000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -704,7 +765,7 @@
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <color key="backgroundColor" red="0.0" green="0.50196081399917603" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <state key="normal" title="5">
+                                <state key="normal" title="3">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -722,7 +783,7 @@
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <color key="backgroundColor" red="0.78989270119999999" green="1" blue="0.3354631743" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <state key="normal" title="5">
+                                <state key="normal" title="3">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <variation key="widthClass=regular" fixedFrame="YES">
@@ -739,7 +800,7 @@
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <color key="backgroundColor" red="1" green="0.58948708579999998" blue="0.99471247569999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <state key="normal" title="5">
+                                <state key="normal" title="3">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <variation key="widthClass=regular" fixedFrame="YES">
@@ -753,16 +814,6 @@
                                     <action selector="revealHintTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Yu9-7G-qYe"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Remove" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Efu-b7-MYp">
-                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="672" y="272" width="64" height="21"/>
-                                </variation>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Flash" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c7X-st-vNg">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <color key="backgroundColor" red="0.50907966199999999" green="0.76574337120000002" blue="0.25108482789999997" alpha="1" colorSpace="calibratedRGB"/>
@@ -777,7 +828,7 @@
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <color key="backgroundColor" red="0.79506480690000003" green="0.79172348979999996" blue="0.7985497117" alpha="1" colorSpace="deviceRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <state key="normal" title="5">
+                                <state key="normal" title="3">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <variation key="widthClass=regular" fixedFrame="YES">
@@ -865,17 +916,14 @@
                                     <rect key="frame" x="33" y="50" width="175" height="32"/>
                                 </variation>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score: 0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wtj-ru-SAJ">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Remove" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Efu-b7-MYp">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
-                                <color key="textColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
-                                <color key="shadowColor" red="0.70488175929999997" green="0.53786836390000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <variation key="widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="594" y="28" width="67" height="31"/>
-                                </variation>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="589" y="50" width="147" height="31"/>
+                                    <rect key="frame" x="672" y="272" width="64" height="21"/>
                                 </variation>
                             </label>
                         </subviews>
@@ -910,11 +958,11 @@
                                 <exclude reference="7If-ps-KcO"/>
                                 <exclude reference="fLx-MD-hzA"/>
                                 <exclude reference="ii2-ru-aMc"/>
+                                <exclude reference="Wtj-ru-SAJ"/>
                                 <exclude reference="FrQ-Kh-QW8"/>
                                 <exclude reference="1ZJ-Hm-T4K"/>
                                 <exclude reference="S7T-cQ-sPt"/>
                                 <exclude reference="GjJ-Vg-lUZ"/>
-                                <exclude reference="Efu-b7-MYp"/>
                                 <exclude reference="c7X-st-vNg"/>
                                 <exclude reference="LMc-qw-UMr"/>
                                 <exclude reference="aMR-bR-lJH"/>
@@ -924,17 +972,17 @@
                                 <exclude reference="HV6-F9-QSZ"/>
                                 <exclude reference="dUR-QZ-pVv"/>
                                 <exclude reference="RwG-NU-cEQ"/>
-                                <exclude reference="Wtj-ru-SAJ"/>
+                                <exclude reference="Efu-b7-MYp"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=regular">
                             <mask key="subviews">
                                 <include reference="Bpa-4Q-Jrj"/>
                                 <include reference="ii2-ru-aMc"/>
+                                <include reference="Wtj-ru-SAJ"/>
                                 <include reference="1ZJ-Hm-T4K"/>
                                 <include reference="S7T-cQ-sPt"/>
                                 <include reference="RwG-NU-cEQ"/>
-                                <include reference="Wtj-ru-SAJ"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=regular">
@@ -967,7 +1015,6 @@
                                 <include reference="fLx-MD-hzA"/>
                                 <include reference="FrQ-Kh-QW8"/>
                                 <include reference="GjJ-Vg-lUZ"/>
-                                <include reference="Efu-b7-MYp"/>
                                 <include reference="c7X-st-vNg"/>
                                 <include reference="LMc-qw-UMr"/>
                                 <include reference="aMR-bR-lJH"/>
@@ -976,6 +1023,7 @@
                                 <include reference="qa2-nP-0Hl"/>
                                 <include reference="HV6-F9-QSZ"/>
                                 <include reference="dUR-QZ-pVv"/>
+                                <include reference="Efu-b7-MYp"/>
                             </mask>
                         </variation>
                     </view>
@@ -1022,7 +1070,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2097.75" y="66.75"/>
+            <point key="canvasLocation" x="1671.75" y="99.75"/>
         </scene>
         <!--ListUserViewController-->
         <scene sceneID="DhF-H7-GfW">
@@ -1200,11 +1248,11 @@
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P2G-NJ-4Nf">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="159" y="323" width="83" height="45"/>
+                                    <rect key="frame" x="219" y="323" width="83" height="45"/>
                                 </variation>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VKX-HE-Dju">
@@ -1212,22 +1260,9 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="310" y="331" width="178" height="30"/>
+                                    <rect key="frame" x="310" y="331" width="176" height="30"/>
                                 </variation>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RfE-gX-ZKK">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <color key="backgroundColor" red="1" green="0.62249018970000003" blue="0.55399207009999996" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Save">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="341" y="418" width="106" height="30"/>
-                                </variation>
-                                <connections>
-                                    <action selector="SaveUser:" destination="aBz-MA-5kN" eventType="touchUpInside" id="zss-Eu-gxp"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rc8-Rs-lGl">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <state key="normal" image="back">
@@ -1240,6 +1275,19 @@
                                     <action selector="backButton:" destination="aBz-MA-5kN" eventType="touchUpInside" id="FkG-RY-F0J"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RfE-gX-ZKK">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.62249018970000003" blue="0.55399207009999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Save">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="322" y="395" width="106" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="SaveUser:" destination="aBz-MA-5kN" eventType="touchUpInside" id="zss-Eu-gxp"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
@@ -1247,8 +1295,8 @@
                                 <exclude reference="56Y-co-TiH"/>
                                 <exclude reference="P2G-NJ-4Nf"/>
                                 <exclude reference="VKX-HE-Dju"/>
-                                <exclude reference="RfE-gX-ZKK"/>
                                 <exclude reference="rc8-Rs-lGl"/>
+                                <exclude reference="RfE-gX-ZKK"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=regular">
@@ -1256,8 +1304,8 @@
                                 <include reference="56Y-co-TiH"/>
                                 <include reference="P2G-NJ-4Nf"/>
                                 <include reference="VKX-HE-Dju"/>
-                                <include reference="RfE-gX-ZKK"/>
                                 <include reference="rc8-Rs-lGl"/>
+                                <include reference="RfE-gX-ZKK"/>
                             </mask>
                         </variation>
                     </view>
@@ -1296,6 +1344,7 @@
         <image name="Yellow" width="110" height="110"/>
         <image name="back" width="60" height="60"/>
         <image name="background" width="1024" height="1024"/>
+        <image name="congrats" width="460" height="418"/>
         <image name="frontscreen" width="1300" height="1300"/>
         <image name="highScore" width="1500" height="1000"/>
         <image name="large-home-purple" width="401" height="401"/>

@@ -18,6 +18,7 @@
 		A589B59D1AD9BE0B00F1A395 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A589B59C1AD9BE0B00F1A395 /* User.swift */; };
 		A5CA5E111AE6C239007A8B20 /* ListUserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5CA5E101AE6C239007A8B20 /* ListUserCell.swift */; };
 		A5D4AD081AC7BE6200B18171 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D4AD071AC7BE6200B18171 /* RootViewController.swift */; };
+		AE2444281AF4628300E776D1 /* ModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE2444271AF4628300E776D1 /* ModalViewController.swift */; };
 		AE294C201AE827650041373C /* Level1.plist in Resources */ = {isa = PBXBuildFile; fileRef = AE294C1F1AE827650041373C /* Level1.plist */; };
 		AE294C221AEA9B100041373C /* Level3.plist in Resources */ = {isa = PBXBuildFile; fileRef = AE294C211AEA9B100041373C /* Level3.plist */; };
 		AE57BBAF1AC496C30098E5A5 /* Level.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE57BBAE1AC496C30098E5A5 /* Level.swift */; };
@@ -66,6 +67,7 @@
 		A589B59C1AD9BE0B00F1A395 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		A5CA5E101AE6C239007A8B20 /* ListUserCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListUserCell.swift; sourceTree = "<group>"; };
 		A5D4AD071AC7BE6200B18171 /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RootViewController.swift; path = ../RootViewController.swift; sourceTree = "<group>"; };
+		AE2444271AF4628300E776D1 /* ModalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalViewController.swift; sourceTree = "<group>"; };
 		AE294C1F1AE827650041373C /* Level1.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Level1.plist; path = GuessAndSpell/Level1.plist; sourceTree = SOURCE_ROOT; };
 		AE294C211AEA9B100041373C /* Level3.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Level3.plist; sourceTree = SOURCE_ROOT; };
 		AE57BBAE1AC496C30098E5A5 /* Level.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Level.swift; sourceTree = SOURCE_ROOT; };
@@ -194,6 +196,7 @@
 			children = (
 				AE57BBB61AC497790098E5A5 /* GameController.swift */,
 				D6D786161AD9AD58003CF6A2 /* AudioController.swift */,
+				AE2444271AF4628300E776D1 /* ModalViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -354,6 +357,7 @@
 				A5CA5E111AE6C239007A8B20 /* ListUserCell.swift in Sources */,
 				AE57BBB31AC4972D0098E5A5 /* PictureView.swift in Sources */,
 				D6D786171AD9AD58003CF6A2 /* AudioController.swift in Sources */,
+				AE2444281AF4628300E776D1 /* ModalViewController.swift in Sources */,
 				D65494F61AC9E53B00F26A78 /* TargetView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

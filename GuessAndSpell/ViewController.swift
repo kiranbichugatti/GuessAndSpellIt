@@ -48,6 +48,7 @@ class ViewController: UIViewController {
         
         super.init(coder: aDecoder)
     }
+    
    
     @IBAction func revealHintTouched(sender: UIButton) {
         var left = controller.revealBlock()
@@ -126,8 +127,15 @@ class ViewController: UIViewController {
 
     
     func startNewPuzzle() {
+        
         controller.currentPuzzle += 1
         if controller.currentPuzzle > level.puzzles.count {
+            if controller.currentLevel == 3 {
+                var storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                var vc : ModalViewController = storyBoard.instantiateViewControllerWithIdentifier("modalView") as! ModalViewController
+                self.presentViewController(vc, animated: true, completion: nil)
+                return
+            }
             initNewLevel()
             controller.currentPuzzle = 1
         }
@@ -142,6 +150,7 @@ class ViewController: UIViewController {
     }
     
     func initNewLevel(){
+        
         if controller.currentLevel < 3 {
             controller.currentLevel = controller.currentLevel + 1
             level = Level(levelNumber:controller.currentLevel)
@@ -171,12 +180,6 @@ class ViewController: UIViewController {
             }
             }
         }
-            
-            else
-            {
-            //all game is finished. Congrats!
-            //this code will be implemented in beta version
-            }
         
     }
     
@@ -267,7 +270,7 @@ class ViewController: UIViewController {
         controller.onPuzzleSolved =  self.startNewPuzzle
         
         self.initNewLevel()
-        
+        self.startNewPuzzle()
         
     }
     
@@ -331,8 +334,8 @@ class ViewController: UIViewController {
     }
     
     override func viewDidAppear(animated: Bool) {
-        self.startNewPuzzle()
-        println(controller.currentPuzzleIndex())
+
+      //  println(controller.currentPuzzleIndex())
     }
     
 
