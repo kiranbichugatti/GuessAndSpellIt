@@ -126,8 +126,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-
-
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="You have passed all the puzzles in this game!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X7z-39-41o">
                                 <rect key="frame" x="79" y="393" width="417" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
@@ -174,7 +172,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Acu-K4-42X" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="963" y="-413"/>
+            <point key="canvasLocation" x="1099" y="-383"/>
         </scene>
         <!--Root View Controller-->
         <scene sceneID="xPc-mI-HnS">
