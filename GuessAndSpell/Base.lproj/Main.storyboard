@@ -812,7 +812,6 @@
                                 </variation>
                                 <connections>
                                     <action selector="correctHintTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EJM-Jz-Dlb"/>
-                                    <action selector="revealHintTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Yu9-7G-qYe"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Flash" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c7X-st-vNg">
@@ -1044,7 +1043,7 @@
                         <outlet property="correctHint" destination="GjJ-Vg-lUZ" id="TNf-JO-mgL"/>
                         <outlet property="flashHint" destination="LMc-qw-UMr" id="CyY-vL-pVm"/>
                         <outlet property="hintImage" destination="aMR-bR-lJH" id="ypG-Ew-gOu"/>
-                        <outlet property="leftArrow" destination="ETh-5l-DfO" id="zQz-YN-NuJ"/>
+                        <outlet property="leftArrow" destination="ETh-5l-DfO" id="l42-iJ-npg"/>
                         <outlet property="progress" destination="RwG-NU-cEQ" id="4iw-uJ-Mzt"/>
                         <outlet property="remainingReveal" destination="fLx-MD-hzA" id="bzi-Pn-u2H"/>
                         <outlet property="removeHint" destination="1ZJ-Hm-T4K" id="EXL-sh-Dfc"/>

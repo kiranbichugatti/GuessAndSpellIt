@@ -257,7 +257,7 @@ class GameController: TileDragDelegateProtocol {
             
             completion: {
                 (value:Bool) in
-                targetView.hidden = true
+                //targetView.hidden = true
         })
         
         filled++

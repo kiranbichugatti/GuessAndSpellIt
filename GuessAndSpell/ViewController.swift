@@ -32,6 +32,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var removeHint: UIButton!
     @IBOutlet weak var correctHint: UIButton!
     @IBOutlet weak var flashHint: UIButton!
+    @IBOutlet weak var leftArrow: UIImageView!
+
     
     var selectCount: Int = 0 {
         didSet { 
@@ -49,26 +51,25 @@ class ViewController: UIViewController {
         super.init(coder: aDecoder)
     }
     
-    @IBOutlet weak var leftArrow: UIImageView!
+
     
    
     @IBAction func revealHintTouched(sender: UIButton) {
         var left = controller.revealBlock()
-        //leftArrow.hidden = false
+        leftArrow.hidden = false
         
-        UIView.animateWithDuration(2.0, delay: 0.01, options: UIViewAnimationOptions.CurveEaseOut, animations: {
-            self.leftArrow.hidden = false
-            }, completion: {
-                (value:Bool) in
-                self.leftArrow.hidden = true
+        let delay = 3 * Double(NSEC_PER_SEC)
+        let time = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
+        
+        dispatch_after(time, dispatch_get_main_queue(), {
+            self.leftArrow.hidden = true
         })
         
         sender.setTitle(toString(left), forState: UIControlState.Normal)
         if left == 0 {sender.enabled = false}
         if left >= 0 {selectCount--}
         
-       gamedata.points -= 10
-     scoreLabel.text = "Score: \(controller.currentScore())"
+        scoreLabel.text = "Score: \(controller.currentScore())"
         
     }
 
@@ -78,7 +79,6 @@ class ViewController: UIViewController {
         sender.setTitle(toString(removeLeft), forState: UIControlState.Normal)
         if removeLeft == 0 { sender.enabled = false }
         
-        gamedata.points -= 10
         updateGUI()
         
     }
