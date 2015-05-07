@@ -27,6 +27,8 @@
 		AE57BBB71AC497790098E5A5 /* GameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE57BBB61AC497790098E5A5 /* GameController.swift */; };
 		AE57BBB91AC498DF0098E5A5 /* Level2.plist in Resources */ = {isa = PBXBuildFile; fileRef = AE57BBB81AC498DF0098E5A5 /* Level2.plist */; };
 		AE57BBBB1AC5B3470098E5A5 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE57BBBA1AC5B3470098E5A5 /* Config.swift */; };
+		AE9420BB1AFAF380009C433F /* RuleContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9420BA1AFAF380009C433F /* RuleContentViewController.swift */; };
+		AE9420BD1AFAF398009C433F /* RuleHintsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9420BC1AFAF398009C433F /* RuleHintsViewController.swift */; };
 		AEF289A91ACD9C6A00F1D997 /* GameData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF289A81ACD9C6900F1D997 /* GameData.swift */; };
 		D60259FF1AED6B0700C6C7B8 /* HighscoreController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60259FE1AED6B0700C6C7B8 /* HighscoreController.swift */; };
 		D65494F61AC9E53B00F26A78 /* TargetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65494F51AC9E53B00F26A78 /* TargetView.swift */; };
@@ -76,6 +78,8 @@
 		AE57BBB61AC497790098E5A5 /* GameController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameController.swift; sourceTree = "<group>"; };
 		AE57BBB81AC498DF0098E5A5 /* Level2.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Level2.plist; sourceTree = SOURCE_ROOT; };
 		AE57BBBA1AC5B3470098E5A5 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		AE9420BA1AFAF380009C433F /* RuleContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RuleContentViewController.swift; sourceTree = "<group>"; };
+		AE9420BC1AFAF398009C433F /* RuleHintsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RuleHintsViewController.swift; sourceTree = "<group>"; };
 		AEF289A81ACD9C6900F1D997 /* GameData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameData.swift; sourceTree = SOURCE_ROOT; };
 		D60259FE1AED6B0700C6C7B8 /* HighscoreController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HighscoreController.swift; sourceTree = "<group>"; };
 		D65494F51AC9E53B00F26A78 /* TargetView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TargetView.swift; sourceTree = SOURCE_ROOT; };
@@ -197,6 +201,8 @@
 				AE57BBB61AC497790098E5A5 /* GameController.swift */,
 				D6D786161AD9AD58003CF6A2 /* AudioController.swift */,
 				AE2444271AF4628300E776D1 /* ModalViewController.swift */,
+				AE9420BA1AFAF380009C433F /* RuleContentViewController.swift */,
+				AE9420BC1AFAF398009C433F /* RuleHintsViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -342,6 +348,7 @@
 			files = (
 				AE57BBAF1AC496C30098E5A5 /* Level.swift in Sources */,
 				AEF289A91ACD9C6A00F1D997 /* GameData.swift in Sources */,
+				AE9420BB1AFAF380009C433F /* RuleContentViewController.swift in Sources */,
 				A57BEBC71ACA5939008EFAB0 /* UserViewController.swift in Sources */,
 				D60259FF1AED6B0700C6C7B8 /* HighscoreController.swift in Sources */,
 				AE57BBB71AC497790098E5A5 /* GameController.swift in Sources */,
@@ -352,6 +359,7 @@
 				A547CB291AAD77BC0084F2A9 /* AppDelegate.swift in Sources */,
 				AE57BBB51AC497490098E5A5 /* TileView.swift in Sources */,
 				A57BEBC91ACA74CE008EFAB0 /* ListUserViewController.swift in Sources */,
+				AE9420BD1AFAF398009C433F /* RuleHintsViewController.swift in Sources */,
 				A5D4AD081AC7BE6200B18171 /* RootViewController.swift in Sources */,
 				A5CA5E111AE6C239007A8B20 /* ListUserCell.swift in Sources */,
 				AE57BBB31AC4972D0098E5A5 /* PictureView.swift in Sources */,

@@ -71,7 +71,7 @@
                                     </tableViewCell>
                                 </prototypes>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="0.0" width="768" height="946"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="768" height="872"/>
                                 </variation>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lcZ-tj-Gxx">
@@ -80,7 +80,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="338" y="954" width="109" height="70"/>
+                                    <rect key="frame" x="335" y="893" width="109" height="70"/>
                                 </variation>
                                 <connections>
                                     <action selector="back:" destination="lA7-JA-YsC" eventType="touchUpInside" id="FR4-wz-d6g"/>
@@ -304,10 +304,10 @@
             </objects>
             <point key="canvasLocation" x="408" y="369.75"/>
         </scene>
-        <!--View Controller-->
+        <!--Rule Content View Controller-->
         <scene sceneID="m1v-lo-HPf">
             <objects>
-                <viewController id="jKi-fG-ULy" sceneMemberID="viewController">
+                <viewController id="jKi-fG-ULy" customClass="RuleContentViewController" customModule="GuessAndSpell" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="lGF-RY-ppM"/>
                         <viewControllerLayoutGuide type="bottom" id="1WU-eW-O2y"/>
@@ -316,39 +316,78 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XCm-Hj-WdU">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rules" translatesAutoresizingMaskIntoConstraints="NO" id="dYs-IN-mBS">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                                </variation>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qgp-Xa-ysE">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="Got It ! Play the game">
+                                <state key="normal" backgroundImage="large-home-purple">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="305" y="854" width="187" height="49"/>
+                                    <rect key="frame" x="38" y="58" width="66" height="64"/>
                                 </variation>
                                 <connections>
-                                    <segue destination="NU9-9e-qS0" kind="push" id="F4k-3L-pji"/>
+                                    <action selector="homeButtonTouched" destination="jKi-fG-ULy" eventType="touchUpInside" id="aMj-yb-qiV"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Under Construction....." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0IT-j6-lM4">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lcu-uH-Uba">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" backgroundImage="hint">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="643" y="869" width="62" height="55"/>
+                                </variation>
+                                <connections>
+                                    <segue destination="KRt-2e-WKk" kind="show" id="m8j-ZI-ssO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gwu-6v-JFi">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="0.50907966199999999" green="0.76574337120000002" blue="0.25108482789999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Got it! Let's Play">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="306" y="869" width="157" height="55"/>
+                                </variation>
+                                <connections>
+                                    <segue destination="NU9-9e-qS0" kind="show" id="Wsq-DI-K76"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hints" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n2Z-SD-x6h">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="106" y="108" width="272" height="63"/>
+                                    <rect key="frame" x="650" y="845" width="55" height="32"/>
                                 </variation>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="XCm-Hj-WdU"/>
-                                <exclude reference="0IT-j6-lM4"/>
+                                <exclude reference="dYs-IN-mBS"/>
+                                <exclude reference="Qgp-Xa-ysE"/>
+                                <exclude reference="Lcu-uH-Uba"/>
+                                <exclude reference="Gwu-6v-JFi"/>
+                                <exclude reference="n2Z-SD-x6h"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=regular">
                             <mask key="subviews">
-                                <include reference="XCm-Hj-WdU"/>
-                                <include reference="0IT-j6-lM4"/>
+                                <include reference="dYs-IN-mBS"/>
+                                <include reference="Qgp-Xa-ysE"/>
+                                <include reference="Lcu-uH-Uba"/>
+                                <include reference="Gwu-6v-JFi"/>
+                                <include reference="n2Z-SD-x6h"/>
                             </mask>
                         </variation>
                     </view>
@@ -359,6 +398,55 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jcm-5e-ESv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="417" y="1237.5"/>
+        </scene>
+        <!--Rule Hints View Controller-->
+        <scene sceneID="RmV-aZ-4i1">
+            <objects>
+                <viewController id="KRt-2e-WKk" customClass="RuleHintsViewController" customModule="GuessAndSpell" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1TG-4O-Wib"/>
+                        <viewControllerLayoutGuide type="bottom" id="x5L-ac-eV8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hbi-I1-BuR">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rules2" translatesAutoresizingMaskIntoConstraints="NO" id="FPt-pe-7m7">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                                </variation>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y4q-7e-uqz">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" backgroundImage="back">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="38" y="20" width="66" height="63"/>
+                                </variation>
+                                <connections>
+                                    <action selector="backButtonTouched" destination="KRt-2e-WKk" eventType="touchUpInside" id="ddS-nh-NbF"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="FPt-pe-7m7"/>
+                                <exclude reference="y4q-7e-uqz"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=regular">
+                            <mask key="subviews">
+                                <include reference="FPt-pe-7m7"/>
+                                <include reference="y4q-7e-uqz"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="drD-jd-dnk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="417" y="2130.75"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -1287,7 +1375,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RfE-gX-ZKK">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <color key="backgroundColor" red="1" green="0.62249018970000003" blue="0.55399207009999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <state key="normal" title="Save">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
@@ -1356,6 +1446,7 @@
         <image name="congrats" width="460" height="418"/>
         <image name="frontscreen" width="1300" height="1300"/>
         <image name="highScore" width="1500" height="1000"/>
+        <image name="hint" width="50" height="45"/>
         <image name="large-home-purple" width="401" height="401"/>
         <image name="launch" width="1024" height="768"/>
         <image name="leaderboard" width="1286" height="997"/>
@@ -1363,9 +1454,11 @@
         <image name="logo" width="423" height="80"/>
         <image name="music3" width="256" height="256"/>
         <image name="playButton" width="128" height="128"/>
+        <image name="rules" width="689" height="517"/>
+        <image name="rules2" width="690" height="514"/>
         <image name="user" width="105" height="138"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="F4k-3L-pji"/>
+        <segue reference="Wsq-DI-K76"/>
     </inferredMetricsTieBreakers>
 </document>
