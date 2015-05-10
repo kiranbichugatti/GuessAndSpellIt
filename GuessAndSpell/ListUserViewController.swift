@@ -38,7 +38,6 @@ class ListUserViewController: UIViewController,UITableViewDataSource,UITableView
         
     var cell: ListUserCell = tableView.dequeueReusableCellWithIdentifier("TCell") as! ListUserCell
         
-      //  cell.backgroundColor = [UIColor clearColor];
         tableView.backgroundColor = UIColor.clearColor();
         cell.backgroundColor = UIColor.clearColor();
         
@@ -47,12 +46,7 @@ class ListUserViewController: UIViewController,UITableViewDataSource,UITableView
         
         dict = users?.objectAtIndex(indexPath.row) as? NSDictionary
         
-        //        var image : UIImage?
-        //        let base64: String? = dict?.objectForKey("pic") as? String
-        //
-        //        var decodedData = NSData(base64EncodedString: base64!, options: NSDataBase64DecodingOptions(0))
-        //
-        //        var decodedimage = UIImage(data: decodedData!)
+        
         
         var player : NSString?
         player = dict?.objectForKey("userName") as? NSString

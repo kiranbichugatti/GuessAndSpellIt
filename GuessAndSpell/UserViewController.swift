@@ -14,36 +14,6 @@ class UserViewController: UIViewController, UIImagePickerControllerDelegate,UINa
     @IBOutlet weak var UserName: UITextField!
     
     
-    
-  //  @IBOutlet weak var ProPic: UIImageView!
-    
-    
-    
-    
-//    @IBAction func ChoosePic(sender: AnyObject) {
-//        
-//    var picker = UIImagePickerController()
-//        
-//    picker.modalPresentationStyle = UIModalPresentationStyle.CurrentContext
-//    picker.delegate = self
-//    self.presentViewController(picker,animated: true,completion: nil)
-//        
-//        
-//    }
-//    
-//    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: NSDictionary!)
-//    
-//    {
-//        var imagePicked : UIImage = info[UIImagePickerControllerOriginalImage] as UIImage
-//        ProPic.image = imagePicked
-//        self.dismissViewControllerAnimated(true,completion: nil)
-//    }
-//    
-    
-
-    
-    
-    
     @IBAction func SaveUser(sender: UIButton) {
         
         var usr : User?
